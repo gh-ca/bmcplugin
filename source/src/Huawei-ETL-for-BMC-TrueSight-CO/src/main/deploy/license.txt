@@ -1,0 +1,921 @@
+END USER LICENSE AGREEMENT 
+
+BY OPENING THE PACKAGE, INSTALLING, PRESSING "AGREE" OR "YES" OR USING THE PRODUCT, THE ENTITY OR 
+INDIVIDUAL ENTERING INTO THIS AGREEMENT AGREES TO BE BOUND BY THE FOLLOWING TERMS. IF YOU DO NOT 
+AGREE WITH ANY OF THESE TERMS, DO NOT INSTALL OR USE THE PRODUCT, PROMPTLY RETURN THE PRODUCT TO 
+BMC OR YOUR BMC RESELLER, AND IF YOU ACQUIRED THE LICENSE WITHIN 15 DAYS OF THE DATE OF YOUR ORDER 
+CONTACT BMC OR YOUR BMC RESELLER FOR A REFUND OF LICENSE FEES PAID. IF YOU REJECT THIS AGREEMENT, YOU 
+WILL NOT ACQUIRE ANY LICENSE TO USE THE PRODUCT. 
+
+This Agreement ("Agreement") is between the entity or individual entering into this Agreement ("Customer") and the BMC Entity for 
+the applicable Territory as described in Section 19 ("BMC"). In addition to the restrictions imposed under this Agreement, any other 
+usage restrictions contained in the Product installation instructions or release notes shall apply to your use of the Product. 
+
+Territory: The country where Customer acquired the license. 
+
+1. 
+GENERAL DEFINITIONS. 
+"Affiliate" is an entity that controls, is controlled by or shares common control with BMC or Customer, where such control arises 
+from either (a) a direct or indirect ownership interest of more than 50% or (b) the power to direct or cause the direction of the 
+management and policies, whether through the ownership of voting stock by contract, or otherwise, equal to that provided by a 
+direct or indirect ownership of more than 50%. 
+"Documentation" means the technical publications relating to the software, such as release notes, reference, user, installation, 
+systems administrator and technical guidelines, included with the Product. 
+"Licensed Capacity" is the amount of each Product licensed as established in the Order. 
+"Order" is an agreed written or electronic document, subject to the terms of this Agreement that identifies the Products to be 
+licensed and their Licensed Capacity and/or the Support to be purchased and the fees to be paid. 
+"Product" is the object code of the software and all accompanying Documentation delivered to Customer, including all items 
+delivered by BMC to Customer under Support. 
+"Support" is the support services program as further specified in this Agreement. 
+2. SCOPE. Licenses are granted, and Support is obtained, solely by execution of Orders. Each Order is deemed to be a discrete 
+contract, separate from each other Order, unless expressly stated otherwise therein, and in the event of a direct conflict between any 
+Order and the terms of this Agreement, the terms of the Order will control only if the Order is executed by an authorized representative 
+of each party. Orders may be entered under this Agreement by and between (a) BMC or an Affiliate of BMC; and (b) the Customer or 
+an Affiliate of Customer. With respect to an Order, the terms "BMC" and "Customer" as used in this Agreement will be deemed to refer 
+to the entities that execute that Order, the Order will be considered a two party agreement between such entities, and BMC will 
+separately invoice the Customer named in the Order for the associated License fees and Support fees. Neither execution of this 
+Agreement, nor anything contained herein, shall obligate either party to enter into any Orders. In the event an Order is proposed by 
+BMC and is deemed to constitute an offer, then acceptance of such offer is limited to its terms. In the event Customer proposes an 
+Order by submitting a purchase order, then regardless of whether BMC acknowledges, accepts or fully or partially performs under such 
+purchase order, BMC OBJECTS to any additional or different terms in the purchase order, other than those that establish Product, 
+price and Licensed Capacity in accordance with this Agreement. 
+3. LICENSE. Subject to the terms, conditions, payment requirements and restrictions set forth in this Agreement, BMC grants 
+Customer a non-exclusive, non-transferable, non-sub-licensable perpetual (unless a non-perpetual license is provided on an Order) 
+license, as specified in the relevant Order, to exercise the following rights to the Product up to the Licensed Capacity: (a) copy the 
+Product for the purpose of installing it on Customer's owned or leased hardware at a facility owned or controlled by Customer in the 
+Territory; (b) operate solely for Customer's and its Affiliates own internal Customer's business operations; and (c) make one copy of 
+the Product for archival purposes only (collectively a "License"). Affiliates may use and access the Products and Support under the 
+terms of this Agreement, and Customer is responsible for its Affiliates compliance with the terms of this Agreement. 
+4. RESTRICTIONS. Customer will not: (a) copy, operate or use any Product in excess of the applicable Licensed Capacity; (b) 
+modify, delete or remove any ownership, title, trademark, patent or copyright notices ("Identification") from any Product; (c) copy any 
+Product or any portion of any Product without reproducing all Identification on each copy or partial copy; (d) disassemble, reverse 
+engineer, decompile or otherwise attempt to derive any Product source code from object code, except to the extent expressly permitted 
+by applicable law despite this limitation without possibility of contractual waiver; (e) distribute, rent, lease, sublicense or provide the 
+Product to any third party or use it in a service bureau, outsourcing environment, or for the processing of third party data; (f) provide a 
+third party with the results of any functional evaluation, or performance tests, without BMC's prior written approval; (g) attempt to disable 
+or circumvent any of the licensing mechanisms within the Product; or (h) violate any other usage restrictions contained in the 
+Documentation. 
+5. PRODUCT PERFORMANCE WARRANTY. BMC warrants that (a) the Product will perform in substantial accordance with its 
+Documentation for a period of one year from the date of the first Order, (b) BMC has used commercially reasonable efforts consistent 
+with industry standards to scan for and remove software viruses, and (c) other than passwords that may be required for the operation of 
+the Product, BMC has not inserted any code that is not addressed in the Documentation and that is designed to delete, interfere with or 
+disable the normal operation the Products in accordance with the License. This warranty will not apply to any problems caused by 
+hardware, Computers, or software other than the Product, or misuse of the Product use of the Product other than as provided by the 
+applicable License, modification of the Product, or claims made either outside the warranty period or not in compliance with the notice 
+and access requirements set forth below. No warranty is provided for additional Licensed Capacity, Product provided pursuant to 
+Support or Product provided pursuant to Section 11. 
+EULA (07.07.2013) Page 1 of 12 
+BMC Confidential 
+
+
+6. LIMITED REMEDIES. BMC's entire liability, and Customer's exclusive remedy, for breach of the above warranty is limited to: 
+BMC's use of commercially reasonable efforts to have the Product perform in substantial accordance with its Documentation, or 
+replacement of the non-conforming Product within a reasonable period of time, or if BMC cannot have the Product perform in 
+substantial accordance with its Documentation replace the Product within such time period, then BMC will refund the amount paid by 
+Customer for the License for that Product. Customer's rights and BMC's obligations in this section are conditioned upon Customer's 
+providing BMC during the warranty period (a) full cooperation and access to the Product in resolving any claim; and (b) written notice 
+addressed to the BMC Legal Department that includes notice of the claim, a complete description of the alleged defects sufficient to 
+permit their reproduction in BMC's development or support environment, and a specific reference to the Documentation to which such 
+alleged defects are contrary. 
+7. DISCLAIMER OF WARRANTIES. EXCEPT FOR THE EXPRESS WARRANTIES IN THIS AGREEMENT, THE PRODUCT IS 
+PROVIDED WITH NO OTHER WARRANTIES WHATSOEVER, AND BMC, ITS AFFILIATES AND LICENSORS DISCLAIM ALL 
+OTHER WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR 
+A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. BMC DOES NOT WARRANT THAT THE OPERATION OF THE PRODUCT 
+WILL BE UNINTERRUPTED OR ERROR FREE, OR THAT ALL DEFECTS CAN BE CORRECTED. 
+8. PAYMENTS AND DELIVERY. Customer will pay each License fee and/or Support fee upon receipt of invoice. Customer will pay, 
+or reimburse, BMC or when required by law the appropriate governmental agency for taxes of any kind, including sales, use, VAT, 
+excise, customs duties, withholding, property, and other similar taxes (other than taxes based on BMC's net income) imposed in 
+connection with the License and/or the Support fees which are exclusive of these taxes. For Products that are delivered electronically, 
+upon request from BMC, Customer agrees to provide BMC with Documentation supporting that the designated Product was received 
+electronically. If Customer accepts any Product in a non-electronic format, there may be an additional charge and it is the sole 
+responsibility of Customer to bear any sales/use tax obligation, penalties, and interest. The unpaid balance of each late payment bears 
+interest at a rate equal to the lesser of 1% per month or the maximum amount permitted by law. All Products are licensed FCA ("Free 
+Carrier" as per Incoterms 2000) shipping point. The Products are accepted on the date BMC delivers the Product to the Customer 
+either physically or by providing access codes for electronic download, whichever occurs first, however, such acceptance will not affect 
+the Product Performance Warranty provided in this Agreement. 
+9. PROPRIETARY RIGHTS AND CONFIDENTIALITY. (a) BMC, its Affiliates or licensors retain all right, title and interest to the 
+Product, Support and all related intellectual property and proprietary rights. The Product and all third party software provided with the 
+Product are protected by applicable copyright, trade secret, industrial and other intellectual property laws. Customer may not remove 
+any product identification, copyright, trademark or other notice from the Product. BMC reserves any rights not expressly granted to 
+Customer in this Agreement. (b) "Confidential Information" means all proprietary or confidential information that is disclosed to the 
+recipient ("Recipient") by the discloser ("Discloser"), and includes, among other things (i) any and all information relating Discloser 
+financial information, customers, employees, products or services, including, without limitation, software code, flow charts, techniques, 
+specifications, development and marketing plans, strategies, forecasts, and proposal related documents and responses; (ii) as to BMC, 
+and its licensors, the Product and any third party software provided with the Product; and (iii) the terms of this Agreement, including 
+without limitation, Product pricing information. Confidential Information does not include information that Recipient can show: (a) was 
+rightfully in Recipient's possession without any obligation of confidentiality before receipt from the Discloser; (b) is or becomes a matter 
+of public knowledge through no fault of Recipient; (c) is rightfully received by Recipient from a third party without violation of a duty of 
+confidentiality; or (d) is independently developed by or for Recipient. Recipient may not disclose Confidential Information of Discloser to 
+any third party or use the Confidential Information in violation of this Agreement. The Recipient (i) will exercise the same degree of care 
+and protection with respect to the Confidential Information of the Discloser that it exercises with respect to its own Confidential 
+Information and (ii) will not, either directly or indirectly, disclose, copy, distribute, republish, or allow any third party to have access to 
+any Confidential Information of the Discloser. Notwithstanding the foregoing, Recipient may disclose Discloser's Confidential 
+Information to Recipient's employees and agents who have the need to know provided that such employees and agents have legal 
+obligations of confidentiality substantially the same (and in no case less protective) as the provisions of this Agreement. (c) 
+Notification Obligation. If the Recipient becomes aware of any unauthorized use or disclosure of Discloser's Confidential Information, 
+then Recipient will promptly and fully notify the Discloser of all facts known to it concerning such unauthorized use or disclosure. In 
+addition, if the Recipient or any of its employees or agents are required (by oral questions, interrogatories, requests for information, or 
+documents in legal proceedings, subpoena, civil investigative demand, or other similar process) to disclose any of Discloser's 
+Confidential Information, the Recipient will not disclose the Discloser's Confidential Information without providing the Discloser with 
+commercially reasonable advance prior written notice to allow Discloser to seek a protective order or other appropriate remedy or to 
+waive compliance with this provision. In any event, the Recipient will exercise its commercially reasonable efforts to preserve the 
+confidentiality of the Discloser's Confidential Information, including, without limitation, cooperating with Discloser to obtain an 
+appropriate protective order or other reliable assurance that confidential treatment will be accorded to the Confidential Information. 
+10. DISCLAIMER OF DAMAGES; LIMITS ON LIABILITY. EXCEPT FOR VIOLATIONS OF LICENSE (SECTION 3), LICENSE 
+RESTRICTIONS (SECTION 4), PROPRIETARY RIGHTS AND CONFIDENTIALITY (SECTION 9) AND FOR INFRINGEMENT CLAIMS 
+(SECTION 12), NEITHER PARTY, ITS AFFILIATES OR BMC'S LICENSORS ARE LIABLE FOR (A) ANY SPECIAL, INDIRECT, 
+INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES RELATING TO OR ARISING OUT OF THIS AGREEMENT, SUPPORT, 
+THE PRODUCT OR ANY THIRD PARTY CODE OR SOFTWARE PROVIDED WITH THE PRODUCT (INCLUDING, WITHOUT 
+LIMITATION, LOST PROFITS, LOST COMPUTER USAGE TIME, AND DAMAGE TO, OR LOSS OF USE OF DATA), EVEN IF 
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, AND IRRESPECTIVE OF NEGLIGENCE OF A PARTY OR WHETHER 
+SUCH DAMAGES RESULT FROM A CLAIM ARISING UNDER TORT OR CONTRACT LAW OR (B) DAMAGES OF ANY KIND IN AN 
+AMOUNT GREATER THAN THE AMOUNT OF ACTUAL, DIRECT DAMAGES UP TO THE GREATER OF THE AMOUNT PAID AND 
+PAYABLE BY CUSTOMER FOR THE LICENSE TO THE APPLICABLE PRODUCT GIVING RISE TO SUCH DAMAGES. 
+EULA (07.07.2013) Page 2 of 12 BMC Confidential 
+
+
+11. TRIAL LICENSE. BMC may determine, in its sole discretion, to make products available to Customer without an Order and without 
+charge Such products are deemed to be "Products" pursuant to this Agreement except that (a) they are provided to Customer solely so 
+that Customer may evaluate internally whether to acquire a license to the products for a fee, (b) the license term for such products is 
+thirty (30) days; (c) the Products are provided "AS IS" and without any warranty or support, and (d) the products cannot be put into 
+productive use or included as part of Customer's business processes in any manner, unless or until they are expressly licensed and 
+paid for under an Order. BMC may terminate all of Customer's rights and licenses to these products for BMC's convenience upon 
+notice to Customer. 
+12. INFRINGEMENT CLAIMS. If a third party asserts a claim against Customer asserting that Customer's use of a Product in 
+accordance with this Agreement violates that third-party's patent, trade secret or copyright rights ("Infringement Claim"), then BMC 
+will, at its own expense: (a) defend or settle the Infringement Claim; and (b) indemnify Customer for any damages finally awarded 
+against Customer based on infringement by the Product. BMC's obligations under this Section will not apply if: (a) BMC's legal 
+department does not receive prompt, detailed written notice of the Infringement Claim from Customer, (b) BMC is not able to retain sole 
+control of the defense of the Infringement Claim and all negotiations for its settlement or compromise, (c) BMC does not receive all 
+reasonable assistance, or (d) the Infringement Claim is based on (i) the use of Product in combination with products not approved by 
+BMC in the Product's Documentation, (ii) the failure of Customer to use any updates to such Product within a reasonable time after 
+such updates are made available to Customer, or (iii) the failure of Customer to use the Product as permitted by the Order and in 
+accordance with the Documentation. BMC will not bind Customer to a monetary obligation in a settlement or compromise, or make an 
+admission on behalf of Customer, without obtaining Customer's prior consent. If BMC determines in BMC's reasonable discretion that 
+use of the Product should be stopped because of an Infringement Claim or potential Infringement Claim, if a court of competent 
+jurisdiction enjoins Customer from using a Product as a result of an Infringement Claim and BMC is unable to have such injunction 
+stayed or overturned, or if BMC settles an Infringement Claim on terms that would require Customer to stop using the Product, then 
+BMC will, at its expense and election: (a) modify or replace the Product, (b) procure the right to continue using the Product, or (c) if in 
+BMC's reasonable judgment, neither (a) or (b) is commercially reasonable, terminate Customer's License to the Product and (i) for any 
+perpetual licenses, issue a refund based upon the applicable license fees paid, prorated over 48 months from the date of the Order 
+under which the Products were initially licensed; and (ii) for any non-perpetual licenses, release Customer from its obligation to make 
+future payments for the Product or issue a pro rata refund for any fees paid in advance. This Section contains Customer's exclusive 
+remedies and BMC's sole liability for Infringement Claims. 
+13. TERMINATION. Upon thirty days advance written notice, either party may terminate this Agreement for its convenience on a 
+prospective basis; however, such termination will have no effect on Orders executed by the parties prior to its effective date and such 
+Orders will remain in full force and effect under the terms of this Agreement. BMC may: (i) terminate an Order and the Licenses to the 
+Products on that Order if Customer fails to pay any applicable fees due under that Order within 30 days after receipt of written notice 
+from BMC of non-payment; (ii) terminate any or all Orders, Licenses to the Products and/or this Agreement, without notice or cure 
+period, if Customer violates the intellectual property rights of BMC, its Affiliates or licensors, or uses the Products outside of the scope 
+of the applicable Licenses; or (iii) terminate all Licenses and this Agreement in whole or in part if Customer commits any other material 
+breach of this Agreement and fails to correct the breach within 30 days after BMC notifies Customer in writing of the breach. Upon any 
+termination of a License, Customer will immediately uninstall and stop using the relevant Product, and upon BMC's request, Customer 
+will immediately return such Product to BMC, together with all related Documentation and copies, or certify its destruction in writing. 
+Neither party is liable for its failure to perform any obligation under this Agreement, other than a payment obligation, during any period 
+in which performance is delayed by circumstances beyond that party's reasonable control. 
+14. AUDIT. If requested by BMC not more than once a year, Customer agrees to deliver to BMC periodic product usage reports 
+generated from specific products (when available) or written reports, whether generated manually or electronically, specifying 
+Customer's use of the Product. Additionally, if requested by BMC not more than once a year, Customer agrees to allow BMC to 
+perform an audit at Customer's facilities during normal business hours to ensure compliance with the terms of this Agreement. 
+Customer agrees to cooperate during any such audit and to provide reasonable access to its information and systems. If an audit 
+reveals that Customer has exceeded the Licensed Capacity for a Product, Customer agrees to pay the applicable fees for additional 
+capacity. If the understated capacity exceeds 5% of the Licensed Capacity of the applicable Product, then Customer agrees to also pay 
+BMC's reasonable costs of conducting the audit. 
+15. EXPORT CONTROLS. By using the Technology (as this term is defined below), Customer acknowledges that it is responsible 
+for complying with the applicable laws and regulations of the United States and all other relevant countries relating to exports and reexports. 
+Customer agrees that it will not download, access, license or otherwise export or re-export, directly or indirectly, any software 
+code (delivered as a BMC Product, through support/maintenance, or through other services), any technical publications relating to the 
+software code, such as release notes, reference, user, installation, systems administrator and technical guidelines, or 
+services (collectively, "Technology") in violation of any such laws and regulations, including regulations prohibiting export to certain 
+restricted countries ("Restricted Countries"), or without any written governmental authorization required by such applicable laws. The 
+list of Restricted Countries can and does change from time to time. It currently includes Cuba, Iran, North Korea, Sudan and Syria. In 
+particular, but without limitation, the Technology may not be downloaded, licensed, transferred or otherwise exported or re-exported, 
+directly or indirectly, including via remote access (a) into a Restricted Country or to a national or resident of a Restricted Country; (b) to 
+anyone on the U.S. Treasury Department's list of Specially Designated Nationals or Other Blocked Persons, the U.S. Commerce 
+Department's Denied Parties List, Entity List, or Unverified List; or (c) to or for any proliferation-related (nuclear weapons, missile 
+technology, or chemical/biological weapons) end use. By downloading, licensing and/or using the Technology, Customer represents 
+and warrants that (w) it is not located in, under the control of, acting on behalf of, or a national or resident of any Restricted Country; (x) 
+Customer is not on any list in (b) above; (y) Customer is not involved in any end use listed in (c) above; and (z) no U.S. federal agency 
+has suspended, revoked, or denied its export privileges. Customer agrees that all rights to use the Technology are granted on the 
+condition that such rights are forfeited if it fails to comply with these terms. 
+EULA (07.07.2013) Page 3 of 12 BMC Confidential 
+
+
+EC No. 428/2009 sets up a Community regime for control of exports of dual-use items and technology, and it is declared that this 
+Technology is intended for civil purposes only. Therefore, Customer agrees not to license, download or transfer, directly or indirectly 
+any Technology controlled by it to any military entity or to any other entity for military purposes, including any State Security Forces 
+pursuant to this Agreement, nor to knowingly transfer any Technology to end-users for use in connection with chemical, biological or 
+nuclear weapons or missiles capable of delivering such weapons. Customer also agrees, (a) not to export or re-export any Technology 
+to an entity that is based in China and describe themselves as "Institute(s)" or "Academy(ies)"; or (b) not to knowingly export or reexport 
+any Technology to any country that is subject to European Union, United Nations or Organizations for Security and Cooperation 
+in Europe sanctions without first obtaining a validated license. 
+
+16. GOVERNING LAW. This Agreement is governed by the substantive laws in force, without regard to conflict of laws principles: (a) 
+in the State of Texas, if you acquired the License in the United States, Puerto Rico, or any country in Central or South America; (b) in 
+the Province of Ontario, if you acquired the License in Canada (subsections (a) and (b) collectively referred to as the "Americas 
+Region"); (c) in Singapore, if you acquired the License in Japan, South Korea, Peoples Republic of China, Special Administrative 
+Regions of Hong Kong or Macau, Taiwan, Philippines, Indonesia, Malaysia, Myanmar, Singapore, Brunei, Vietnam, Cambodia, Laos, 
+Thailand, India, Pakistan, Australia, New Zealand, Papua New Guinea or any of the pacific island states (collectively, "Asia Pacific 
+Region"); or (d) in the Netherlands, if you acquired the License in any other country not described above. The United Nations 
+Convention on Contracts for the International Sale of Goods is specifically disclaimed in its entirety. 
+17. ARBITRATION. ANY DISPUTE BETWEEN CUSTOMER AND BMC ARISING OUT OF THIS AGREEMENT OR THE BREACH 
+OR ALLEGED BREACH, SHALL BE DETERMINED BY BINDING ARBITRATION CONDUCTED IN ENGLISH. IF THE DISPUTE IS 
+INITIATED IN THE AMERICAS REGION, THE ARBITRATION SHALL BE HELD IN NEW YORK, U.S.A., UNDER THE CURRENT 
+COMMERCIAL OR INTERNATIONAL, AS APPLICABLE, RULES OF THE AMERICAN ARBITRATION ASSOCIATION. IF THE 
+DISPUTE IS INITIATED IN A COUNTRY IN THE ASIA PACIFIC REGION, THE ARBITRATION SHALL BE HELD IN SINGAPORE, 
+SINGAPORE UNDER THE CURRENT UNCITRAL ARBITRATION RULES. IF THE DISPUTE IS INITIATED IN A COUNTRY OUTSIDE 
+OF THE AMERICAS REGION OR ASIA PACIFIC REGION, THE ARBITRATION SHALL BE HELD IN AMSTERDAM, NETHERLANDS 
+UNDER THE CURRENT UNCITRAL ARBITRATION RULES. THE COSTS OF THE ARBITRATION SHALL BE BORNE EQUALLY 
+PENDING THE ARBITRATOR'S AWARD. THE AWARD RENDERED SHALL BE FINAL AND BINDING UPON THE PARTIES AND 
+SHALL NOT BE SUBJECT TO APPEAL TO ANY COURT, AND MAY BE ENFORCED IN ANY COURT OF COMPETENT 
+JURISDICTION. NOTHING IN THIS AGREEMENT SHALL BE DEEMED AS PREVENTING EITHER PARTY FROM SEEKING 
+INJUNCTIVE RELIEF FROM ANY COURT HAVING JURISDICTION OVER THE PARTIES AND THE SUBJECT MATTER OF THE 
+DISPUTE AS NECESSARY TO PROTECT EITHER PARTY'S CONFIDENTIAL INFORMATION, OWNERSHIP, OR ANY OTHER 
+PROPRIETARY RIGHTS. ALL ARBITRATION PROCEEDINGS SHALL BE CONDUCTED IN CONFIDENCE, AND THE PARTY 
+PREVAILING IN ARBITRATION SHALL BE ENTITLED TO RECOVER ITS REASONABLE ATTORNEYS' FEES AND NECESSARY 
+COSTS INCURRED RELATED THERETO FROM THE OTHER PARTY. 
+18. U.S. FEDERAL ACQUISITIONS. This Article applies to all acquisitions of the commercial Product subject to this Agreement by or 
+on behalf of the federal government, or by any prime contractor or subcontractor (at any tier) under any contract, grant, cooperative 
+agreement or other activity with the federal government. By accepting delivery of the Product, the government hereby agrees that the 
+Product qualifies as "commercial" within the meaning of the acquisition regulation(s) applicable to this procurement. The terms and 
+conditions of this Agreement shall pertain to the government's use and disclosure of the Product, and shall supersede any conflicting 
+contractual terms and conditions. If the license granted by this Agreement fails to meet the government's needs or is inconsistent in any 
+respect with Federal law, the government agrees to return the Product, unused, to BMC. The following additional statement applies only 
+to acquisitions governed by DFARS Subpart 227.4 (October 1988): "Restricted Rights – Use, duplication and disclosure by the 
+Government is subject to restrictions as set forth in subparagraph (c)(1)(ii) of the Rights in Technical Data and Computer Software 
+clause at DFARS 252.227-7013 (Oct. 1988)." 
+19. BMC ENTITIES. The following licensing entities apply to this Agreement: 
+TerritoryUnited States and Latin America 
+Licensing Entity 
+BMC Software, Inc. 
+Address of Licensing Entity 
+2101 CityWest Boulevard, Houston, Texas 77042 
+South (not a specified Central or 
+South America country below) 
+Canada BMC Software Canada Inc. 50 Minthorn Boulevard, Suite 200 
+Markham, Ontario L3T 7X8 Canada 
+EMEA (Europe, Middle East and BMC Software Distribution B.V. Boeing Avenue 245, 1119 PE Schiphol Rijk, The 
+Africa) Netherlands 
+Brazil BMC Software do Brasil Ltda. Rua Leopoldo Couto de Magalhães Jr, 758 - 14º 
+andar, São Paulo – SP – Brazil 
+Mexico BMC Software Distribution de México, Torre Esmeralda II Blvd. Manuel Avila, Camacho #36, 
+S.A. de C.V. Piso 23 Lomas de Chapultepec, CP11000, México 
+D.F. 
+Argentina BMC Software de Argentina S.A. Ing. Butty 220 – Piso 14, Buenos Aires, Republica 
+Argentina, C1001AFB 
+S.E.A (Southeast Asia), Australia, BMC Software Asia Pacific Pte Ltd 600 North Bridge Road, #20-01/10 Parkview Square, 
+New Zealand, Hong Kong, Taiwan Singapore 188778 
+China BMC Software (China) Limited Suite 501-504, Level 5, Tower W1, The Towers, 
+Oriental Plaza, #1 East Chang An Ave., Dong Cheng, 
+Beijing 100738, China 
+Japan BMC Software K.K. Harmony Tower 24th Floor, 1-32-2 Honcho, Nakanoku, 
+Tokyo, 164-8721 
+
+EULA (07.07.2013) Page 4 of 12 BMC Confidential 
+
+
+Territory 
+Licensing Entity Address of Licensing Entity 
+
+Korea BMC Software Korea Ltd 
+33rd Fl., ASEM Tower World Trade Center, 159-1, 
+Samsung-dong, Kangnam-ku, Seoul 135-798 
+
+20. ASSIGNMENT AND TRANSFERS. Customer may not assign or transfer a Product separate from the applicable Agreement and 
+License, and may not assign or transfer an Agreement or a License, except in the event of a merger with or into, or a transfer of all or 
+substantially all of Customer's assets to, a third party who assumes all of Customer's liabilities and obligations under the Agreement 
+and License, and expressly agrees in writing to be bound by and comply with all of the terms of the Agreement and License. Except as 
+specifically authorized by applicable law, any attempt to assign or transfer an Agreement or License in violation of this provision will be 
+null and void and be treated as a violation of BMC's intellectual property rights or use outside the scope of the License. 
+21. FORCE MAJEURE. Any delay or failure of any party to perform any obligation under this Agreement caused by governmental 
+restrictions, labor disputes, storms or natural disasters, emergency, or other causes beyond the reasonable control of the party, will not 
+be deemed a breach of this Agreement. This provision does not apply to the payment of monies or any breach of Section 9. 
+22. DATA PROTECTION. (a) Customer acknowledges that BMC neither requires nor needs Customer to (i) send BMC any personal 
+data collected by Customer ("Customer Collected Data") or (ii) give BMC access to any Customer Collected Data. Consequently, 
+Customer remains responsible for either filtering, making anonymous, encrypting such Customer Collected Data or for having proper 
+procedures in place to prevent Customer Collected Data from being sent to or accessed by BMC. (b) In the course of normal business, 
+BMC may collect and process personal information related to the Customer (mainly contact and related information) in order to perform 
+its obligations under this Agreement and/or under an Order, such information being referred to hereinafter as "Customer Contact 
+Information". BMC undertakes to comply with all the relevant data protection legislation and/or regulations where the Customer 
+Contact Information is to be processed. BMC shall in particular : (i) allow Customer to access, modify, correct or erase Customer 
+Contact Information when necessary; (ii) take reasonable technical and organizational security measures to maintain the confidentiality 
+and integrity of Customer Contact Information and to prevent its unauthorized access, use, or disclosure; (iii) refrain from transferring 
+any Customer Contact Information to any third party without obtaining the express consent of the person to whom Customer Contact 
+Information relates to, and (iv) refrain from using Customer Contact Information for any other purpose than performing its obligations 
+under this Agreement and/or any Order. 
+23. MISCELLANEOUS TERMS. A waiver by a party of any breach of any term of this Agreement will not be construed as a waiver of 
+any continuing or succeeding breach. Should any term of this Agreement be invalid or unenforceable, the remaining terms will remain in 
+effect. The parties acknowledge they have read this Agreement and agree that it is the complete and exclusive statement of the 
+agreement and supersedes any prior or contemporaneous negotiations or agreements, between the parties relating to the subject 
+matter of this Agreement. There are no representations, promises, warranties, covenants, or undertakings between the parties other 
+than those expressly set forth in this Agreement. This Agreement may not be modified or rescinded except in writing signed by both 
+parties. The prevailing party in any litigation is entitled to recover its attorney's fees and costs from the other party. Customer agrees 
+that BMC and its affiliates may refer to Customer as a customer of BMC, both internally and in externally published media. The BMC 
+Products may contain both open source code ("Open Source") and proprietary third party code (together "TPS") which is delivered to 
+Customer as part of the Product and may not be taken out of the Product or used separately from the Product ("Embedded TPS"). 
+Embedded TPS is included in the defined term "Product" and is covered by all of the terms of the Agreement, including but not limited 
+to, the warranty and indemnification responsibilities of BMC. Some terms related to Embedded TPS may be included in the 
+Documentation due to requirements of the TPS licensor, however these terms will not (1) impose any additional restrictions on 
+Customer's use of the Product, or (2) negate or amend the BMC responsibilities with respect to the Embedded TPS in the Product (or 
+the Product itself). If the Open Source is also distributed separately by BMC pursuant to requirements by the owner of the Open 
+Source, then Customer may separately use the Open Source and such use will be subject to the separate license agreement that 
+accompanies the Open Source and not the BMC Agreement. 
+24. SUPPORT. Customer may acquire BMC support services ("Support") on an Order. Once Support is acquired for a Product, 
+Customer is automatically enrolled in Support on an annual basis for all Licensed Capacity of that Product, unless either party 
+terminates Support on all Licensed Capacity of a Product upon at least 30 days written notice prior to the next Support anniversary 
+date. The annual fee for Support will be agreed upon at the time of each Order. For a description of Support go to 
+www.bmc.com/support/review-policies. BMC may change its Support terms, to be effective upon Customer's support anniversary 
+date. BMC reserves the right to discontinue Support for a Product where BMC generally discontinues such services to all licensees of 
+that Product. If Customer terminates Support and then re-enrolls in Support, BMC may charge Customer a reinstatement fee. 
+25. 
+ADDITIONAL TERMS. The following additional terms are incorporated into this Agreement. 
+a. 
+DEFINITIONS. Terms set forth below have the indicated meaning regardless of whether they are capitalized. 
+"Client" means a third party whose data is processed by Customer and is only permitted if Customer is an authorized BMC service 
+provider. 
+"Cloud Environment" means a shared pool of configurable computing resources (e.g., networks, servers, storage, applications 
+and services) managed so they behave as if they were one computer. 
+"Cloud Services" means the dynamic provisioning of IT resources as a service, where typically the Cloud infrastructure is shared 
+across multiple tenants, and tenants are billed on a utility/subscription basis for what they use. Examples of Cloud Services include 
+Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). 
+"Cloud Service Provider" is an entity that provides Cloud Services to Clients under agreements pursuant to transactions for which 
+the Cloud Service Provider is compensated. 
+"Computer" or "Server" has the meaning generally given within the computer industry, which is a single machine, whether a 
+central processing unit, such as a mainframe machine, or a distributed systems machine, such as a Unix or Intel based server. A 
+mainframe machine would be an individual mainframe computer having single or multiple processors or engines. For purposes of 
+distributed systems machines (excluding Control-M and Mainview product(s), a Computer or Server may be physical or virtual. 
+EULA (07.07.2013) Page 5 of 12 
+BMC Confidential 
+
+
+"Documentation" means the technical publications relating to the software, such as release notes, reference, user, installation, 
+systems administrator and technical guidelines, included with the Product. 
+"Enterprise" is the environment consisting of all hardware owned or leased by a Customer, or by a Client respectively, in the 
+Territory. 
+
+
+b. 
+LICENSE RESTRICTIONS. The following restrictions apply to certain Products. 
+BMC AppSight Products: 
+. 
+BMC AppSight Initial Platform ("AppSight System") may only be used to support a Customer's own applications according to 
+the AppSight System configuration licensed. For this purpose, Customer's "own" applications are those of which Customer is 
+the ultimate beneficiary or applications developed by Customer as an independent software vendor. Each AppSight System 
+may only be used with the platform designated on the Product Table (Windows/.Net or J2EE) unless a BMC AppSight 
+Additional Platform is licensed for that AppSight System which enables the AppSight System to be used with an additional 
+platform. Each AppSight System may only be used for the Workflow designated on the Product Order Form unless a BMC 
+AppSight Additional Platform is licensed for that AppSight System for an additional Workflow. 
+
+o 
+AppSight System-Team Edition may only be used at a designated Site to support a designated Application for a 
+designated Workflow. 
+o 
+AppSight System – Group Edition may be used at a designated Site to support multiple applications of a designated 
+Group for a designated Workflow. 
+o 
+AppSight System – Division Edition may be used at multiple Sites to support multiple applications of a designated 
+Division for a designated Workflow. 
+. 
+BMC AppSight Named User is a license to use the full BMC AppSight System. Customer must provide the individual domain 
+ID or email ID for each named user. Once designated, the BMC AppSight Named User may only be changed if the individual 
+leaves the Customer or the Team, Group or Division as applicable. BMC AppSight Named Users may not be transferred from 
+one AppSight System to another. 
+
+. 
+BMC AppSight QA User is a license to use the AppSight Test Recorder module of the AppSight System. 
+
+. 
+BMC AppSight Level 1 Viewer is a license to use limited-functions of AppSight System that provides a user with the ability to 
+view and replay the visual recording of a Black Box log. The AppSight Level 1 Viewer may be used by the named users 
+provided to BMC. 
+
+. 
+BMC AppSight for Citrix Support User is a license to use the AppSight System for Citrix application support. Only licensed 
+BMC AppSight for Citrix users may use the AppSight System for Citrix support. 
+
+. 
+BMC AppSight Connector for Defect/Incident Tracking may only be used to interface the AppSight System to Customer's 
+defect/incident tracking application. 
+
+. 
+BMC Desktop Capture. Customer must provide the individual domain ID or email ID for each named user. The BMC Desktop 
+Capture Player may be used by licensed named users to play back and view BMC Desktop Capture incident recordings. Once 
+designated, a named user may only be changed if the individual leaves the Customer. 
+
+BMC AppSight and BMC Application Problem Resolution Products: 
+
+. 
+License Key. The Product may require a software license key that limits usage to that provided under the terms of the 
+Agreement and this Product Order Form. Licensee must install and run license manager software provided with the Product at 
+no additional cost. All AppSight Consoles must be connected to the license manager. 
+
+. 
+AppSight Black Box is the agent portion of the AppSight System.. All AppSight Systems include unlimited AppSight Black 
+Boxes which may be installed on any computers of Customer or Customer's customers. Customer may provide Customer's 
+customers the limited right to install and to use on behalf of Customer the AppSight Black Boxes (but not any other 
+components of the AppSight System) but only for the sole purpose of providing information to Customer to support Customer's 
+own software applications, and in no event to support Customer's customer's own internal software applications. 
+
+. 
+Embedded Black Box. Customer may incorporate the AppSight Black Box into a Customer application, in which case, in 
+addition to the licenses granted above, Customer is hereby granted a worldwide, nonexclusive, perpetual license to (a) 
+incorporate the unmodified unaltered object code version of the AppSight Black Box into Customer's designated application 
+("Customer Application"); (b) reproduce and distribute the AppSight Black Box as incorporated into the Customer Application; 
+and (c) to use in unaltered form the BMC trademarks, service marks or marketing logos (the "BMC Trademarks") solely to 
+promote the Customer Application, provided Customer obtains BMC's prior written approval for each new usage. Customer 
+shall ensure that any Customer Application incorporating the AppSight Black Box shall be governed by a license agreement 
+which is at least as protective of BMC's proprietary rights in the AppSight Black Box as of Customer's proprietary rights in the 
+Customer Application, but no less protective than this Agreement, including rights and restrictions related to end user's right to 
+make backup and archival copies. In the event Customer incorporates the Black Box into Customer's Application, Customer 
+shall include in the startup screen, help and/or the about screens in the Customer Application, BMC's logo and the following, 
+"POWERED BY BMC'S APPSIGHT BLACK BOX TECHNOLOGY." Furthermore, Customer shall visually display the BMC 
+name and the BMC product names and trademarks in the documentation for the Customer Application incorporating the 
+AppSight Black Box, on Customer's website and in advertising and promotional materials. 
+
+BMC Atrium Orchestrator Automation Pack – Device Endpoint License Add-on: Restricts license rights to up to five (5) peers 
+in the orchestration environment; and allows use of the following runbooks (Continuous Compliance for Network Automation and 
+NetApp Solutions) and supporting base Adapters only for the Licensed Capacity. 
+BMC Atrium Orchestrator Automation Pack – Server Endpoint License Add-on: Restricts license rights to up to five (5) peers 
+in the orchestration environment; and allows use of the following runbooks (Continuous Compliance for Server Automation, 
+Discovery Synch, and NetApp Solutions) and supporting base Adapters only for the Licensed Capacity. 
+BMC Atrium Orchestrator – Adapters License Add-on: Restricts license rights to deploy one unique adapter for every unit 
+licensed; also includes unlimited deployment rights to use Light Weight Activity Peers in combination with licensed adapters; test 
+and development license are provided at no additional cost. 
+-Adapter - a system/interfaces/gateways/connectors used to talk to external applications. 
+
+
+EULA (07.07.2013) Page 6 of 12 
+BMC Confidential 
+
+
+-Light Weight Activity Peer - Slave peers/servers that can optionally be added to a grid to accommodate network latencies 
+and/or security topologies when deployed in combination with adapters; these peers do not directly add incremental 
+processing power. 
+
+BMC Atrium Orchestrator - Peer License Add-on: Restricts license rights to deploy one peer for every unit licensed; a peer can 
+either be a Configuration Distribution Peer or an Application Peer; test and development license are provided at no additional cost. 
+-Application Peer – Server that executes workflows. 
+
+-Configuration Distribution Peer – Master application that controls all workflows, including load balancing across the grid of 
+Peers. 
+BMC BladeLogic Automation Suite – Base License: Includes unlimited use of the following BMC Atrium Orchestrator core 
+product components including Repository, Access Manger, Grid Manager, Metrics and Reporting, Operations Actions Management 
+Modules, and Operations Actions Utility Modules. Test and development licenses are provided at no additional cost. 
+Restricts license rights to use the following BMC Atrium Orchestrator product components for configuration of an initial 
+Orchestration environment as detailed here: One (1) Configuration Distribution Peer, 3 Development Studio user licenses, 5 
+
+Operator Control Panel user licenses, and Application Adapters for BMC products. 
+-Adapter - a system/interfaces/gateways/connectors used to talk to external applications 
+-Configuration Distribution Peer – Master application that controls all workflows, including load balancing across the grid of 
+
+Peers. 
+-Development Studio – Graphical workflow authoring tool used to create and modify workflows. 
+-Operator Control Panel – Web-based UI designed for operators to monitor workflows in action, launch workflows manually, 
+
+or view reports on workflow actions. 
+BMC BladeLogic Application Release Automation: Excludes use of BMC BladeLogic agent for server compliance, remediation, 
+configuration, patching, and provisioning tasks. 
+BMC Application Automation – License Add-on: Excludes use of BMC BladeLogic agent for server compliance, remediation, 
+configuration, patching, and provisioning tasks 
+BMC Decision Support – Server Automation (5 Viewer, 1 Query License): Excludes use of Report Authoring module which 
+must be licensed separately. 
+BMC Decision Support – Network Automation (5 Viewer/Query Licenses): Excludes use of Report Authoring module which 
+must be licensed separately. 
+BMC Decision Support – Database Automation (5 Viewer/Query Licenses): Excludes use of Report Authoring module which 
+must be licensed separately. 
+BMC BladeLogic Server Automation – Configuration Module: Excludes use of BMC BladeLogic agent for server compliance, 
+remediation, and provisioning tasks. 
+BMC BladeLogic Server Automation – Provisioning Module: Excludes use of BMC BladeLogic agent for server configuration, 
+patching, compliance, and remediation tasks. 
+BMC Capacity Management for Mainframes: Any BMC Capacity Management for Mainframes Product and/or any BMC 
+Performance Analyzer for Mainframes, BMC Performance Predictor for Mainframes, BMC Performance Perceiver for Mainframes, 
+BMC Performance Analyzer for Mainframe Applications and other related products that may be released as part of the BMC 
+Capacity Management for Mainframes must be licensed for all Computer(s) within the mainframe environment for which the 
+Product or one of its components will process data or execute functionality on behalf of, regardless of whether the Product or one 
+of its components is specifically installed on that Computer. The Products may be installed on or moved to any Computer(s) 
+included in the licensed environment. 
+BMC Capacity Management Products: Any BMC Capacity Management Product, BMC Capacity Optimization Product, BMC 
+Performance Assurance Product and/or any other related products that may be released as part of the BMC Capacity Management 
+solutions for distributed systems environments are licensed to the Computer(s) for which the Products are initially assigned and 
+may not be reassigned to another Computer(s) unless the original Computer(s) has been removed from service. "Removed from 
+service" or "out of service" is defined as no longer providing support for a business application or workload. A license is required for 
+all Computers for which the Product or one of its components executes functionality, either locally or remotely. 
+
+BMC Cloud Service Management – Development Environment for Service Providers License Add-on ("CSM Dev"): 
+
+. 
+The Product may only be used in the Cloud Service Provider's Development Sites for the sole purpose of developing or 
+demonstrating commercial Cloud Services. The Product may not be used for production processing, such as a cloud pilot or 
+cloud production environment for Clients or any other third party. Licenses cannot be transferred (i) from a Development Site 
+to other environments, or (ii) from a Cloud Service Provider to any other third party. 
+
+. 
+CSM Dev provides a license to use the BMC Service Cost Management solution, excluding access to, and usage of, IT 
+service cost industry benchmark data content published by Rubin Systems, Inc. 
+
+BMC Cloud Lifecycle Management – Core License Add-on ("CLM Core"): 
+
+. 
+The Product may only be used in a Cloud Environment. 
+. 
+The Product includes the right to use BMC Network Automation for the network devices in the Cloud Environment as long as 
+the number of supported Network Devices does not exceed the Licensed Capacity. 
+
+. 
+The Product includes the right to use BMC Network Automation only in order to enable the initial provisioning, on-going 
+network operations, and use of the Virtual Data Center feature for Network Devices in the Cloud Environment. The Product 
+does not include the right to use BMC Network Automation for the management of Network Devices that are not in a BMC 
+Network Automation Pod. 
+
+BMC Cloud Lifecycle Management – Standard Pack License Add-on ("CLM Standard"): 
+
+. 
+The Product may only be used in a Cloud Environment. 
+. 
+If Customer is also a Cloud Service Provider then Product cannot be used by the Cloud Service Provider for other 
+environments, including but not limited to the Cloud Service Provider's internal IT environment, or System Integration activities 
+
+EULA (07.07.2013) Page 7 of 12 
+BMC Confidential 
+
+
+for Clients which are not part of Cloud Services. The Product may not be installed on Client premises or accessed or used 
+directly by Clients. 
+
+. 
+The Product includes expanded license rights for BMC Atrium Orchestrator including unlimited peer licenses, use of all 
+generally available Base Adapters, and Development Studio and Operator Control Panel user licenses to support the Licensed 
+Capacity. The Product does not include the right to use any other Application Adapters other than what is installed out-of-thebox. 
+
+
+. 
+Customer may only use the BMC Remedy Service Request Management functionality of the BMC Remedy ITSM product. 
+The Product includes the right to use BMC Remedy Service Request Management for any number of users, to support any 
+service requests that are directly related to the delivery or consumption of Cloud Services, for the Licensed Capacity. 
+
+. 
+The Product includes the right to use BMC Network Automation for the network devices in the Cloud Environment as long as 
+the number of supported Network Devices does not exceed the Licensed Capacity. The Product includes the right to use BMC 
+Network Automation only in order to enable the initial provisioning, on-going network operations, and use of the Virtual Data 
+Center feature for Network Devices in the Cloud Environment. The Product does not include the right to use BMC Network 
+Automation for the management of Network Devices that are not in a BMC Network Automation Pod. 
+
+. 
+The Product includes the right to use BMC ProactiveNet Performance Management for the Licensed Capacity, only in order to 
+deliver the CPU monitoring capabilities that are installed out-of-the-box. The Product does not include the right to use any 
+other functional capabilities of BMC ProactiveNet Performance Management, including but not limited to, use of the BMC 
+ProactiveNet Performance Management console for operational purposes, monitoring of IT infrastructure beyond what is 
+specified, and any other analytics, diagnostics, event or impact management capabilities. 
+
+. 
+The product includes the right to use BMC Capacity Optimization for the Licensed Capacity only in order to enable the out-ofthe-
+box Capacity Aware Placement Advice capability as part of the CLM Resource Manager. The Product does not include the 
+rights to use any other functional capabilities of BMC Capacity Optimization, including but not limited to, the use of BMC 
+Capacity Optimization for capacity planning, virtualization and consolidation; capacity analysis, forecasting, reporting and 
+dashboards; and capacity metering for showback or chargeback. 
+
+BMC Cloud Lifecycle Management – Foundation Pack for Service Providers License Add-on ("CLM Foundation"): 
+
+. 
+The Product may only be used in a Cloud Environment. 
+
+. 
+If Customer is also a Cloud Service Provider then The Product cannot be used by the Cloud Service Provider for other 
+environments, including but not limited to the Cloud Service Provider's internal IT environment, or System Integration activities 
+for Clients which are not part of Cloud Services. The Product may not be installed on Client premises or accessed or used 
+directly by Clients. 
+
+. 
+The Product includes expanded license rights for BMC Atrium Orchestrator including unlimited peer licenses, use of all 
+generally available Base Adapters, and Development Studio and Operator Control Panel user licenses to support the Licensed 
+Capacity. The Product does not include the right to use any other Application Adapters other than what is installed out-of-thebox. 
+
+
+. 
+The Product includes the right to use the BMC BladeLogic Server Automation (BBSA) for Server Provisioning and Software 
+Deployment functionality only. The Product does not include the right to use any other functionality of BBSA, including, but not 
+limited to, patching, compliance, application release automation, configuration management, discovery, inventory, and nshscripting. 
+
+
+. 
+Customer may only use the BMC Remedy Service Request Management functionality of the BMC Remedy ITSM product. 
+The Product includes the right to use BMC Remedy Service Request Management for any number of users, to support any 
+service requests that are directly related to the delivery or consumption of Cloud Services, for the Licensed Capacity. 
+
+. 
+The Product includes the right to use BMC Network Automation for the network devices in the Cloud Environment as long as 
+the number of supported Network Devices does not exceed the Licensed Capacity. The Product includes the right to use BMC 
+Network Automation only in order to enable the initial provisioning, on-going network operations, and use of the Virtual Data 
+Center feature for Network Devices in the Cloud Environment. The Product does not include the right to use BMC Network 
+Automation for the management of Network Devices that are not in a BMC Network Automation Pod. 
+
+. 
+The Product includes the right to use BMC ProactiveNet Performance Management for the Licensed Capacity, only in order to 
+deliver the CPU monitoring capabilities that are installed out-of-the-box. The Product does not include the right to use any 
+other functional capabilities of BMC ProactiveNet Performance Management, including but not limited to, use of the BMC 
+ProactiveNet Performance Management console for operational purposes, monitoring of IT infrastructure beyond what is 
+specified, and any other analytics, diagnostics, event or impact management capabilities. 
+
+. 
+The product includes the right to use BMC Capacity Optimization for the Licensed Capacity only in order to enable the out-ofthe-
+box Capacity Aware Placement Advice capability as part of the CLM Resource Manager. The Product does not include the 
+rights to use any other functional capabilities of BMC Capacity Optimization, including but not limited to, the use of BMC 
+Capacity Optimization for capacity planning, virtualization and consolidation; capacity analysis, forecasting, reporting and 
+dashboards; and capacity metering for showback or chargeback. 
+
+Desktop/Mobile Management Product Restrictions for BMC Configuration Management Products: Each "Desktop/Mobile 
+
+Management" License is limited for use with one Client Endpoint. "Client Endpoint" means a laptop, desktop or other non-Server 
+
+Computer. 
+
+. 
+Desktop/Mobile Patch Management Restriction: A "Desktop/Mobile Patch Management" License may only be used to 
+manage, deploy, update and inventory anti-virus software and security patches on one Client Endpoint. 
+
+. 
+Desktop/Mobile Patch Management Pack Restriction: The Desktop/Mobile Application Management Product and the 
+Desktop/Mobile Configuration Discovery Product that are shipped with the Desktop/Mobile Patch Management Pack License 
+may only be used to manage, deploy, update and inventory anti-virus software and security patches on one licensed Client 
+Endpoint, unless Customer has separately licensed the Desktop/Mobile Application Management Product and the 
+Desktop/Mobile Configuration Discovery Product. Customer may not use the functionality of such Products for any other 
+purpose. 
+
+EULA (07.07.2013) Page 8 of 12 
+BMC Confidential 
+
+
+. 
+BMC Configuration Management Desktop OS Management Restriction: A "BMC CM Desktop OS Management" License 
+may only be used to manage operating system migration activities on one Client Endpoint. Each BMC CM Desktop OS 
+Management License: (a) may only be used on a licensed Client Endpoint that is licensed for use with both a Desktop/Mobile 
+Application Management License and a Desktop/Mobile Configuration Discovery License; and (b) may not be redeployed or 
+harvested to a different Client Endpoint. 
+
+. 
+Extranet Application Management Restriction: An "Extranet Application Management" License may only be used on one 
+Client Endpoint. The parties must mutually agree on the name of each Single Application and its primary function at the time of 
+Order. Single Application is defined as a Tuner channel containing one application with one primary function, and Tuner is 
+defined as is the client component of the Product configured by Customer for deployment on licensed Endpoints. 
+
+BMC Configuration Management Control Center Module Restriction for BMC Configuration Management Products: Each 
+"BMC CM Control Center" License may only be used by Administrators for the project for which it was licensed. An Administrator is 
+defined as an employee with access to or the right to use the administrative components of the Product. 
+BMC Configuration Management Developers Kit Definition and Restriction for BMC Configuration Management Products: 
+A "BMC CM Developers Kit" license allows Customer to embed the "SDK Run Time Code" in unmodified object code form, into a 
+single software application developed by Customer to create an "SDK Client." "SDK Run Time Code" means the unmodified object 
+code files in the BMC CM Product that are designated as re-distributable. "SDK Client" means a software technology with e a 
+principal purpose and functionality substantially different than that of the SDK Run Time Code and that uses only a BMC 
+Desktop/Mobile Management Product, a BMC Device Management Product and/or a BMC Server Management Product, as 
+applicable, to invoke the update functionality of the SDK Run Time Code. An SDK Client may only be used on, or distributed to, 
+licensed Endpoints that are licensed separately by Customer, which licensed Endpoints may be within or outside of Customer's 
+organization. "Client Endpoint" means a laptop, desktop or other non-Server Computer. "Device Endpoint" means a personal 
+digital assistant or similar computing device. "Endpoint" means a Client Endpoint, a Device Endpoint, a Server Endpoint, or Other 
+Endpoint, as the case may be. "Other Endpoint" means a router, a switch, a hub, or other network device, peripheral or hardware 
+instrument, as the case may be. "Server Endpoint" is any virtual or physical Computer that provides a service for other Computers 
+or users connected to it via the Internet, extranet, intranet, or other networked technologies. 
+Device Management Product Restriction for BMC Configuration Management Products: Each "Device Management" License 
+is limited for use with one Device Endpoint. "Device Endpoint" " means a personal digital assistant or similar computing device. 
+Server Management Product Restrictions for BMC Configuration Management Products: Each "Server Management" 
+License is limited for use per CPU – Subcapacity. 
+. 
+Server Patch Management Restriction: A "Server Patch Management" License may only be used to manage, deploy, 
+
+update and inventory anti-virus software and security patches per CPU – Subcapacity. 
+
+. 
+Server Patch Management Pack Restriction: The Desktop/Mobile Application Management Product and the Desktop/Mobile 
+Configuration Discovery Product that are shipped with the Server Patch Management Pack License may only be used to 
+manage, deploy, update and inventory anti-virus software and security patches on licensed Server Endpoints, unless 
+Customer has separately licensed the Desktop/Mobile Application Management Product and the Desktop/Mobile Configuration 
+Discovery Product. Customer may not use the functionality of such Products for any other purpose. With respect to the above 
+Server Management Licenses, Customer must comply with any restrictions designated at the time of Order on the maximum 
+number of CPUs that may be included in each Server Endpoint. "Server Endpoint" is any virtual or physical Computer that 
+provides a service for other Computers or users connected to it via the Internet, extranet, intranet, or other networked 
+technologies. 
+
+CONTROL-M/Assist: Control-M/Assist may only be used to interface with the third party scheduler and may not be used to 
+schedule or manage batch processes outside of the cross-scheduler dependencies. 
+BMC Identity Products: 
+. 
+Internal User: If a Product name includes the term "Internal User," that Product can only be used by Customer's 
+
+
+employees (full time and part time) and contractors whose information is being managed using the BMC IdM tools. Information 
+on these users will typically be found in the HR database. 
+
+. 
+External User: If a Product name includes the term "External User," that Product can only be used by Customer's business 
+partners and customers/ prospects whose information is being managed using the BMC IdM tools or Customer's employees 
+(full or part time)/contractors who are licensed to use one or more of the following BMC Identity Management Tools: (1) BMC 
+Identity User Administration (2) BMC Identity Password Management (3) BMC Identity Compliance Manager, provided the 
+users have no more than 2 logons (access points) being managed by the IdM tools. 
+
+. 
+Archive User: If a Product name includes the term "Archive User," that Product can only be used by users whose identity 
+information is stored within the IdM system but is not being actively managed; the information could be stored for the purpose 
+of audit/ forensics etc. 
+
+. 
+Developer User: If a Product name includes the term "Developer User," that Product can only be used by users who create or 
+modify applications using the BMC Directory Management Studio. 
+
+BMC Middleware Management - Performance and Availability and BMC Middleware Management - Transaction Monitoring 
+Products: If Customer is using BMC Middleware Management version 6.0 or lower, notwithstanding the Licensed Capacity the 
+number of individual employees or contractors of Customer to whom access to the Management Console is granted ("End Users") 
+is limited to the lesser of (a) the Licensed Capacity of the Product if priced on a per named user Unit of Measurement, or (b) 250 
+End Users. 
+BMC Middleware and Transaction Management Products: If Customer is using BMC Middleware Management version 6.0 or 
+lower, when licensed on the per CPU - Subcapacity or per MIPS Unit of Measurement, regardless of the Licensed Capacity, 
+Customer is limited to ten (10) individual employees or contractors to whom access to the Management Console is granted ("End 
+Users"). When licensed on the per named user Unit of Measurement, Customer is limited to the lesser of (a) the Licensed Capacity 
+of the Product, or (b) 250 End Users. 
+
+EULA (07.07.2013) Page 9 of 12 
+BMC Confidential 
+
+
+BMC Mobile Device Management Products: For BMC Mobile Device Management (MDM) Products, any clickwrap agreement 
+with AirWatch, LLC contained in the Products is void and of no effect. Customer's use of these Products is governed by the 
+Agreement. 
+BMC Monitoring Only Products: Customer is not entitled to use analytics as further detailed in the Documentation. 
+BMC Real End User Experience Monitoring and Analytics - Licensed Add-on Product: For synthetic transaction monitoring 
+solutions, each instance of the execution server installed should be counted. For real end user transaction monitoring solutions, 
+each instance of the watchpoint created should be counted. 
+BMC Remedy Products: Customer may not bypass, in any way, the use of a concurrent or named user license to manage an 
+update (including, without limitation, submitting a ticket to a parallel form and then using workflow to perform the update without a 
+license). 
+Development License Restriction for BMC Remedy Products: If a Product name includes the term "Dev Lsn", Customer will 
+restrict installation, access and use of such Product to a server dedicated to development and testing only, and will not allow any 
+production or commercial activity on that server. 
+Hot Backup License Definition and Restriction for BMC Remedy Products: A hot backup license is a replicate of the Remedy 
+production licenses on one backup server. Customer may access that backup server only when the customary server on which the 
+AR System is installed fails or in preparation of that backup server for such situation. 
+Load Balanced System Restriction for BMC Remedy Products: If Customer has multiple servers in a single logical environment 
+pointing to a single AR System database instance, only one Instance of Remedy "per Instance" licenses is required for installation 
+on these servers (except for the AR System, which must be licensed for each server). 
+BMC Server Automation – Compliance License Add-on: Excludes use of the BMC BladeLogic agent for server configuration, 
+patching, and provisioning tasks. 
+BMC Server Automation – Configuration License Add-on: Excludes use of the BMC BladeLogic agent for server compliance, 
+remediation, and provisioning tasks. 
+BMC Server Automation – Patch License Add-on: Excludes use of the BMC BladeLogic agent for server configuration, 
+compliance, and provisioning tasks. 
+BMC Server Automation – Provisioning License Add-on: Excludes use of the BMC BladeLogic agent for server configuration, 
+patching, compliance, and remediation tasks. 
+BMC Service Desk Express Products: No terms in any Business Objects or Crystal license agreement embedded in the Product 
+apply to the Product. Customer may make and operate 2 additional copies of the Product solely for internal pre-production 
+configuration and testing purposes. 
+BMC Service Desk Express Suite Restriction for BMC Service Desk Express Products: When purchasing Concurrent User 
+licenses for the "Service Desk Express" Product, regardless of the number of such licenses purchased and regardless of the 
+number of purchases made (including future purchases), Customer is restricted via license keys to a total of (i) five Concurrent 
+Users conducting a process in the report environment of the Crystal Reports "Web Server" product which is embedded in the 
+"Service Desk Express" Product and (ii) two named users accessing the "Crystal Reports Professional " product which is bundled 
+with the "Service Desk Express" Product. 
+License Allocation Restriction for BMC ITSM Products: Notwithstanding anything to the contrary in this Order or the 
+Agreement, and when the Product is licensed (i) on the "per named user" Unit of Measurement, Customer may exchange 5 named 
+user licenses of the Product for 2 licenses of the same Product with the Unit of Measurement of "per concurrent user" or (ii) on the 
+"per concurrent user" Unit of Measurement, Customer may exchange 2 concurrent user licenses for 5 licenses of the same Product 
+with the Unit of Measurement of "per named user". Customer will not incur additional charges for such exchange of licenses so 
+long as Customer does not exceed the Licensed Capacity of the Product granted to Customer, however, Customer must: (i) notify 
+BMC in writing of its intent to exchange the Product Licenses and (ii) enter into a separate Order to reflect Customer's new 
+Licensed Capacity and the new Unit of Measurement. 
+Products Installed on Customer's Amazon Web Services ("AWS") Cloud Environment: 
+. 
+In instances where Customer hosts the Product on Customer's AWS cloud environment, Customer is responsible for working 
+
+with AWS to ensure the security of its overall AWS cloud environment and the Product. 
+
+. 
+An Amazon Machine Image ("AMI") is a special type of pre-configured operating system and virtual application software which 
+is used to create a virtual machine within the Amazon Elastic Compute Cloud ("EC2"). An AMI serves as the basic unit of 
+deployment for services delivered using EC2. In instances where BMC provides Customer with an AMI of a Product to be 
+used on Customer's AWS cloud environment, Customer is responsible for the security of the Product's operation and any 
+potential vulnerabilities in a Product AMI's preconfigured OS stack, Application stack, and/or OS configuration. 
+
+c. 
+UNITS OF MEASUREMENT. The following units of measurement apply to certain Products. 
+per adapter: A license is required for each installation of an adapter that interfaces with the Product. 
+per agent: A license is required for each unit of software with the official name of Remote Sys Call Daemon or RSCD Agent that can be 
+deployed on a physical or virtual operating system. 
+per application: A license is required for all unique collection of application component templates and configuration objects used to 
+form a single logical platform defined by the Customer. 
+per asset: A license is required for every physical or logical Server Endpoint, Client Endpoint, Device Endpoint, Data Center Rack, Data 
+Center IP Sensor, or Other Endpoint monitored, managed or discovered by the Product. "Client Endpoint" means a laptop, desktop or 
+other non-Server Computer. "Device Endpoint" means a personal digital assistant or similar computing device. "Other Endpoint" 
+means a router, a switch, a hub, or other network device, peripheral or hardware instrument, as the case may be. A "Server Endpoint" 
+is any virtual or physical Computer that provides a service for other Computers or users connected to it via the Internet, extranet, 
+intranet, or other networked technologies. 
+per CiscoTM UCS Server: A license is required for each Cisco Unified Computing System (UCS) Server on which the Product is 
+installed and/or manages regardless of whether the Product or one of its components is installed on that Server. 
+
+
+EULA (07.07.2013) Page 10 of 12 
+BMC Confidential 
+
+
+per Client Endpoint: A license is required for each Client Endpoint. "Client Endpoint" means a laptop, desktop or other non-Server 
+Computer. 
+per component: A license is required for all objects that represent a physical or logical part of the service model. 
+per concurrent access license: A license is required for the maximum number of simultaneous sessions accessing the Product. 
+Sessions are counted in packs of 5. 
+per concurrent session: A license is required for the maximum number of simultaneous sessions accessing the Product. 
+per concurrent user: A license is required for the maximum number of individual employees or contractors of Customer to whom 
+simultaneous access has been granted to the Product on a computer or multiple computers. 
+per CPU – Full Capacity: A license is required for the total number of active, physical CPUs in each Computer upon which the Product 
+is installed or which the Product manages, either remotely or locally. "CPU" means a physical processor or central unit in a designated 
+Computer containing the logic circuitry that performs the instructions of a Computer's programs and refers to the "socket" which can 
+contain one or more processor cores. 
+per CPU – Subcapacity: A license is required for all active, physical CPUs which the Product manages, either remotely or locally. 
+"CPU" means a physical processor or central unit in a designated Computer containing the logic circuitry that performs the instructions 
+of a Computer's programs and refers to the "socket" which can contain one or more processor cores. 
+per database: A license is required for the total allocated database space per host ID or physical Computer which the Product is 
+managing. The total allocated database capacity cannot be segregated or aggregated into lower or higher ranges. 
+per deployed robot: A license is required for all PATROL End-to-End Response Timer robots deployed. 
+per Device Endpoint: A license is required for each Device Endpoint. "Device Endpoint" means a personal digital assistant or similar 
+computing device. 
+per engine: A license is required for each mainframe general purpose engine on the server upon which the Product is installed and/or 
+manages regardless of whether the Product or one of its components is installed on that Server. 
+per enterprise: A license is required per Customer and per Client each, regardless of the number of times Customer installs the 
+Product in its Enterprise or its Client's Enterprise. 
+per gigabyte: A license is required for the total allocated database space of all Computers on which the Product has been installed or 
+operated. 
+per gigabyte range: A license is required for the total allocated database space per host ID or physical Computer which the Product is 
+managing. The Product may not be moved to another Computer unless the current Computer is taken out of service. The total allocated 
+database capacity cannot be segregated or aggregated into lower or higher ranges among different Computers. For example: if 
+Customer licenses 26-50 gigabytes, the Customer is only licensed for a maximum of 50 gigabytes in total across all the databases of 
+the licensed Product on one particular Computer. 
+per installed server: A license is required for each Server (with a Classification at the appropriate Tier level, if applicable) upon which 
+the Product or any of its components is installed. 
+per instance: A license is required for all named occurrences of the Product created or installed in the Enterprise. 
+per Linux engine: A license is required for all engines of a mainframe Computer on which Customer is running Linux, when applicable 
+classified by Linux Group using BMC's standard Computer classification. 
+per managed asset – Device Endpoint: A license is required for every Device Endpoint that is monitored, managed, or discovered by 
+the Product(s). A "Device Endpoint" can be any virtual or physical Non-Server Client Computer (e.g. laptop, desktop computer, PDA, 
+smart phone); any network device (e.g. router, switch, hub) standalone or chassis-based device/card/processor using a unique-IP 
+address (also includes virtual network devices managed through the IP address of its physical host); and independent storage (e.g. a 
+disk array, a fiber switch, a tape library, a switch director). When applicable, the license must be computed at the appropriate tier level. 
+per managed asset – server endpoint: A license is required for every Server Endpoint monitored, managed (directly or indirectly), or 
+discovered by the Product(s). "Server Endpoint" is any virtual or physical Computer that provides a service for other Computers or 
+users connected to it via the Internet, extranet, intranet, or other networked technologies. 
+per managed component: A license is required for all objects that represent a physical or logical part of the service model managed by 
+the Product. 
+per managed network device: A license is required for each Network Device managed using a unique IP-address. "Network 
+Device" means a standalone or chassis-based network device/card/processor. 
+per managed server: A license is required for each Server managed by the Product or one of its components whether locally or 
+remotely. When applicable, this license must be computed at the appropriate tier level based on the cumulative count of managed 
+servers. Network Devices are not counted as Servers. This license does not include the Product's installation on or management of 
+Integrated Facility for Linux (IFL) engines. "Network Device" means a standalone or chassis-based network device/card/processor. 
+per MIPS: A license is required for the total aggregate number of MIPS for each Computer, including all Computers coupled in a parallel 
+Sysplex environment, upon which the Product is installed, managed or monitored. MIPS Rating is the aggregate computing power 
+(expressed in millions of instructions per second) of a Computer, using the MIPS rating set forth in the then current Gartner Group 
+Rating Guide. Computer-specific passwords will be issued for the Product. 
+per monitored element: A license is required for all remotely monitored elements, such as a Server, database, operating system, URL, 
+firewall, storage, or network device. 
+per monitored server: A license is required for each Server (with a Classification at the appropriate Tier level, if applicable) which the 
+Product or one of its components is monitoring regardless of whether the Product is monitoring it locally or remotely. 
+per named user: A license (with a Classification at the appropriate Level, if applicable) is required for all individual employees or 
+contractors or clients of Customer to whom access has been granted to the Product on a computer or multiple computers typically via 
+the issuance of a unique ID regardless of whether the individual is actively using the Product at any given time. 
+per node: A license is required for the maximum number of Nodes which the Product manages and/or monitors. "Node" means a 
+network device (IP or non-IP) such as a router, switch or Computer. 
+
+per port: A license is required for each port. A port is defined as a physical connection point used by a storage device to connect 
+other devices or systems. For the purpose of BMC licensing, all active ports (Fibre Channel, iSCSI, etc.) for all managed devices 
+(storage arrays, filers, tape libraries, etc.) are counted. Ports on hosts, gateways and switches are not to be counted. 
+per project: A license is required for each specific project, facility or business unit, as the case may be specified at the time of order. 
+
+EULA (07.07.2013) Page 11 of 12 BMC Confidential 
+
+
+per Server Endpoint: A license is required for each Server Endpoint. A "Server Endpoint" is any virtual or physical Computer that 
+provides a service for other Computers or users connected to it via the Internet, extranet, intranet, or other networked technologies. 
+per Service Management MIPS: A license is required for the total aggregate number of MIPS for each Computer, including all 
+Computers coupled in a parallel Sysplex environment, upon which the Product is installed, managed or monitored. MIPS Rating is the 
+aggregate computing power (expressed in millions of instructions per second) of a Computer, using the MIPS rating set forth in the then 
+current Gartner Group Rating Guide. 
+per site: A license is required for the physical site at which the Product is installed regardless of the number of times the Product is 
+installed. 
+per task: For all Control-M Products, except those that are restricted to the Mainframe environment, a license is required for the 
+maximum number of Tasks (as defined below) present in the Control-M "Active Jobs" databases in any 24-hour period, regardless of 
+whether the Tasks execute or not. For the Control- M Mainframe add-on products, a license is required for the maximum number of 
+Tasks (as defined below) present in solely the Mainframe environment's Control-M "Active Jobs" database. Tasks in the Control-M 
+"Active Jobs" databases include all Tasks that are monitored by Control-M in all Distributed Systems and/or Mainframe environments 
+(including but not limited to development, staging, QA, pre-production, production, and test environments), except that, (i) SMART 
+folders/table and sub-folders/tables which contain scheduling definitions and are listed as tasks in the "Active Jobs" databases are not 
+counted as Tasks, (ii) Tasks that have time zone settings may remain in the "Active Jobs" databases for up to three consecutive days, 
+but are only counted as one Task, (iii) a Task that runs more than once during the day (with the same Order ID) is counted as one Task 
+
+– this includes Tasks that are rerun and cyclic Tasks, and (iv) Tasks that are provided for by licenses under alternative Units of 
+Measurement (i.e. tier or MIPS) are not considered Tasks under this "per task" unit of measurement. The number of steps or scripts 
+executed within the named Task shall have no bearing upon the number of Tasks licensed. "Task" is interchangeable with "job" and 
+means an executable command containing the name of the JCL, CL, DCL, ECL, script or dummy processes that is scheduled to 
+execute, as well as the scheduling criteria, flow control, and resource usage. 
+per terabyte: A license is required for the total aggregate storage capacity in the Enterprise. 
+per third-party software: A license is required for each installation of the third-party software product that interfaces with the Product. 
+YOU AGREE THAT YOU HAVE READ THIS AGREEMENT AND INTEND TO BE BOUND, AS IF YOU HAD SIGNED THIS 
+AGREEMENT IN WRITING. IF YOU ARE ACTING ON BEHALF OF AN ENTITY, YOU WARRANT THAT YOU HAVE THE 
+AUTHORITY TO ACCEPT THE TERMS OF THIS AGREEMENT FOR SUCH ENTITY. 
+
+EULA (07.07.2013) Page 12 of 12 BMC Confidential 
+
+

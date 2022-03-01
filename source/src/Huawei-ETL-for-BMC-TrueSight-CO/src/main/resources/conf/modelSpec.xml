@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<models>
+    <model type="2200V3">
+        <unsupportList>filesystem</unsupportList>
+    </model>
+    <model type="2800V3">
+        <unsupportList>filesystem</unsupportList>
+    </model>
+    <model type="Dorado">
+        <unsupportList>filesystem</unsupportList>
+    </model>
+</models>

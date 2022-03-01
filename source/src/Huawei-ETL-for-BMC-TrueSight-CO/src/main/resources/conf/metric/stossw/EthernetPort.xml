@@ -1,0 +1,60 @@
+<metrics>
+    <metric dataSet="STOSSW" column="DS_SYSNM">
+        <name>Storage Array datasource name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getContainerDSName">
+                <target>System,Huawei_OceanStor+</target>
+                <result>DS_SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOSSW" column="SYSNM">
+        <name>Storage Array name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getContainerName">
+                <target>System,Huawei_OceanStor+</target>
+                <result>SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOSSW" column="SYSTYPENM" value="san"></metric>
+    <metric dataSet="STOSSW" column="GOLEVELS" value="1"></metric>
+    <metric dataSet="STOSSW" column="WEIGHT" value="1"></metric>
+    <metric dataSet="STOSSW" column="BYPORT_TYPE" value="FCoE"></metric>
+
+
+    <metric dataSet="STOSSW" column="BYPORT_CONTROLLER_NAME">
+        <name>Controller name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromRest">
+                <target>LOCATION</target>
+                <result>BYPORT_CONTROLLER_NAME</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="STOSSW" column="BYPORT_ADDRESS">
+        <name>Port address</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromRest">
+                <target>IPV4ADDR</target>
+                <result>BYPORT_ADDRESS</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOSSW" column="PORTNM" value="1">
+        <name>Port name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>ETH-[${DEVICENAME}]-[${ID}]-[${LOCATION}]</target>
+                <result>PORTNM</result>
+            </task>
+        </tasks>
+    </metric>
+
+
+
+    <metric dataSet="STOSSW" column="BYPORT_BANDWIDTH" value="100"></metric>
+    <metric dataSet="STOSSW" column="BYPORT_BANDWIDTH_UTIL" value="0.5"></metric>
+    <metric dataSet="STOSSW" column="BYPORT_BYTE_RATE" value="20"></metric>
+</metrics>

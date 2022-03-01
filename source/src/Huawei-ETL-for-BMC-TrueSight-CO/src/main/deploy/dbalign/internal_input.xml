@@ -1,0 +1,6 @@
+<align>
+  <ETL_MOD_DATASET><where><![CDATA[ where etlmodid = 9889]]></where></ETL_MOD_DATASET>
+  <ETL_MOD_PROPS><where><![CDATA[where etlmodid = 9889 ]]></where></ETL_MOD_PROPS>
+  <ETL_MOD_EXT><where><![CDATA[where etlmodid = 9889 ]]></where></ETL_MOD_EXT>
+  <ETL_MOD><where><![CDATA[ where etlmodid = 9889 ]]></where></ETL_MOD>
+</align>

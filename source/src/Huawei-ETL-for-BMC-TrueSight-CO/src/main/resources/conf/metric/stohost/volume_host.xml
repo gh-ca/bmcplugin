@@ -1,0 +1,69 @@
+<metrics>
+
+    <!--<metric dataSet="STOHOST" column="BYHOST_CUSTOMER_RECHARGE" value="20000000"></metric>
+    <metric dataSet="STOHOST" column="BYHOST_FS_TOTAL" value="10000000"></metric>
+    <metric dataSet="STOHOST" column="BYHOST_FS_USED" value="1000000"></metric>
+    <metric dataSet="STOHOST" column="BYHOST_NOPERM_HOST_MIRROR" value="2000000"></metric>
+    <metric dataSet="STOHOST" column="BYHOST_PERM_HOST_MIRROR" value="2000000"></metric>
+    <metric dataSet="STOHOST" column="BYHOST_PERM_STO_MIRROR" value="2000000"></metric>
+    <metric dataSet="STOHOST" column="BYHOST_SIZE" value="2000000"></metric>
+    <metric dataSet="STOHOST" column="BYHOST_SLA" value="200000"></metric>-->
+
+
+    <metric dataSet="STOHOST" column="BYHOST_ALLOCATED">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getLinkedLUNCapacity">
+                <target>ID</target>
+                <result>BYHOST_ALLOCATED</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="STOHOST" column="BYHOST_SIZE">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getLinkedLUNCapacity">
+                <target>ID</target>
+                <result>BYHOST_SIZE</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="STOHOST" column="SYSTYPENM" value="volume"></metric>
+
+    <metric dataSet="STOHOST" column="DS_SYSNM">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getLinkedLUNUniqueName">
+                <target>ID</target>
+                <result>DS_SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOHOST" column="SYSNM">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getLinkedLUNUniqueName">
+                <target>ID</target>
+                <result>SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOHOST" column="SUBOBJNM">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getLinkedHostUniqueName">
+                <target>ID</target>
+                <result>SUBOBJNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOHOST" column="DS_SUBOBJNM">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getLinkedHostUniqueName">
+                <target>ID</target>
+                <result>DS_SUBOBJNM</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="STOHOST" column="GOLEVELS" value="1"></metric>
+
+
+</metrics>

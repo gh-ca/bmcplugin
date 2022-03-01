@@ -1,0 +1,23 @@
+package com.huawei.storage.utils;
+
+import com.huawei.storage.domain.StorageObject;
+import com.huawei.storage.exception.ETLException;
+import com.huawei.storage.oceanstor.rest.operation.DeviceManager;
+
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * Huawei Technologies  all rights reserved
+ * <p>
+ * Created on 2016/11/9.
+ */
+public class StorageObjectRestHandler {
+
+    public List<StorageObject> findStorageObjectsFromRest(String countCommand,String queryCommand, DeviceManager deviceManager) throws ETLException {
+
+        return  RestPageUtils.pageGetAll(deviceManager, countCommand, queryCommand
+                    , new HashMap<String, String>());
+
+    }
+}

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="open">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/third_party_groupware/Huawei-ETL-for-BMC-TrueSight-CO/open" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/third_party_groupware/Huawei-ETL-for-BMC-TrueSight-CO/open" recursive="false" />
+  </library>
+</component>

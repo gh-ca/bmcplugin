@@ -1,0 +1,122 @@
+<managed-objects>
+
+    <storage-object name="system">
+        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <query-command>find-all-system</query-command>
+        <counters>
+            <counter mapping="array"><name>STOGLB</name></counter>
+            <counter mapping="array_blank"><name>OBJREL</name></counter>
+            <counter mapping="array"><name>OBJREL</name></counter>
+        </counters>
+    </storage-object>
+
+    <storage-object name="controller">
+        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <performance>ReadBandWidth,WriteBandWidth,Throughput,ReadThroughput,WriteThroughput,AverageIOResponseTime,AverageIOSize</performance>
+        <query-command>find-all-controller</query-command>
+        <counters>
+            <counter mapping="controller"><name>STOCONT</name></counter>
+        </counters>
+    </storage-object>
+
+<!--    <storage-object name="sas_port">-->
+<!--        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>-->
+<!--        <query-command>find-all-sas_port</query-command>-->
+<!--        <counters>-->
+<!--            <counter mapping="SASPort"><name>STOSSW</name></counter>-->
+<!--        </counters>-->
+<!--    </storage-object>-->
+
+<!--    <storage-object name="fcoe_port">-->
+<!--        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>-->
+<!--        <query-command>find-all-fcoe_port</query-command>-->
+<!--        <counters>-->
+<!--            <counter mapping="FCoEPort"><name>STOSSW</name></counter>-->
+<!--        </counters>-->
+<!--    </storage-object>-->
+
+
+    <storage-object name="eth_port">
+        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <query-command>find-all-eth_port</query-command>
+        <counters>
+            <counter mapping="EthernetPort"><name>STOSSW</name></counter>
+        </counters>
+    </storage-object>
+
+    <storage-object name="fc_port">
+        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <query-command>find-all-fc_port</query-command>
+        <counters>
+            <counter mapping="FCPort"><name>STOSSW</name></counter>
+        </counters>
+    </storage-object>
+
+    <storage-object name="disk">
+        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <performance>AverageIOResponseTime,ReadThroughput,AVERAGE_READ_IO_SIZE,WriteThroughput,AVERAGE_WRITE_IO_SIZE</performance>
+        <count-command>get-disk-count</count-command>
+        <query-command>batch-find-disk</query-command>
+        <counters>
+            <counter mapping="disk"><name>SYSDSK</name></counter>
+        </counters>
+    </storage-object>
+
+    <storage-object name="storage-pool">
+        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <count-command>get-storage-pool-count</count-command>
+        <query-command>batch-find-storage-pool</query-command>
+        <counters>
+            <counter mapping="storagePool"><name>STOGLB</name></counter>
+            <counter mapping="storagePool_blank"><name>OBJREL</name></counter>
+            <counter mapping="storagePool_system"><name>OBJREL</name></counter>
+        </counters>
+    </storage-object>
+
+    <storage-object name="filesystem">
+        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <count-command>get-filesystem-count</count-command>
+        <query-command>batch-find-filesystem</query-command>
+        <counters>
+            <counter mapping="filesystem"><name>STOGLB</name></counter>
+            <counter mapping="filesystem_blank"><name>OBJREL</name></counter>
+            <counter mapping="filesystem_storagepool"><name>OBJREL</name></counter>
+            <counter mapping="filesystem_system"><name>OBJREL</name></counter>
+        </counters>
+    </storage-object>
+
+    <storage-object name="lun">
+        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <performance>AverageIOResponseTimeUs,ReadBandWidth,WriteBandWidth,Throughput,ReadThroughput,WriteThroughput</performance>
+        <count-command>get-lun-count</count-command>
+        <query-command>batch-find-lun</query-command>
+        <counters>
+            <counter mapping="volume"><name>STOGLB</name></counter>
+            <counter mapping="volume_blank"><name>OBJREL</name></counter>
+            <counter mapping="volume_system"><name>OBJREL</name></counter>
+            <counter mapping="volume_storagepool"><name>OBJREL</name></counter>
+        </counters>
+    </storage-object>
+
+
+   <storage-object name="host" >
+       <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+       <count-command>get-host-count</count-command>
+       <query-command>batch-find-host</query-command>
+        <counters>
+<!--            <counter mapping="host_system"><name>OBJREL</name></counter>-->
+            <counter mapping="host"><name>OBJREL</name></counter>
+            <counter mapping="host_blank"><name>OBJREL</name></counter>
+        </counters>
+    </storage-object>
+
+    <storage-object name="mappedLunHost" >
+        <method>com.huawei.storage.utils.LunHostRestHandler.getMappedLunHost</method>
+        <counters>
+            <counter mapping="volume_host"><name>STOHOST</name></counter>
+        </counters>
+    </storage-object>
+
+
+
+</managed-objects>

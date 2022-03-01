@@ -1,0 +1,46 @@
+<metrics>
+    <metric dataSet="SYSCNF" column="ALIAS_NAME">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>Host-[${ID}]-[${NAME}]</target>
+                <result>ALIAS_NAME</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="SYSCNF" column="HOST_NAME">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>Host-[${ID}]-[${NAME}]</target>
+                <result>HOST_NAME</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="SYSCNF" column="ASSET_ID">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>Host-[${ID}]-[${NAME}]</target>
+                <result>ASSET_ID</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="SYSCNF" column="DS_SYSNM">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>Host-[${ID}]-[${NAME}]</target>
+                <result>DS_SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="SYSCNF" column="SYSNM">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>Host-[${ID}]-[${NAME}]</target>
+                <result>SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="SYSCNF" column="SYSTYPENM" value="gen"></metric>
+<!--    <metric dataSet="SYSCNF" column="SYSTYPENM" value="vh"></metric>-->
+    <metric dataSet="SYSCNF" column="GOLEVELS" value="1"></metric>
+    <metric dataSet="SYSCNF" column="WEIGHT" value="1"></metric>
+</metrics>

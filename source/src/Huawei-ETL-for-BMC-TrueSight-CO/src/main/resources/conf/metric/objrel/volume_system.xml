@@ -1,0 +1,40 @@
+<metrics>
+    <metric dataSet="OBJREL" column="TS">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getCurrentTimeStamp">
+                <result>TS</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="OBJREL" column="ENTCATNM" value="SYS"></metric>
+    <metric dataSet="OBJREL" column="ENTNM">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>LUN-[${ID}]-[${NAME}]</target>
+                <result>ENTNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="OBJREL" column="DS_ENTNM">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>LUN-[${ID}]-[${NAME}]</target>
+                <result>DS_ENTNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="OBJREL" column="ENTCATNMPARENT" value="SYS"></metric>
+
+    <metric dataSet="OBJREL" column="DS_ENTNMPARENT">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getBCOParentDSName">
+                <target>System</target>
+                <result>DS_ENTNMPARENT</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="OBJREL" column="CHANGETYPE" value="ASSERT"></metric>
+    <metric dataSet="OBJREL" column="ENTTYPENM" value="volume"></metric>
+    <metric dataSet="OBJREL" column="RELATIONTYPE" value="SA_CONTAINS_VOLUME"></metric>
+    <metric dataSet="OBJREL" column="RELATIONMODE" value="0"></metric>
+</metrics>

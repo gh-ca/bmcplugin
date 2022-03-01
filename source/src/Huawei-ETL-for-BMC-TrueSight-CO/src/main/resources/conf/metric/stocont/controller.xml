@@ -1,0 +1,117 @@
+<metrics>
+    <metric dataSet="STOCONT" column="BYCONT_BANDWIDTH">
+        <name>Bandwidth by Controller</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>ReadBandWidth,WriteBandWidth</target>
+                <result>ReadBandWidth,WriteBandWidth</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>(${ReadBandWidth},+,${WriteBandWidth}),*,1024,*,1024,*,8</target>
+                <result>BYCONT_BANDWIDTH</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="BYCONT_BANDWIDTH_UTIL">
+        <name>Bandwidth utilization by Controller</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>ReadBandWidth</target>
+                <result>BYCONT_BANDWIDTH_UTIL</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="BYCONT_IO_RATE">
+        <name>Controller Operation Rate</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>Throughput</target>
+                <result>BYCONT_IO_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="BYCONT_IO_READ_RATE">
+        <name>Controller Read Operation Rate</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>ReadThroughput</target>
+                <result>BYCONT_IO_READ_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="BYCONT_IO_WRITE_RATE">
+        <name>Controller Write Operation Rate</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>WriteThroughput</target>
+                <result>BYCONT_IO_WRITE_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="BYCONT_PORT_NUM">
+        <name>Controller Read Operation Rate</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getAllFreePortCount">
+                <target>FCPort,ETHPort,SASPort,FCoEPort</target>
+                <result>BYCONT_PORT_NUM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="BYCONT_PROCESSOR_UTIL">
+        <name>Processor utilization by Controller</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>CPUUSAGE</target>
+                <result>BYCONT_PROCESSOR_UTIL</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="BYCONT_RESPONSE_TIME">
+        <name>Response time by Controller</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>AverageIOResponseTime</target>
+                <result>BYCONT_RESPONSE_TIME</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="BYCONT_TRANSFER_RATE">
+        <name>Transfer rate by Controller</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>AverageIOSize</target>
+                <result>BYCONT_TRANSFER_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="CONTNM">
+        <name>Storage controller name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>NAME</target>
+                <result>CONTNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="SYSTYPENM" value="san"></metric>
+    <metric dataSet="STOCONT" column="GOLEVELS" value="1"></metric>
+    <metric dataSet="STOCONT" column="WEIGHT" value="1"></metric>
+    <metric dataSet="STOCONT" column="DS_SYSNM">
+        <name>Storage Array datasource name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getContainerDSName">
+                <target>System,Huawei_OceanStor+</target>
+                <result>DS_SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="SYSNM">
+        <name>Storage Array name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getContainerName">
+                <target>System,Huawei_OceanStor+</target>
+                <result>SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+</metrics>

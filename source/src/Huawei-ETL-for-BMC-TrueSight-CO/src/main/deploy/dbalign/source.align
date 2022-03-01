@@ -1,0 +1,43 @@
+##TABLE: ETL_MOD_DATASET
+##PK: etlmodid|datasetid
+##WHERE: where etlmodid = 9889
+##COLUMN_NAMES: etlmodid|datasetid
+##COLUMN_TYPES: NUMBER|NUMBER
+##TYPE: ALIGN
+##CONSTRAINT_HANDLING: DISABLE_ON_INSERT_DELETE
+9889|4
+9889|30
+9889|59
+9889|63
+9889|108
+#ROWCOUNT: 6 rows extracted.
+
+##TABLE: ETL_MOD_PROPS
+##PK: etlmodid|name
+##WHERE: where etlmodid = 9889
+##COLUMN_NAMES: etlmodid|name|description|type|required|defaultvalue|orderfield
+##COLUMN_TYPES: NUMBER|VARCHAR|VARCHAR|VARCHAR|NUMBER|VARCHAR|NUMBER
+##TYPE: ALIGN
+##CONSTRAINT_HANDLING: DISABLE_ON_INSERT_DELETE
+#ROWCOUNT: 0 rows extracted.
+
+##TABLE: ETL_MOD_EXT
+##PK: etlmodid|name
+##WHERE: where etlmodid = 9889
+##COLUMN_NAMES: etlmodid|name|value
+##COLUMN_TYPES: NUMBER|VARCHAR|VARCHAR
+##TYPE: ALIGN
+##CONSTRAINT_HANDLING: DISABLE_ON_INSERT_DELETE
+9889|etlmod.addon.wperules|"<?xml version=""1.0"" encoding=""UTF-8""?><!-- Huawei Confidential and Proprietary Copyright (c) 2016 Huawei All Rights Reserved. --><wperules xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:noNamespaceSchemaLocation=""wpeRulesSchema.xsd""><section name=""Connection settings""><group id=""HUAWEICONFIG""><fields><field label=""Hostname"" name=""huawei.hostname"" type=""TEXT"" canbeempty=""false"" default=""""><configuration><conf name=""additionalText"" value=""&lt;br/&gt;Hostname or IP address of the Huawei Oceanstor Storage Array Controller IP."" /></configuration></field><field label=""SftpPort"" name=""huawei.sftp.port"" type=""INTEGER_POS"" canbeempty=""false"" default=""22""><configuration><conf name=""additionalText"" value=""&lt;br/&gt;Port number used by Huawei OceanStor Storage Sftp file transfer"" /></configuration></field><field label=""RestPort"" name=""huawei.rest.port"" type=""INTEGER_POS"" canbeempty=""false"" default=""8088""><configuration><conf name=""additionalText"" value=""&lt;br/&gt;Port number used by Huawei OceanStor Storage Restful webservice"" /></configuration></field><field label=""Connect As"" name=""huawei.username"" type=""TEXT"" canbeempty=""false"" default=""""><configuration><conf name=""additionalText"" value=""&lt;br/&gt;Username to connect to the Huawei OceanStor Storage Array."" /></configuration></field><field label=""Password"" name=""huawei.password"" type=""PASSWORD"" canbeempty=""false"" default=""""><configuration><conf name=""additionalText"" value=""&lt;br/&gt;Password to connect to the Huawei OceanStor Storage Array."" /></configuration></field></fields></group></section><section name=""ETL additional settings""><group id=""HUAWEIADST""><fields><field label=""Shares"" name=""configFileSystem"" type=""SELECT"" canbeempty=""false"" default=""Collected""><options><option value=""Collected"" label=""Collected for metric computation"" /><option value=""Imported"" label=""Collected and Imported"" /></options></field><field label=""Volumes"" name=""configVolume"" type=""SELECT"" canbeempty=""false"" default=""Collected""><options><option value=""Disabled"" label=""Disabled"" /><option value=""Collected"" label=""Collected for metric computation"" /><option value=""Imported"" label=""Collected and Imported"" /></options></field></fields></group></section></wperules>"
+#ROWCOUNT: 1 rows extracted.
+
+##TABLE: ETL_MOD
+##PK: etlmodid
+##WHERE: where etlmodid = 9889
+##COLUMN_NAMES: etlmodid|name|description|filename|language|statusid|insertts|updatets|etlprojectid|etlmodtype|ownership|attachidsrc|attachidxml|licmodid|etlmodsubtype|suplevel|longdescr|etlmodgroupid
+##COLUMN_TYPES: NUMBER|VARCHAR|VARCHAR|VARCHAR|VARCHAR|NUMBER|DATE|DATE|NUMBER|VARCHAR|NUMBER|NUMBER|NUMBER|NUMBER|VARCHAR|VARCHAR|VARCHAR|NUMBER
+##TYPE: ALIGN
+##CONSTRAINT_HANDLING: DISABLE_ON_INSERT_DELETE
+9889|com.huawei.storage.etl.HWStorageETLService|Storage - Huawei Oceanstor Extractor Service|HWStorageETLService.java|JAVA|1|24/09/2012 00:00:00|24/09/2012 00:00:00||SERVICE|102|||128|||"Extract capacity and performance metrics on Huawei Storage. "|
+#ROWCOUNT: 1 rows extracted.
+

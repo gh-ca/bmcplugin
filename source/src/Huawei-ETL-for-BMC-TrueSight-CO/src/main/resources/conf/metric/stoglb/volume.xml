@@ -1,0 +1,283 @@
+<metrics>
+    <metric dataSet="STOGLB" column="SYSTYPENM" value="volume"></metric>
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_RAID_LEVEL" value="raid5"></metric>-->
+    <!--<metric dataSet="STOGLB" column="VOLUME_EXTERNAL_ID" value="2100643e8c4c5f66"></metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_MAPPED" value="0"></metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_RESPONSE_TIME" value="50"></metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_CONSUMED_CAPACITY" value="100"></metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_CONSUMED_CAPACITY_PCT" value="0.1"></metric>-->
+
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_TRANSFER_BYTE_RATE" value="200"></metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_TIME_SINCE_LAST_ACTIVITY" value="100"></metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_IO_READ_RATE" value="200"></metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_IO_WRITE_RATE" value="200"></metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_IO_RATE" value="300"></metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_VOLUME_TYPE" value="lun"></metric>-->
+
+
+    <metric dataSet="STOGLB" column="DS_SYSNM">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>LUN-[${ID}]-[${NAME}]</target>
+                <result>DS_SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="SYSNM">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>LUN-[${ID}]-[${NAME}]</target>
+                <result>SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="STOGLB" column="ST_VOLUME_MAPPED" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>EXPOSEDTOINITIATOR</target>
+                <result>EXPOSEDTOINITIATOR</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.convertBoolToNumber">
+                <target>EXPOSEDTOINITIATOR</target>
+                <result>ST_VOLUME_MAPPED</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_RAID_LEVEL" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>PARENTID</target>
+                <result>PARENTID</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.getLunRaidLevel">
+                <target>PARENTID</target>
+                <result>ST_VOLUME_RAID_LEVEL</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="STOGLB" column="ST_TIERING_POLICY">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>DATATRANSFERPOLICY</target>
+                <result>DATATRANSFERPOLICY</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.getLunTierPolicy">
+                <target>DATATRANSFERPOLICY</target>
+                <result>ST_TIERING_POLICY</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="STOGLB" column="VOLUME_EXTERNAL_ID" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>WWN</target>
+                <result>VOLUME_EXTERNAL_ID</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_TYPE" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>TYPE,SUBTYPE</target>
+                <result>TYPE,SUBTYPE</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.getLunAndFileSystemType">
+                <target>TYPE,SUBTYPE</target>
+                <result>ST_VOLUME_TYPE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_USED" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>ALLOCCAPACITY,SECTORSIZE</target>
+                <result>ALLOCCAPACITY,SECTORSIZE</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${ALLOCCAPACITY},*,${SECTORSIZE}</target>
+                <result>ST_VOLUME_USED</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_CONSUMED_CAPACITY" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>ALLOCCAPACITY,SECTORSIZE</target>
+                <result>ALLOCCAPACITY,SECTORSIZE</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${ALLOCCAPACITY},*,${SECTORSIZE}</target>
+                <result>ST_VOLUME_CONSUMED_CAPACITY</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_CONSUMED_CAPACITY_PCT" name="StorageConfigured Space">
+         <tasks>
+             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                 <target>ALLOCCAPACITY,CAPACITY</target>
+                 <result>ALLOCCAPACITY,CAPACITY</result>
+             </task>
+             <task id="1" method="com.huawei.storage.utils.TaskHandler.calculatePercentage">
+                 <target>ALLOCCAPACITY,CAPACITY</target>
+                 <result>ST_VOLUME_CONSUMED_CAPACITY_PCT</result>
+             </task>
+         </tasks>
+     </metric>
+    <metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>ALLOCCAPACITY,SECTORSIZE</target>
+                <result>ALLOCCAPACITY,SECTORSIZE</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${ALLOCCAPACITY},*,${SECTORSIZE}</target>
+                <result>ST_CONSUMED_CAPACITY</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_RESPONSE_TIME" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromPerformance">
+                <target>AverageIOResponseTimeUs</target>
+                <result>ST_RESPONSE_TIME</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_TRANSFER_BYTE_RATE" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>ReadBandWidth,WriteBandWidth</target>
+                <result>ReadBandWidth,WriteBandWidth</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.addValues">
+                <target>ReadBandWidth,WriteBandWidth</target>
+                <result>ST_VOLUME_TRANSFER_BYTE_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_IO_RATE" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>Throughput</target>
+                <result>ST_VOLUME_IO_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_IO_READ_RATE" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>ReadThroughput</target>
+                <result>ST_VOLUME_IO_READ_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_IO_WRITE_RATE" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>WriteThroughput</target>
+                <result>ST_VOLUME_IO_WRITE_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_VOLUME_HOST_VISIBLE_CAPACITY">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>CAPACITY,SECTORSIZE,EXPOSEDTOINITIATOR</target>
+                <result>CAPACITY,SECTORSIZE,EXPOSEDTOINITIATOR</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.judgeHostViewCapacity">
+                <target>EXPOSEDTOINITIATOR</target>
+                <result>CAPACITY</result>
+            </task>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${CAPACITY},*,${SECTORSIZE}</target>
+                <result>ST_VOLUME_HOST_VISIBLE_CAPACITY</result>
+            </task>
+        </tasks>
+</metric>
+
+
+<!--<metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY">-->
+        <!--<tasks>-->
+            <!--<task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">-->
+                <!--<target>ALLOCCAPACITY</target>-->
+                <!--<result>ALLOCCAPACITY</result>-->
+            <!--</task>-->
+            <!--<task id="1" method="com.huawei.storage.utils.TaskHandler.convertSectorToBytes">-->
+                <!--<target>ALLOCCAPACITY</target>-->
+                <!--<result>ST_AVAILABLE_CAPACITY</result>-->
+            <!--</task>-->
+        <!--</tasks>-->
+    <!--</metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY_PCT">-->
+        <!--<tasks>-->
+            <!--<task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">-->
+                <!--<target>ALLOCCAPACITY,CAPACITY</target>-->
+                <!--<result>ALLOCCAPACITY,CAPACITY</result>-->
+            <!--</task>-->
+            <!--<task id="1" method="com.huawei.storage.utils.TaskHandler.getDifference">-->
+                <!--<target>CAPACITY,ALLOCCAPACITY</target>-->
+                <!--<result>DIFFERENCE_CAPACITY</result>-->
+            <!--</task>-->
+            <!--<task id="2" method="com.huawei.storage.utils.TaskHandler.calculatePercentage">-->
+                <!--<target>DIFFERENCE_CAPACITY,CAPACITY</target>-->
+                <!--<result>ST_AVAILABLE_CAPACITY_PCT</result>-->
+            <!--</task>-->
+        <!--</tasks>-->
+    <!--</metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_AVAILABLE_SIZE">-->
+        <!--<tasks>-->
+            <!--<task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">-->
+                <!--<target>CAPACITY</target>-->
+                <!--<result>CAPACITY</result>-->
+            <!--</task>-->
+            <!--<task id="1" method="com.huawei.storage.utils.TaskHandler.convertSectorToBytes">-->
+                <!--<target>CAPACITY</target>-->
+                <!--<result>ST_AVAILABLE_SIZE</result>-->
+            <!--</task>-->
+        <!--</tasks>-->
+    <!--</metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_CONFIGURED_VOLUME_CAPACITY">-->
+        <!--<tasks>-->
+            <!--<task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">-->
+                <!--<target>CAPACITY</target>-->
+                <!--<result>CAPACITY</result>-->
+            <!--</task>-->
+            <!--<task id="1" method="com.huawei.storage.utils.TaskHandler.convertSectorToBytes">-->
+                <!--<target>CAPACITY</target>-->
+                <!--<result>ST_CONFIGURED_VOLUME_CAPACITY</result>-->
+            <!--</task>-->
+        <!--</tasks>-->
+    <!--</metric>-->
+
+    <!--<metric dataSet="STOGLB" column="ST_LUN_SIZE" name="StorageConfigured Space">-->
+        <!--<tasks>-->
+            <!--<task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">-->
+                <!--<target>SECTORSIZE</target>-->
+                <!--<result>SECTORSIZE</result>-->
+            <!--</task>-->
+            <!--<task id="1" method="com.huawei.storage.utils.TaskHandler.convertSectorToBytes">-->
+                <!--<target>SECTORSIZE</target>-->
+                <!--<result>ST_LUN_SIZE</result>-->
+            <!--</task>-->
+        <!--</tasks>-->
+    <!--</metric>-->
+
+    <metric dataSet="STOGLB" column="ST_VOLUME_STATE" name="StorageConfigured Space">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>RUNNINGSTATUS</target>
+                <result>RUNNINGSTATUS</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.getObjectRunningStatus">
+                <target>RUNNINGSTATUS</target>
+                <result>ST_VOLUME_STATE</result>
+            </task>
+        </tasks>
+    </metric>
+
+
+</metrics>

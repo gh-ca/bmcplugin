@@ -1,0 +1,155 @@
+<metrics>
+    <metric dataSet="SYSDSK" column="SYSTYPENM" value="san"></metric>
+    <metric dataSet="SYSDSK" column="GOLEVELS" value="1"></metric>
+    <metric dataSet="SYSDSK" column="WEIGHT" value="1"></metric>
+    <metric dataSet="SYSDSK" column="DS_SYSNM">
+        <name>Storage Array name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getContainerDSName">
+                <target>System,Huawei_OceanStor+</target>
+                <result>DS_SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="SYSDSK" column="SYSNM">
+        <name>Storage Array name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getContainerName">
+                <target>System,Huawei_OceanStor+</target>
+                <result>SYSNM</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="SYSDSK" column="DSKNM">
+        <name>disk name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
+                <target>ENCLOSURE-[${PARENTID}]-[${POOLNAME}]-DISK-[${ID}]</target>
+                <result>DSKNM</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="SYSDSK" column="BYDISK_MODEL">
+        <name>disk model</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromRest">
+                <target>MODEL</target>
+                <result>BYDISK_MODEL</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="SYSDSK" column="BYDISK_TYPE">
+        <name>disk type</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromRest">
+                <target>DISKTYPE</target>
+                <result>DISK_MODEL</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.convertNumToEnum">
+                <target>DISK_MODEL</target>
+                <result>BYDISK_MODEL</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="SYSDSK" column="BYDISK_RPM">
+        <name>disk speed</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromRest">
+                <target>SPEEDRPM</target>
+                <result>BYDISK_RPM</result>
+            </task>
+        </tasks>
+    </metric>
+
+
+
+
+    <metric dataSet="SYSDSK" column="BYDISK_SIZE">
+        <name>Capacity</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromRest">
+                <target>SECTORS</target>
+                <result>SECTORS</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.getDataFromRest">
+                <target>SECTORSIZE</target>
+                <result>SECTORSIZE</result>
+            </task>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.computeDiskCapacity">
+                <target>SECTORS,SECTORSIZE</target>
+                <result>BYDISK_SIZE</result>
+            </task>
+        </tasks>
+    </metric>
+
+
+    <metric dataSet="SYSDSK" column="BYDISK_UTIL">
+        <name>Capacity usage.</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromRest">
+                <target>CAPACITYUSAGE</target>
+                <result>CAPACITYUSAGE</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.PercentageToNum">
+                <target>CAPACITYUSAGE</target>
+                <result>BYDISK_UTIL</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="SYSDSK" column="BYDISK_RESPONSE_TIME">
+        <name>Capacity usage.</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromPerformance">
+                <target>AverageIOResponseTime</target>
+                <result>RESPONSE_TIME_MS</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.convertMsToSec">
+                <target>RESPONSE_TIME_MS</target>
+                <result>BYDISK_RESPONSE_TIME</result>
+            </task>
+        </tasks>
+    </metric>
+    <!--<metric dataSet="SYSDSK" column="BYDISK_TRANSFER_RATE" value="100"></metric>-->
+
+    <metric dataSet="SYSDSK" column="BYDISK_READ_RATE">
+        <name>Read Rate</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromPerformance">
+                <target>ReadThroughput</target>
+                <result>READ_IOPS</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.getDataFromPerformance">
+                <target>AVERAGE_READ_IO_SIZE</target>
+                <result>READ_IO_SIZE</result>
+            </task>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.caculateIOrate">
+                <target>READ_IOPS,READ_IO_SIZE</target>
+                <result>BYDISK_READ_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="SYSDSK" column="BYDISK_WRITE_RATE">
+        <name>Read Rate</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromPerformance">
+                <target>WriteThroughput</target>
+                <result>WRITE_IOPS</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.getDataFromPerformance">
+                <target>AVERAGE_WRITE_IO_SIZE</target>
+                <result>WRITE_IO_SIZE</result>
+            </task>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.caculateIOrate">
+                <target>WRITE_IOPS,WRITE_IO_SIZE</target>
+                <result>BYDISK_WRITE_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+
+</metrics>
