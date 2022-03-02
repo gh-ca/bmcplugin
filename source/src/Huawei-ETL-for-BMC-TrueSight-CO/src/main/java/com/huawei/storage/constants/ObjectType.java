@@ -24,6 +24,8 @@ public enum  ObjectType {
 
     FileSystem(40),
 
+    NFShare(16401),
+
     RemoteReplication(263),
 
     SmartPartition(268),

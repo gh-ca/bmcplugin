@@ -271,6 +271,20 @@ public class TaskHandler {
 
     }
 
+    public void getFSCapacityByShare(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+        String[] target = task.getTarget().split(",");
+        List<StorageObject> storageObjects = storObjMap.get(target[0]);
+        for (StorageObject o : storageObjects) {
+            if (ObjectType.FileSystem.getValue() == o.getType()) {
+                String fsId = obj.getRestData().get("FSID");
+                if (null != fsId && fsId.equals(o.getId())) {
+                    flowContext.put(task.getResult(), o.getRestData().get(target[1]));
+                    break;
+                }
+            }
+        }
+    }
+
 
     public void getCurrentTimeStamp(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
         flowContext.put(task.getResult(), CommonUtils.getCurrentTimeStamp());

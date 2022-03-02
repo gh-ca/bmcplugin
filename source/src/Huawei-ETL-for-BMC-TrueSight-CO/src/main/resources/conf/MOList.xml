@@ -85,6 +85,18 @@
         </counters>
     </storage-object>
 
+    <storage-object name="nfshare">
+        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <count-command>find-NFS-share-count</count-command>
+        <query-command>batch-find-NFS-share</query-command>
+        <counters>
+            <counter mapping="nfshare"><name>STOGLB</name></counter>
+            <counter mapping="nfshare_blank"><name>OBJREL</name></counter>
+            <counter mapping="nfshare_system"><name>OBJREL</name></counter>
+        </counters>
+    </storage-object>
+
+
     <storage-object name="lun">
         <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
         <performance>AverageIOResponseTimeUs,ReadBandWidth,WriteBandWidth,Throughput,ReadThroughput,WriteThroughput</performance>
