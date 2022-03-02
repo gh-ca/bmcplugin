@@ -11,7 +11,6 @@ import com.huawei.storage.oceanstor.rest.operation.OperationResult;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -101,7 +100,8 @@ public class RestPageUtils {
         object.setStorageObjectType(type);
         object.setId(data.get("ID"));
         object.setType(Integer.parseInt(data.get("TYPE")));
-        object.setName(data.get("NAME"));
+        //v6 unsupport NFSHARE/CIFSHARE NAME
+        object.setName(data.get("NAME") == null ? data.get("NAME"): data.get("SHAREPATH"));
         object.setTypeName(ObjectType.valueOf(object.getType()).name());
         object.setRestData(data);
 
