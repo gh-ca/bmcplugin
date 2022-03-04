@@ -94,6 +94,10 @@ public class RestPageUtils {
 
     public static StorageObject setStorageObjectRestData(StorageObjectType type, StorageObject object) {
         Map<String,String> data = object.getRestData();
+
+
+        String parentid = data.get("PARENTID");
+
         CommonUtils.upperMapKey(data);
         object.setCounters(type.getCounters().getCounterList());
         object.setMappingName(type.getMappingName());
@@ -101,12 +105,13 @@ public class RestPageUtils {
         object.setId(data.get("ID"));
         object.setType(Integer.parseInt(data.get("TYPE")));
         //v6 unsupport NFSHARE/CIFSHARE NAME
-        object.setName(data.get("NAME") == null ? data.get("NAME"): data.get("SHAREPATH"));
+        object.setName(data.get("NAME") != null ? data.get("NAME"): data.get("SHAREPATH"));
+        //CIFShare unsupport TPYE param
         object.setTypeName(ObjectType.valueOf(object.getType()).name());
         object.setRestData(data);
 
-        logger.debug("ID: "+object.getId()+",TYPE: "+object.getType()
-                +",NAME: "+object.getName() +",TYPE-NAME: " + object.getTypeName());
+        logger.debug("ID: " + object.getId() + ",TYPE: " + object.getType()
+                + ",NAME: " + object.getName() + ",TYPE-NAME: " + object.getTypeName());
 
         return object;
     }

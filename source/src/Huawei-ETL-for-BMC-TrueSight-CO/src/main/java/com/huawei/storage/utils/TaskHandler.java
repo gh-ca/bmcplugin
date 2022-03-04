@@ -1,5 +1,6 @@
 package com.huawei.storage.utils;
 
+import com.google.gson.Gson;
 import com.huawei.storage.constants.*;
 import com.huawei.storage.domain.StorageObject;
 import com.huawei.storage.domain.Task;
@@ -255,10 +256,21 @@ public class TaskHandler {
                     "Huawei_OceanStor+" + storObjMap.get("System").get(0).getId());
         } else {
             List<StorageObject> storageObjects = storObjMap.get(task.getTarget());
+            logger.info("TaskHandler Test : target=" + task.getTarget());
+            logger.info("TaskHandler Test : storageObjects size =" + storageObjects.size());
             for (StorageObject o : storageObjects) {
                 String parentid = obj.getRestData().get("PARENTID");
+                String fsid = obj.getRestData().get("FSID");
                 if (null != parentid) {
                     if (parentid.equals(o.getId())) {
+                        flowContext.put(task.getResult(),
+                                o.getTypeName() + "-[" + o.getId() + "]-" +
+                                        "[" + o.getName() + "]"
+                        );
+                        break;
+                    }
+                } else {
+                    if (fsid.equals(o.getId())) {
                         flowContext.put(task.getResult(),
                                 o.getTypeName() + "-[" + o.getId() + "]-" +
                                         "[" + o.getName() + "]"
@@ -271,19 +283,22 @@ public class TaskHandler {
 
     }
 
-    public void getFSCapacityByShare(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
-        String[] target = task.getTarget().split(",");
-        List<StorageObject> storageObjects = storObjMap.get(target[0]);
-        for (StorageObject o : storageObjects) {
-            if (ObjectType.FileSystem.getValue() == o.getType()) {
-                String fsId = obj.getRestData().get("FSID");
-                if (null != fsId && fsId.equals(o.getId())) {
-                    flowContext.put(task.getResult(), o.getRestData().get(target[1]));
-                    break;
-                }
-            }
-        }
-    }
+//    public void getFSCapacityByShare(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+//        List<StorageObject> storageObjects = storObjMap.get(task.getTarget());
+////        String s = new Gson().toJson(storageObjects);
+////        logger.info("NFShare get FS capacity objects :" + s);
+////        logger.info("NFShare get FS capacity object :" + new Gson().toJson(obj));
+//        for (StorageObject o : storageObjects) {
+//            if (ObjectType.FileSystem.getValue() == o.getType()) {
+//                String fsId = obj.getRestData().get("FSID");
+//                logger.info("NFShare get FS capacity,fsid = :" + fsId + ",share check fsid =" + o.getId());
+//                if (null != fsId && fsId.equals(o.getId())) {
+//                    flowContext.put(task.getResult(), o.getRestData().get(task.getTarget()));
+//                    break;
+//                }
+//            }
+//        }
+//    }
 
 
     public void getCurrentTimeStamp(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {

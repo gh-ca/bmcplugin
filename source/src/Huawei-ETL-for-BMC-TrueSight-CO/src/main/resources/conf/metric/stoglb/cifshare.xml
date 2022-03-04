@@ -22,7 +22,7 @@
     <metric dataSet="STOGLB" column="DS_SYSNM">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
-                <target>NfShare-[${ID}]-[${NAME}]</target>
+                <target>CifShare-[${ID}]-[${NAME}]</target>
                 <result>DS_SYSNM</result>
             </task>
         </tasks>
@@ -30,7 +30,7 @@
     <metric dataSet="STOGLB" column="SYSNM">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
-                <target>NfShare-[${ID}]-[${NAME}]</target>
+                <target>CifShare-[${ID}]-[${NAME}]</target>
                 <result>SYSNM</result>
             </task>
         </tasks>
