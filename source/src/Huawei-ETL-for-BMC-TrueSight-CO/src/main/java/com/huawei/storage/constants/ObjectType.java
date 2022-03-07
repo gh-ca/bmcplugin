@@ -26,6 +26,8 @@ public enum  ObjectType {
 
     NFShare(16401),
 
+    CIFShare(16402),
+
     RemoteReplication(263),
 
     SmartPartition(268),
@@ -52,7 +54,7 @@ public enum  ObjectType {
         this.type = type;
     }
 
-    public int getValue() {
+    public Integer getValue() {
         return type;
     }
 
@@ -67,7 +69,7 @@ public enum  ObjectType {
 
     }
 
-    public static ObjectType valueOf(int type){
+    public static ObjectType valueOf(Integer type){
         return c.get(type);
     }
 

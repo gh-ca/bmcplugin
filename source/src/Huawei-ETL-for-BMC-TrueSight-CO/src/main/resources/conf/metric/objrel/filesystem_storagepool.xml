@@ -34,8 +34,8 @@
         </tasks>
     </metric>
     <metric dataSet="OBJREL" column="CHANGETYPE" value="ASSERT"></metric>
-    <metric dataSet="OBJREL" column="ENTTYPENM" value="share"></metric>
-    <metric dataSet="OBJREL" column="RELATIONTYPE" value="SP_CONTAINS_SHARE"></metric>
+    <metric dataSet="OBJREL" column="ENTTYPENM" value="volume"></metric>
+    <metric dataSet="OBJREL" column="RELATIONTYPE" value="SP_CONTAINS_VOLUME"></metric>
     <metric dataSet="OBJREL" column="RELATIONMODE" value="0"></metric>
 
 </metrics>

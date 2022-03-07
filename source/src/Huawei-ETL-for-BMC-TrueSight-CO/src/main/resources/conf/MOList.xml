@@ -92,7 +92,20 @@
         <counters>
             <counter mapping="nfshare"><name>STOGLB</name></counter>
             <counter mapping="nfshare_blank"><name>OBJREL</name></counter>
+            <counter mapping="nfshare_filesystem"><name>OBJREL</name></counter>
             <counter mapping="nfshare_system"><name>OBJREL</name></counter>
+        </counters>
+    </storage-object>
+
+    <storage-object name="cifshare">
+        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <count-command>find-CIFS-share-count</count-command>
+        <query-command>batch-find-CIFS-share</query-command>
+        <counters>
+            <counter mapping="cifshare"><name>STOGLB</name></counter>
+            <counter mapping="cifshare_blank"><name>OBJREL</name></counter>
+            <counter mapping="cifshare_filesystem"><name>OBJREL</name></counter>
+            <counter mapping="cifshare_system"><name>OBJREL</name></counter>
         </counters>
     </storage-object>
 
