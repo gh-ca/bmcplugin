@@ -269,36 +269,35 @@ public class TaskHandler {
                         );
                         break;
                     }
-                } else {
-                    if (fsid.equals(o.getId())) {
-                        flowContext.put(task.getResult(),
-                                o.getTypeName() + "-[" + o.getId() + "]-" +
-                                        "[" + o.getName() + "]"
-                        );
-                        break;
-                    }
+                } else if (fsid.equals(o.getId())) {
+                    flowContext.put(task.getResult(),
+                            o.getTypeName() + "-[" + o.getId() + "]-" +
+                                    "[" + o.getName() + "]"
+                    );
+                    break;
                 }
             }
         }
 
     }
 
-//    public void getFSCapacityByShare(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
-//        List<StorageObject> storageObjects = storObjMap.get(task.getTarget());
-////        String s = new Gson().toJson(storageObjects);
-////        logger.info("NFShare get FS capacity objects :" + s);
-////        logger.info("NFShare get FS capacity object :" + new Gson().toJson(obj));
-//        for (StorageObject o : storageObjects) {
-//            if (ObjectType.FileSystem.getValue() == o.getType()) {
-//                String fsId = obj.getRestData().get("FSID");
-//                logger.info("NFShare get FS capacity,fsid = :" + fsId + ",share check fsid =" + o.getId());
-//                if (null != fsId && fsId.equals(o.getId())) {
-//                    flowContext.put(task.getResult(), o.getRestData().get(task.getTarget()));
-//                    break;
-//                }
-//            }
-//        }
-//    }
+    public void getFSCapacityByShare(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+        String[] target = task.getTarget().split(",");
+        logger.info("Share Test : storObjMap = "+storObjMap);
+        List<StorageObject> storageObjects = storObjMap.get(target[0]);
+        if (null != storageObjects) {
+            for (StorageObject o : storageObjects) {
+                if (ObjectType.FileSystem.getValue() == o.getType()) {
+                    String fsId = obj.getRestData().get("FSID");
+                    logger.info("NFShare get FS capacity,fsid = :" + fsId + ",share check fsid =" + o.getId());
+                    if (null != fsId && fsId.equals(o.getId())) {
+                        flowContext.put(task.getResult(), o.getRestData().get(target[1]));
+                        break;
+                    }
+                }
+            }
+        }
+    }
 
 
     public void getCurrentTimeStamp(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
@@ -364,7 +363,7 @@ public class TaskHandler {
         for (int tier = 0; tier < tierCAPACITY.length; tier++) {
             if (null != tierCAPACITY[tier]){
                 if (!"0".equals(tierCAPACITY[tier])) {
-                    poolDiskType = poolDiskType + PoolDiskType.valueOf(tier).name() + " ";
+                    poolDiskType = poolDiskType + PoolDiskType.valueOf(tier).name() + "/";
                 }
             }
         }

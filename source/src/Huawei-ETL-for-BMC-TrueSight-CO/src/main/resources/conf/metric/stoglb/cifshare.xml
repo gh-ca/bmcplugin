@@ -7,18 +7,18 @@
     <!--<metric dataSet="STOGLB" column="ST_VOLUME_STATE" value="true"></metric>-->
     <!--<metric dataSet="STOGLB" column="ST_CAPACITY" value="4000"></metric>-->
 
-<!--    <metric dataSet="STOGLB" column="ST_SHARE_COMMITTED_SIZE">-->
-<!--        <tasks>-->
-<!--            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFSCapacityByShare">-->
-<!--                <target>CAPACITY</target>-->
-<!--                <result>CAPACITY</result>-->
-<!--            </task>-->
-<!--            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">-->
-<!--                <target>${CAPACITY},*,512</target>-->
-<!--                <result>ST_SHARE_COMMITTED_SIZE</result>-->
-<!--            </task>-->
-<!--        </tasks>-->
-<!--    </metric>-->
+    <metric dataSet="STOGLB" column="ST_SHARE_COMMITTED_SIZE">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFSCapacityByShare">
+                <target>FileSystem,CAPACITY</target>
+                <result>ST_SHARE_COMMITTED_SIZE</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${ST_SHARE_COMMITTED_SIZE},*,512</target>
+                <result>ST_SHARE_COMMITTED_SIZE</result>
+            </task>
+        </tasks>
+    </metric>
     <metric dataSet="STOGLB" column="DS_SYSNM">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">
