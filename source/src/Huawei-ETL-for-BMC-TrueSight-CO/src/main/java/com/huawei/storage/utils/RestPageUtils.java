@@ -95,9 +95,6 @@ public class RestPageUtils {
     public static StorageObject setStorageObjectRestData(StorageObjectType type, StorageObject object) {
         Map<String,String> data = object.getRestData();
 
-
-        String parentid = data.get("PARENTID");
-
         CommonUtils.upperMapKey(data);
         object.setCounters(type.getCounters().getCounterList());
         object.setMappingName(type.getMappingName());
