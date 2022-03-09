@@ -1,7 +1,7 @@
 package com.huawei.storage.oceanstor.rest.domain;
 
 /**
- * Created by m00373015 on 2016/8/4.
+ * Huawei Technologies  all rights reserved
  */
 public class RestResponse {
     private Data data;

@@ -22,8 +22,6 @@ import java.util.concurrent.Callable;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/19.
  */
 public class PerformanceDataJob implements Callable<Map<String,Map<String,String>>> {
     private Logger logger = Logger.getLogger(PerformanceDataJob.class);

@@ -5,8 +5,6 @@ import java.util.Map;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/9/21.
  */
 public enum DiskType {
     FC(0),

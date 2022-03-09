@@ -13,8 +13,6 @@ import java.util.Map;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/9/5.
  */
 public class LocalDBManager {
     private final Logger logger = Logger.getLogger(LocalDBManager.class);

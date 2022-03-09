@@ -16,8 +16,6 @@ import java.util.Map;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created on 2016/11/9.
  */
 public class RestPageUtils {
     public static final int DEFAULT_PAGE_SIZE = 100;

@@ -1,13 +1,10 @@
 package com.huawei.storage.oceanstor.rest.connection;
 
 import com.huawei.storage.oceanstor.rest.exception.RestException;
-import com.huawei.storage.oceanstor.rest.operation.OperationExecutor;
 import org.apache.http.client.HttpClient;
 
 /**
  * Huawei Technology  all rights reserverd
- * <p>
- * Created by m00373015 on 2016/8/4.
  */
 public class HttpClientManager {
 

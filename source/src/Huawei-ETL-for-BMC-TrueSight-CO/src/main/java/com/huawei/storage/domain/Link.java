@@ -6,8 +6,6 @@ import com.thoughtworks.xstream.converters.extended.ToAttributedValueConverter;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/29.
  */
 @XStreamAlias("link")
 @XStreamConverter(value=ToAttributedValueConverter.class, strings={"expression"})

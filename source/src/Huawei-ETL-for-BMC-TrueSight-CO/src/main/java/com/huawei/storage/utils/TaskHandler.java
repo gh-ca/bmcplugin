@@ -363,7 +363,7 @@ public class TaskHandler {
         for (int tier = 0; tier < tierCAPACITY.length; tier++) {
             if (null != tierCAPACITY[tier]){
                 if (!"0".equals(tierCAPACITY[tier])) {
-                    poolDiskType = poolDiskType + PoolDiskType.valueOf(tier).name() + "/";
+                    poolDiskType = poolDiskType + PoolDiskType.valueOf(tier).name() + " ";
                 }
             }
         }

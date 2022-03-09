@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Huawei Technologies  all rights reserved
+ */
 public class OperationResult {
 	private String errorCode = "0";
 	private String errorDescription;

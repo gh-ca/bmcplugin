@@ -3,6 +3,9 @@ package com.huawei.storage.oceanstor.rest.utils;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Huawei Technologies  all rights reserved
+ */
 public class CommonUtils {
 
 	public static Map<String, String> upperOperationName(Map<String, String> dataMap) {

@@ -5,8 +5,6 @@ import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/17.
  */
 
 @XStreamAlias("metric")

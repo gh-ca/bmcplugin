@@ -24,8 +24,6 @@ import java.util.concurrent.Callable;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/19.
  */
 public class RestJob implements Callable<List<StorageObject>> {
 

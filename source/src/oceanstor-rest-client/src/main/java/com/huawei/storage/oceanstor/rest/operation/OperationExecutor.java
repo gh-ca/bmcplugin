@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-
+/**
+ * Huawei Technologies  all rights reserved
+ */
 public class OperationExecutor {
 	private static final Logger log = Logger.getLogger(OperationExecutor.class);
 	
