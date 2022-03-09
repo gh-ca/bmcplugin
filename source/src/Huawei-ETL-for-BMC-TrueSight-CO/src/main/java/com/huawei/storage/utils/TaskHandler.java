@@ -359,15 +359,22 @@ public class TaskHandler {
         tierCAPACITY[1] = obj.getRestData().get("TIER1CAPACITY");
         tierCAPACITY[2] = obj.getRestData().get("TIER2CAPACITY");
 
+        String[] tierDISKTYPE = new String[3];
+        tierDISKTYPE[0] = obj.getRestData().get("TIER0DISKTYPE");
+        tierDISKTYPE[1] = obj.getRestData().get("TIER1DISKTYPE");
+        tierDISKTYPE[2] = obj.getRestData().get("TIER2DISKTYPE");
+
         String poolDiskType = "";
         for (int tier = 0; tier < tierCAPACITY.length; tier++) {
             if (null != tierCAPACITY[tier]){
                 if (!"0".equals(tierCAPACITY[tier])) {
-                    poolDiskType = poolDiskType + PoolDiskType.valueOf(tier).name() + "/";
+                    if (tierDISKTYPE[tier] != null){
+                        poolDiskType = poolDiskType + PoolDiskType.valueOf(Integer.valueOf(tierDISKTYPE[tier])).name() + "/";
+                    }
                 }
             }
         }
-        poolDiskType.substring(0, poolDiskType.length() - 1);
+        poolDiskType = poolDiskType.substring(0, poolDiskType.length() - 1);
         flowContext.put(task.getResult(), poolDiskType);
     }
 
