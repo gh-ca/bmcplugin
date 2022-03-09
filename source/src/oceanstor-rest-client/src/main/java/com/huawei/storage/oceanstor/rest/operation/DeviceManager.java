@@ -1,7 +1,5 @@
 package com.huawei.storage.oceanstor.rest.operation;
 
-import java.util.Map;
-
 import com.google.gson.JsonObject;
 import com.huawei.storage.oceanstor.rest.connection.RestManager;
 import com.huawei.storage.oceanstor.rest.constants.HttpMethodEnum;
@@ -13,11 +11,12 @@ import com.huawei.storage.oceanstor.rest.exception.RestException;
 import com.huawei.storage.oceanstor.rest.utils.ComposeUtils;
 import org.apache.log4j.Logger;
 
+import java.util.Map;
+
 
 
 /**
- * The main Entrance for operate the rest
- * @author m00373015
+ * Huawei Technologies  all rights reserved
  *
  */
 public class DeviceManager {

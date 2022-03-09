@@ -3,11 +3,7 @@ package com.huawei.storage.common.extracdata.constant;
 
 /**
  * 魔鬼数字
- * 
- * @author   l90005176
- * @date     2012-9-13
- * @version  V100R001C00
- * @see      [相关类/方法]
+ * *Huawei Technologies  all rights reserved
  */
 public final class IsmNumberConstant
 {

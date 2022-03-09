@@ -17,8 +17,6 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/31.
  */
 public class HWStorageETLService extends AbstractService {
 

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by l00251491 on 2016/9/28.
+ * Huawei Technologies  all rights reserved
  */
 public class BoxTypeConst {
 

@@ -1,9 +1,6 @@
 package com.huawei.storage.oceanstor.rest.utils;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
 import com.huawei.storage.oceanstor.rest.constants.OperationError;
 import com.huawei.storage.oceanstor.rest.domain.RestResponse;
 import com.huawei.storage.oceanstor.rest.exception.RestException;
@@ -11,13 +8,12 @@ import com.huawei.storage.oceanstor.rest.operation.OperationResult;
 import com.huawei.storage.oceanstor.rest.operation.RestInterfaceConfs;
 import org.apache.log4j.Logger;
 
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+/**
+ * Huawei Technologies  all rights reserved
+ */
 public class ComposeUtils {
     private static final Logger log = Logger.getLogger(ComposeUtils.class);
 

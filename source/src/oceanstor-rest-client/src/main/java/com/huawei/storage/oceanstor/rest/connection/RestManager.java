@@ -11,6 +11,9 @@ import org.apache.log4j.Logger;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Huawei Technologies  all rights reserved
+ */
 public class RestManager {
 	private static final Logger logger = Logger.getLogger(RestManager.class);
 

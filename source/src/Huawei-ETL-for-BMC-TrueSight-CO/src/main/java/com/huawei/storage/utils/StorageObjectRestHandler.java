@@ -9,8 +9,6 @@ import java.util.List;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created on 2016/11/9.
  */
 public class StorageObjectRestHandler {
 

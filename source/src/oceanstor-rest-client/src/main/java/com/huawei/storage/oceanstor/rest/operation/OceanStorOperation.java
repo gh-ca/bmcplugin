@@ -6,6 +6,9 @@ import com.huawei.storage.oceanstor.rest.constants.OperationNamesEnum;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Huawei Technologies  all rights reserved
+ */
 public class OceanStorOperation {
 	public String operationName;
 	public Map<String, String>  operationData = new HashMap<String, String>();

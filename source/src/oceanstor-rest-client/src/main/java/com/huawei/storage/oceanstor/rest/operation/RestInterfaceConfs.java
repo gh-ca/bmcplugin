@@ -1,18 +1,16 @@
 package com.huawei.storage.oceanstor.rest.operation;
 
-import java.io.IOException;
-import java.util.*;
-
 import com.huawei.storage.oceanstor.rest.constants.OperationError;
 import com.huawei.storage.oceanstor.rest.exception.RestException;
 import org.apache.log4j.Logger;
 
+import java.io.IOException;
+import java.util.*;
+
 
 /**
- * 
- * Load all request detail form a file
- * @author m00373015
  *
+ * Huawei Technologies  all rights reserved
  */
 public class RestInterfaceConfs {
 	private static Logger logger = Logger.getLogger(RestInterfaceConfs.class);

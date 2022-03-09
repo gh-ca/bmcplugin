@@ -18,8 +18,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/18.
  */
 public class HWStorageExtractor  extends Extractor{
 

@@ -1,5 +1,8 @@
 package com.huawei.storage.common.extracdata.constant;
 
+/**
+ * Huawei Technologies  all rights reserved
+ */
 public class IsmConstant
 {
     //begin　  2008-8-18 AZ7D01197　增加告警导出功能的常量分割符

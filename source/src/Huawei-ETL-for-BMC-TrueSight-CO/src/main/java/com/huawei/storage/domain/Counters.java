@@ -7,8 +7,6 @@ import java.util.List;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/17.
  */
 @XStreamAlias("counters")
 public class Counters {

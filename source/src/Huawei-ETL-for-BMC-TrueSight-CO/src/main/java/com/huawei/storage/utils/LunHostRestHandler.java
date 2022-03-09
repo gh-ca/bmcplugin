@@ -1,7 +1,6 @@
 package com.huawei.storage.utils;
 
 import com.huawei.storage.domain.StorageObject;
-import com.huawei.storage.domain.StorageObjectType;
 import com.huawei.storage.exception.ETLException;
 import com.huawei.storage.oceanstor.rest.operation.DeviceManager;
 import org.apache.log4j.Logger;
@@ -13,8 +12,6 @@ import java.util.Map;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created on 2016/11/4.
  */
 public class LunHostRestHandler {
      private final Logger logger = Logger.getLogger(LunHostRestHandler.class);

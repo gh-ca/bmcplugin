@@ -9,8 +9,6 @@ import java.util.Map;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/18.
  */
 public class StorageObject {
     private static final Logger logger = Logger.getLogger(StorageObject.class);

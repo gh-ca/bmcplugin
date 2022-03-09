@@ -20,8 +20,6 @@ import java.util.Map;
 
 /**
  * Huawei Technology  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/4.
  */
 class RestResponseHandler implements ResponseHandler<RestResponse>{
     private static final Logger log = Logger.getLogger(RestResponseHandler.class);

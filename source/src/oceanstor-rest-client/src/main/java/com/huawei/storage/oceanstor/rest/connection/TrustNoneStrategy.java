@@ -7,8 +7,6 @@ import java.security.cert.X509Certificate;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/10/19.
  */
 public class TrustNoneStrategy implements TrustStrategy{
     @Override

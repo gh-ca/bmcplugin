@@ -2,8 +2,6 @@ package com.huawei.storage.constants;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/10/11.
  */
 public class ConfigConst {
     public static final int RAID10 = 1;

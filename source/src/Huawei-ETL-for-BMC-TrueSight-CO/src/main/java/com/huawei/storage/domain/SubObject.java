@@ -4,8 +4,6 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/25.
  */
 @XStreamAlias("sub-object")
 public class SubObject {

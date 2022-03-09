@@ -12,8 +12,6 @@ import java.util.Properties;
 
 /**
  * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/9/6.
  */
 public class BCODBManager {
     private DatabaseConnectionManagerInterface dbManager;
