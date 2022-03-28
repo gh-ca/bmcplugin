@@ -424,6 +424,30 @@ public class TaskHandler {
 
     }
 
+    public void getDevicesCount(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+        List devices = new ArrayList();
+        String[] deviceType = task.getTarget().split(",");
+        for (String type : deviceType) {
+            if (storObjMap.get(type) != null) {
+                devices.addAll(storObjMap.get(type));
+            }
+        }
+        logger.debug("object is :" + obj.getTypeName() + "_" + obj.getName());
+        logger.debug("device count is " + devices.size() + "device list :" + devices);
+        flowContext.put(task.getResult(), devices.size() + "");
+    }
+
+    public void getAttachedHostCount(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+        List<StorageObject> hosts = new ArrayList<StorageObject>();
+        String type = task.getTarget();
+        if (storObjMap.get(type) != null) {
+            hosts.addAll(storObjMap.get(type));
+        }
+        logger.debug("object is :" + obj.getTypeName() + "_" + obj.getName());
+        logger.debug("host count is " + hosts.size() + " hosts list :" + hosts);
+        flowContext.put(task.getResult(), hosts.size() + "");
+    }
+
 
     public void getAllPortCount(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
         //get eth port , get sas port , get fc port ,get fc_oe port

@@ -262,6 +262,22 @@
             </task>
         </tasks>
     </metric>
+    <metric dataSet="STOGLB" column="ST_DEVICECOUNT">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDevicesCount">
+                <target>Lun,FileSystem</target>
+                <result>ST_DEVICECOUNT</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_HOSTCNT">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getAttachedHostCount">
+                <target>Host</target>
+                <result>ST_HOSTCNT</result>
+            </task>
+        </tasks>
+    </metric>
     <metric dataSet="STOGLB" column="ST_SYSTEM_PORT_NUM">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getAllPortCount">
