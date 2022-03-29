@@ -26,8 +26,8 @@
     <!--<metric dataSet="STOGLB" column="ST_SYSTEM_BANDWIDTH" value="50"></metric>-->
     <!--<metric dataSet="STOGLB" column="ST_SYSTEM_BANDWIDTH_UTIL" value="0.6"></metric>-->
 
-    <!--<metric dataSet="STOGLB" column="ST_DEVICECOUNT" value="2"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_HOSTCNT" value="30"></metric>-->
+
+
     <!--<metric dataSet="STOGLB" column="ST_THINDEV_COUNT" value="1"></metric>-->
     <!--<metric dataSet="STOGLB" column="ST_THINPOOL_COUNT" value="50"></metric>-->
     <!--<metric dataSet="STOGLB" column="ST_THINPOOL_CONFIG_TOTAL" value="70000"></metric>-->
@@ -35,7 +35,8 @@
     <!--<metric dataSet="STOGLB" column="ST_THINPOOL_USED" value="50000"></metric>-->
 
 
-
+    <!--<metric dataSet="STOGLB" column="ST_HOSTCNT" value="30"></metric>-->
+    <!--<metric dataSet="STOGLB" column="ST_DEVICECOUNT" value="2"></metric>-->
 
     <metric dataSet="STOGLB" column="DS_SYSNM">
         <tasks>

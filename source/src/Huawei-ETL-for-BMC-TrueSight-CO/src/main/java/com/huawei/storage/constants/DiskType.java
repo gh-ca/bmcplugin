@@ -7,6 +7,7 @@ import java.util.Map;
  * Huawei Technologies  all rights reserved
  */
 public enum DiskType {
+
     FC(0),
     SAS(1),
     SATA(2),

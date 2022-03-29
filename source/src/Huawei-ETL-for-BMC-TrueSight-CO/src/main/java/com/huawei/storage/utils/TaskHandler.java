@@ -646,13 +646,13 @@ public class TaskHandler {
             case ConfigConst.RAID3:
                 tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 1);
                 break;
-            case ConfigConst.EC1:
-                tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 1);
-                break;
-            case ConfigConst.EC2:
-                tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 2);
-                break;
-            case ConfigConst.EC3:
+//            case ConfigConst.EC1:
+//                tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 1);
+//                break;
+//            case ConfigConst.EC2:
+//                tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 2);
+//                break;
+            case ConfigConst.RAID_TP:
                 tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 3);
                 break;
             default:

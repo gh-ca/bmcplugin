@@ -8,13 +8,6 @@ import java.util.Map;
  */
 public enum PoolDiskType {
 
-//    SSD(0),
-//
-//    SAS(1),
-//
-//    NL_SAS(2);
-
-
     FC(0),
     SAS(1),
     SATA(2),
@@ -32,8 +25,6 @@ public enum PoolDiskType {
     NVMe_SSD(14),
     NVMe_SSD_SED(16),
     SCM_SSD(17);
-
-
 
     private int type;
 
