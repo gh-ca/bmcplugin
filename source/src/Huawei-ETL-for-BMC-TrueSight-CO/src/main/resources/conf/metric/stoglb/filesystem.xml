@@ -1,5 +1,5 @@
 <metrics>
-    <metric dataSet="STOGLB" column="SYSTYPENM" value="volume"></metric>
+    <metric dataSet="STOGLB" column="SYSTYPENM" value="share"></metric>
     <!--<metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY" value="2000"></metric>-->
     <!--<metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY_PCT" value="0.5"></metric>-->
     <!--<metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY" value="1000"></metric>-->

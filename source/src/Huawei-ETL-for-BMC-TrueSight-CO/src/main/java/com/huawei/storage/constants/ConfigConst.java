@@ -11,9 +11,9 @@ public class ConfigConst {
     public static final int RAID6 = 5;
     public static final int RAID50 = 6;
     public static final int RAID3 = 7;
-    public static final int EC1 = 9;
-    public static final int EC2 = 10;
-    public static final int EC3 = 11;
+//    public static final int EC1 = 9;
+//    public static final int EC2 = 10;
+    public static final int RAID_TP = 11;
 
     public static final String HEALTHSTATUS_NORMAL = "1";
     public static final String RUNNINGSTATUS_NORMAL = "10";

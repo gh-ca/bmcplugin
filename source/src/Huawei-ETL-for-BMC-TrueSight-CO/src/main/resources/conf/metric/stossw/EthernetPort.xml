@@ -20,7 +20,7 @@
     <metric dataSet="STOSSW" column="SYSTYPENM" value="san"></metric>
     <metric dataSet="STOSSW" column="GOLEVELS" value="1"></metric>
     <metric dataSet="STOSSW" column="WEIGHT" value="1"></metric>
-    <metric dataSet="STOSSW" column="BYPORT_TYPE" value="FCoE"></metric>
+    <metric dataSet="STOSSW" column="BYPORT_TYPE" value="ETH"></metric>
 
 
     <metric dataSet="STOSSW" column="BYPORT_CONTROLLER_NAME">

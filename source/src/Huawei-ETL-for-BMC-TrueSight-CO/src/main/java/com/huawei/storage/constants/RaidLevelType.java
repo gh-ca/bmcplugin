@@ -24,6 +24,7 @@ public enum RaidLevelType {
 
 //    EC1(9),
 //    EC2(10),
+//    EC3(11),
 
     RAID_TP(11);
 

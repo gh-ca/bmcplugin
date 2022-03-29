@@ -1,11 +1,17 @@
 <metrics>
     <metric dataSet="STOGLB" column="SYSTYPENM" value="share"></metric>
-    <!--<metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY" value="2000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY_PCT" value="0.5"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY" value="1000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY_PCT" value="0.5"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_STATE" value="true"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_CAPACITY" value="4000"></metric>-->
+<!--    <metric dataSet="STOGLB" column="ST_VOLUME_SPACE_GUARANTEE" value="volume"></metric>-->
+
+<!--    <metric dataSet="STOGLB" column="ST_CONFIG_SIZE" value="1000"></metric>-->
+<!--&lt;!&ndash;    <metric dataSet="STOGLB" column="SA_CONTAINS_SHARE" value="Huawei_OceanStor_lq"></metric>&ndash;&gt;-->
+<!--    <metric dataSet="STOGLB" column="ST_COMMITTED_CAPACITY" value="1000"></metric>-->
+<!--    <metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY" value="800"></metric>-->
+<!--    <metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY_PCT" value = "0.8"></metric>-->
+<!--    <metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY" value = "200"></metric>-->
+<!--    <metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY_PCT " value ="0.2"></metric>-->
+<!--    <metric dataSet="STOGLB" column="ST_VOLUME_STATE" value = "online"></metric>-->
+<!--    <metric dataSet="STOGLB" column="ST_VOLUME_TYPE" value="CommonFileSystem"></metric>-->
+<!--    <metric dataSet="STOGLB" column="ST_CAPACITY" value = "1024"></metric>-->
 
     <metric dataSet="STOGLB" column="ST_SHARE_COMMITTED_SIZE">
         <tasks>
@@ -19,6 +25,7 @@
             </task>
         </tasks>
     </metric>
+
     <metric dataSet="STOGLB" column="DS_SYSNM">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getObjectUniqueName">

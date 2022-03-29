@@ -354,6 +354,7 @@ public enum DataType {
 	 */
 	MaxBandWidthWrite(86),
 	/**
+	 *
 	 * 枚举变量
 	 */
 	FetchFlux(87),
