@@ -114,7 +114,20 @@
             </task>
         </tasks>
     </metric>
-    <!--<metric dataSet="SYSDSK" column="BYDISK_TRANSFER_RATE" value="100"></metric>-->
+
+    <metric dataSet="SYSDSK" column="BYDISK_TRANSFER_RATE">
+        <name>Transfer rate by disk</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getPerfDataFromController">
+                <target>AverageIOSize,Throughput</target>
+                <result>AverageIOSize,Throughput</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>(${AverageIOSize},*,${Throughput})</target>
+                <result>BYDISK_TRANSFER_RATE</result>
+            </task>
+        </tasks>
+    </metric>
 
     <metric dataSet="SYSDSK" column="BYDISK_READ_RATE">
         <name>Read Rate</name>

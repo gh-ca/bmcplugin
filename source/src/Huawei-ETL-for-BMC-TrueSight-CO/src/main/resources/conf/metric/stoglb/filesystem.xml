@@ -68,6 +68,20 @@
             </task>
         </tasks>
     </metric>
+
+    <metric dataSet="STOGLB" column="ST_SHARE_COMMITTED_SIZE">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>CAPACITY</target>
+                <result>CAPACITY</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${CAPACITY},*,512</target>
+                <result>ST_SHARE_COMMITTED_SIZE</result>
+            </task>
+        </tasks>
+    </metric>
+
     <metric dataSet="STOGLB" column="ST_VOLUME_TYPE" name="StorageConfigured Space">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
