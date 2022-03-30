@@ -79,9 +79,25 @@
     </metric>
     <metric dataSet="STOGLB" column="ST_CONFIG_SIZE">
         <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.calculatePhysicalSize">
-                <target>ID</target>
-                <result>SI_CONFIG_SIZE</result>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>USERTOTALCAPACITY</target>
+                <result>USERTOTALCAPACITY</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${USERTOTALCAPACITY},*,512</target>
+                <result>ST_CONFIG_SIZE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOGLB" column="ST_CONFIGURED_VOLUME_CAPACITY">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>LUNCONFIGEDCAPACITY</target>
+                <result>LUNCONFIGEDCAPACITY</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${LUNCONFIGEDCAPACITY},*,512</target>
+                <result>ST_CONFIGURED_VOLUME_CAPACITY</result>
             </task>
         </tasks>
     </metric>
@@ -124,11 +140,11 @@
     <metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY_PCT" name="StorageConfigured Space">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
-                <target>USERCONSUMEDCAPACITYPERCENTAGE</target>
-                <result>USERCONSUMEDCAPACITYPERCENTAGE</result>
+                <target>USERCONSUMEDCAPACITY,USERTOTALCAPACITY</target>
+                <result>USERCONSUMEDCAPACITY,USERTOTALCAPACITY</result>
             </task>
             <task id="1" method="com.huawei.storage.utils.TaskHandler.calculatePercentage">
-                <target>USERCONSUMEDCAPACITYPERCENTAGE,100</target>
+                <target>USERCONSUMEDCAPACITY,USERTOTALCAPACITY</target>
                 <result>ST_CONSUMED_CAPACITY_PCT</result>
             </task>
         </tasks>
@@ -182,7 +198,15 @@
                 <result>ST_POOL_OVERSUBSCRIPTION_SITUATION</result>
             </task>
         </tasks>
-
-
     </metric>
+
+<!--    <metric dataSet="STOGLB" column="ST_CONFIG_SIZE">-->
+            <!--        <tasks>-->
+            <!--            <task id="0" method="com.huawei.storage.utils.TaskHandler.calculatePhysicalSize">-->
+            <!--                <target>ID</target>-->
+            <!--                <result>SI_CONFIG_SIZE</result>-->
+            <!--            </task>-->
+            <!--        </tasks>-->
+<!--    </metric>-->
+
 </metrics>

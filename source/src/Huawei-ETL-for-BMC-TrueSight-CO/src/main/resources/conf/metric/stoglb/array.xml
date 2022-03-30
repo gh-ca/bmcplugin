@@ -1,42 +1,6 @@
 <metrics>
     <metric dataSet="STOGLB" column="ST_SYSTEM_VENDOR" value="Huawei"></metric>
     <metric dataSet="STOGLB" column="SYSTYPENM" value="san"></metric>
-    <!--<metric dataSet="STOGLB" column="ST_SYSTEM_MODEL" value="5300_V3"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_TYPE" value="V3"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_SIZE" value="60000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_CAPACITY" value="60000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_DEVICE_TOTAL" value="20"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_PRIMARY_ALLOCATED" value="3000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_SYSTEM_SUBSCRIBED_CAPACITY" value="40000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_OVERSUBSCRIBED_CAPACITY" value="10000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY" value="20000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_AVAILABLE_FOR_STORAGE_POOLS" value="10000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_AVAILABLE_IN_STORAGE_POOLS" value="40000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_SYSTEM_IO_READ_RATE" value="600"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_SYSTEM_IO_WRITE_RATE" value="600"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_SYSTEM_IO_RATE" value="900"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_SYSTEM_TRANSFER_BYTE_RATE" value="900"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_MICROCODE" value="V300R003C10"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_MICROCODE_PATCH" value="SPC100"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_CACHE" value="100000000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_SID" value="2102350BVB10F2000020"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY" value="40000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY_PCT" value="0.6"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_SYSTEM_PORT_NUM" value="40"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_SYSTEM_BANDWIDTH" value="50"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_SYSTEM_BANDWIDTH_UTIL" value="0.6"></metric>-->
-
-
-
-    <!--<metric dataSet="STOGLB" column="ST_THINDEV_COUNT" value="1"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_THINPOOL_COUNT" value="50"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_THINPOOL_CONFIG_TOTAL" value="70000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_THINPOOL_FREE" value="10000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_THINPOOL_USED" value="50000"></metric>-->
-
-
-    <!--<metric dataSet="STOGLB" column="ST_HOSTCNT" value="30"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_DEVICECOUNT" value="2"></metric>-->
 
     <metric dataSet="STOGLB" column="DS_SYSNM">
         <tasks>
@@ -175,6 +139,8 @@
             </task>
         </tasks>
     </metric>
+
+
     <metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY_PCT">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
@@ -215,6 +181,41 @@
             </task>
         </tasks>
     </metric>
+
+    <metric dataSet="STOGLB" column="ST_CONFIGURED_VOLUME_CAPACITY">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>THICKLUNSALLOCATECAPACITY,THINLUNSALLOCATECAPACITY,SECTORSIZE</target>
+                <result>THICKLUNSALLOCATECAPACITY,THINLUNSALLOCATECAPACITY,SECTORSIZE</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.addValues">
+                <target>THICKLUNSALLOCATECAPACITY,THINLUNSALLOCATECAPACITY</target>
+                <result>ST_CONFIGURED_VOLUME_CAPACITY</result>
+            </task>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${ST_CONFIGURED_VOLUME_CAPACITY},*,${SECTORSIZE}</target>
+                <result>ST_CONFIGURED_VOLUME_CAPACITY</result>
+            </task>
+        </tasks>
+    </metric>
+
+    <metric dataSet="STOGLB" column="ST_CONFIGURED_VOLUME_CAPACITY_PCT">
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>THICKLUNSALLOCATECAPACITY,THINLUNSALLOCATECAPACITY,TOTALCAPACITY</target>
+                <result>THICKLUNSALLOCATECAPACITY,THINLUNSALLOCATECAPACITY,TOTALCAPACITY</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.addValues">
+                <target>THICKLUNSALLOCATECAPACITY,THINLUNSALLOCATECAPACITY</target>
+                <result>ST_CONFIGURED_VOLUME_CAPACITY_PCT</result>
+            </task>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.calculatePercentage">
+                <target>ST_CONFIGURED_VOLUME_CAPACITY_PCT,TOTALCAPACITY</target>
+                <result>ST_CONFIGURED_VOLUME_CAPACITY_PCT</result>
+            </task>
+        </tasks>
+    </metric>
+
     <metric dataSet="STOGLB" column="ST_MICROCODE">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">

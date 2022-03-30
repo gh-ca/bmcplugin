@@ -66,6 +66,17 @@
             </task>
         </tasks>
     </metric>
+
+    <metric dataSet="STOCONT" column="CONT_PROCESSOR_UTIL">
+        <name>Processor utilization by Controller</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+                <target>CPUUSAGE</target>
+                <result>CONT_PROCESSOR_UTIL</result>
+            </task>
+        </tasks>
+    </metric>
+
     <metric dataSet="STOCONT" column="BYCONT_RESPONSE_TIME">
         <name>Response time by Controller</name>
         <tasks>
@@ -75,12 +86,32 @@
             </task>
         </tasks>
     </metric>
+
+    <metric dataSet="STOCONT" column="CONT_RESPONSE_TIME">
+        <name>Response time by Controller</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>AverageIOResponseTime</target>
+                <result>CONT_RESPONSE_TIME</result>
+            </task>
+        </tasks>
+    </metric>
+
     <metric dataSet="STOCONT" column="BYCONT_TRANSFER_RATE">
         <name>Transfer rate by Controller</name>
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
                 <target>AverageIOSize</target>
                 <result>BYCONT_TRANSFER_RATE</result>
+            </task>
+        </tasks>
+    </metric>
+    <metric dataSet="STOCONT" column="CONT_TRANSFER_RATE">
+        <name>Transfer rate by Controller</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
+                <target>AverageIOSize</target>
+                <result>CONT_TRANSFER_RATE</result>
             </task>
         </tasks>
     </metric>
@@ -96,6 +127,7 @@
     <metric dataSet="STOCONT" column="SYSTYPENM" value="san"></metric>
     <metric dataSet="STOCONT" column="GOLEVELS" value="1"></metric>
     <metric dataSet="STOCONT" column="WEIGHT" value="1"></metric>
+
     <metric dataSet="STOCONT" column="DS_SYSNM">
         <name>Storage Array datasource name</name>
         <tasks>
