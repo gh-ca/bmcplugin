@@ -23,15 +23,15 @@
     <metric dataSet="STOSSW" column="BYPORT_TYPE" value="ETH"></metric>
 
 
-<!--    <metric dataSet="STOSSW" column="BYPORT_CONTROLLER_NAME">-->
-<!--        <name>Controller name</name>-->
-<!--        <tasks>-->
-<!--            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromRest">-->
-<!--                <target>LOCATION</target>-->
-<!--                <result>BYPORT_CONTROLLER_NAME</result>-->
-<!--            </task>-->
-<!--        </tasks>-->
-<!--    </metric>-->
+    <metric dataSet="STOSSW" column="BYPORT_CONTROLLER_NAME">
+        <name>Controller name</name>
+        <tasks>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromRest">
+                <target>LOCATION</target>
+                <result>BYPORT_CONTROLLER_NAME</result>
+            </task>
+        </tasks>
+    </metric>
 
     <metric dataSet="STOSSW" column="BYPORT_ADDRESS">
         <name>Port address</name>
