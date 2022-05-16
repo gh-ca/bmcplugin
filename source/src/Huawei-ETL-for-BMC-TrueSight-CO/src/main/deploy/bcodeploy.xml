@@ -195,12 +195,6 @@ delete from TASK_PSET_PROPS
                     <targetComponents>custom[${deploy.res.path.scheduler}/libext]</targetComponents>
                 </properties>
             </action>
-<!--            <action auto-idx="16" type="LIB">-->
-<!--                <properties>-->
-<!--                    <source>scheduler/libs/ojdbc8-19.3.0.0.jar</source>-->
-<!--                    <targetComponents>custom[${deploy.res.path.scheduler}/libext]</targetComponents>-->
-<!--                </properties>-->
-<!--            </action>-->
             <action auto-idx="17" type="RESTART"/>
         </actions>
     </component>

@@ -9,9 +9,8 @@ import org.apache.log4j.Logger;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static java.math.BigDecimal.ZERO;
 
@@ -49,6 +48,23 @@ public class TaskHandler {
             logger.debug("get from rest is : " + obj.getRestData().get((targets[i])));
             String contextValue = obj.getRestData().get((targets[i]));
             flowContext.put(results[i], contextValue);
+        }
+    }
+
+    public void getSumFromRestContextByObject(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+        String[] targets = task.getTarget().split(",");
+        String[] results = task.getResult().split(",");
+        logger.debug("object is :" + obj.getTypeName() + "_" + obj.getName() + "targets is " + task.getTarget());
+        logger.debug("flowContxt is " + flowContext);
+        if (storObjMap.get(targets[targets.length - 1]) != null) {
+            List<StorageObject> storageObjects = storObjMap.get(ObjectType.StoragePool.name());
+            for (int i = 0; i < targets.length - 1; i++) {
+                Long total = 0l;
+                for (StorageObject storagePool : storageObjects) {
+                    total += Long.valueOf(storagePool.getRestData().get(targets[i]));
+                }
+                flowContext.put(results[i], total + "");
+            }
         }
     }
 
@@ -142,13 +158,18 @@ public class TaskHandler {
         int count = 0;
         for (String objTypeName : objTypes) {
             List<StorageObject> storageObjects = storObjMap.get(objTypeName);
-            if (storageObjects != null) {
+            if (storageObjects != null ) {
                 for (StorageObject o : storageObjects) {
-                    if (o.getRestData().get("PARENTID").equals(obj.getId())) {
-                        count++;
+                    if (ObjectType.Lun.name().equals(objTypeName)) {
+                        if (o.getRestData().get("PARENTID").equals(obj.getId()) && o.getPerfData().size() != 0) {
+                            count++;
+                        }
+                    }else{
+                        if (o.getRestData().get("PARENTID").equals(obj.getId())) {
+                            count++;
+                        }
                     }
                 }
-
             }
         }
         flowContext.put(task.getResult(), count + "");
@@ -426,9 +447,12 @@ public class TaskHandler {
 
     public void getDevicesCount(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
         List devices = new ArrayList();
+
         String[] deviceType = task.getTarget().split(",");
         for (String type : deviceType) {
-            if (storObjMap.get(type) != null) {
+            if (type.equals(ObjectType.Lun.name()) && storObjMap.get(type) != null) {
+                devices.addAll(storObjMap.get(type).stream().filter(item -> item.getPerfData().size() != 0).collect(Collectors.toList()));
+            }else {
                 devices.addAll(storObjMap.get(type));
             }
         }
@@ -748,5 +772,38 @@ public class TaskHandler {
                 result = "no migration";
         }
         flowContext.put(task.getResult(),result);
+    }
+
+    public static void main(String[] args) {
+        StorageObject storageObject = new StorageObject();
+        storageObject.setType(201);
+        storageObject.setTypeName("Lun");
+        StorageObject storageObject2 = new StorageObject();
+        storageObject2.setType(201);
+        storageObject2.setTypeName("Lun");
+        StorageObject storageObject3 = new StorageObject();
+        storageObject3.setType(201);
+        storageObject3.setTypeName("FileSystem");
+        StorageObject storageObject4 = new StorageObject();
+        storageObject4.setType(201);
+        storageObject4.setTypeName("FileSystem");
+        List<StorageObject> list = new ArrayList<>();
+        list.add(storageObject);
+        list.add(storageObject2);
+        List<StorageObject> list2 = new ArrayList<>();
+        list2.add(storageObject3);
+        list2.add(storageObject4);
+        Map<String, List<StorageObject>> map = new HashMap<>();
+        map.put("Lun", list);
+        map.put("FileSystem", list2);
+        List<String> list1 = new ArrayList<>();
+        list1.add("Lun");
+        list1.add("FileSystem");
+        List<StorageObject> list3 = new ArrayList<>();
+        for (String type : list1) {
+            list3.addAll(map.get(type));
+        }
+        System.out.println(list3.size());
+
     }
 }

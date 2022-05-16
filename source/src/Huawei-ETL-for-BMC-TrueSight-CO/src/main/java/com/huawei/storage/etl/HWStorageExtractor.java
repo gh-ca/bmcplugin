@@ -1,20 +1,23 @@
 package com.huawei.storage.etl;
 
+import com.google.gson.Gson;
 import com.huawei.storage.constants.ConnectionVO;
 import com.huawei.storage.domain.StorageObject;
 import com.huawei.storage.exception.ETLException;
 import com.huawei.storage.job.DataMapper;
 import com.huawei.storage.job.RestJob;
-import com.neptuny.cpit.etl.*;
+import com.neptuny.cpit.etl.DBConf;
+import com.neptuny.cpit.etl.DataSetList;
+import com.neptuny.cpit.etl.Log;
 import com.neptuny.cpit.etl.extractor.Extractor;
 import org.apache.log4j.Logger;
 
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 /**
  * Huawei Technologies  all rights reserved
@@ -72,6 +75,29 @@ public class HWStorageExtractor  extends Extractor{
         // mapping data to object
         // mapping metric data
         DataSetList list = new DataSetList();
+
+        //-------------------------------------测试区----------------------------------------------------
+
+//        Map<String, List<StorageObject>> stringListMap = makeQuickSearchMap(storageObjects);
+//
+//        List<StorageObject> lun = stringListMap.get("Lun");
+//        List<StorageObject> collect = lun.stream().filter(item -> item.getPerfData().size() != 0).collect(Collectors.toList());
+//        List<StorageObject> fileSystem = stringListMap.get("FileSystem");
+//        List<StorageObject> collect1 = fileSystem.stream().filter(item -> item.getType() == 40).collect(Collectors.toList());
+//        ArrayList<String> lunNames = new ArrayList<>();
+//        lun.stream().forEach(item->lunNames.add(item.getName()));
+//
+//
+//        List list1 = new ArrayList();
+//        list1.addAll(collect);
+//        list1.addAll(fileSystem);
+//        System.out.println(list1.size());
+
+
+        //-------------------------------------测试区----------------------------------------------------
+
+
+
         if(storageObjects!=null) {
             bcoLogger.info("start transform data to bco dataset, dataset size will be "
                     + storageObjects.size());
@@ -85,6 +111,23 @@ public class HWStorageExtractor  extends Extractor{
         executorService.shutdownNow();
         return list;
     }
+
+//    private Map<String,List<StorageObject>> makeQuickSearchMap(List<StorageObject> storageObjects) {
+//        Map<String,List<StorageObject>> map = new HashMap<String,List<StorageObject>>();
+//        for(StorageObject s : storageObjects){
+//            if(map.get(s.getTypeName())!=null){
+//                map.get(s.getTypeName()).add(s);
+//            }else{
+//                List<StorageObject> list = new ArrayList<StorageObject>();
+//                list.add(s);
+//                map.put(s.getTypeName(),list);
+//            }
+//        }
+//        return map;
+//    }
+
+
+
 
     @Override
     public void disconnect() throws Exception {

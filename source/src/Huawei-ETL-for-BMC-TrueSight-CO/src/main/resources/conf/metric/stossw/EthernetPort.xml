@@ -53,8 +53,4 @@
     </metric>
 
 
-
-<!--    <metric dataSet="STOSSW" column="BYPORT_BANDWIDTH" value="100"></metric>-->
-<!--    <metric dataSet="STOSSW" column="BYPORT_BANDWIDTH_UTIL" value="0.5"></metric>-->
-<!--    <metric dataSet="STOSSW" column="BYPORT_BYTE_RATE" value="20"></metric>-->
 </metrics>

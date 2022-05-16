@@ -1,15 +1,5 @@
 <metrics>
 
-    <!--<metric dataSet="STOHOST" column="BYHOST_CUSTOMER_RECHARGE" value="20000000"></metric>
-    <metric dataSet="STOHOST" column="BYHOST_FS_TOTAL" value="10000000"></metric>
-    <metric dataSet="STOHOST" column="BYHOST_FS_USED" value="1000000"></metric>
-    <metric dataSet="STOHOST" column="BYHOST_NOPERM_HOST_MIRROR" value="2000000"></metric>
-    <metric dataSet="STOHOST" column="BYHOST_PERM_HOST_MIRROR" value="2000000"></metric>
-    <metric dataSet="STOHOST" column="BYHOST_PERM_STO_MIRROR" value="2000000"></metric>
-    <metric dataSet="STOHOST" column="BYHOST_SIZE" value="2000000"></metric>
-    <metric dataSet="STOHOST" column="BYHOST_SLA" value="200000"></metric>-->
-
-
     <metric dataSet="STOHOST" column="BYHOST_ALLOCATED">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getLinkedLUNCapacity">

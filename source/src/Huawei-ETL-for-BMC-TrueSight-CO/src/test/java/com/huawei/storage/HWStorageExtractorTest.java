@@ -31,9 +31,9 @@ public class HWStorageExtractorTest {
         conn.setAccessible(true);
         executor.setAccessible(true);
         ConnectionVO connVo = new ConnectionVO();
-        connVo.setHostIP("10.143.133.201");
-        connVo.setIpControllerA("10.143.133.201:8088");
-        connVo.setIpControllerB("10.143.133.201:8088");
+        connVo.setHostIP("hw.dmhost.com");
+        connVo.setIpControllerA("hw.dmhost.com:8088");
+        connVo.setIpControllerB("hw.dmhost.com:8088");
         connVo.setUsername("admin");
         connVo.setPassword("Pbu4@123");
         connVo.setSftpPort("22");

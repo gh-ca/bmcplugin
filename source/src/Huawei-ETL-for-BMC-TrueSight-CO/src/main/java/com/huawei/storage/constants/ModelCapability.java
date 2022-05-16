@@ -12,6 +12,8 @@ public class ModelCapability {
 
     public static Map<String,List<String>> unSupportFunctionMap = new HashMap<String, List<String>>();
 
+    public static Map<String, List<String>> StorageTypeMap = new HashMap<>();
+
 
     static {
         List<String> unSupportList2200 = new ArrayList<String>();
@@ -36,6 +38,34 @@ public class ModelCapability {
         unSupportListDoradoNas.add("mappedLunHost");
         unSupportFunctionMap.put(BoxTypeConst.DORADO_NAS, unSupportListDoradoNas);
         unSupportFunctionMap.put(BoxTypeConst.DORADO_NAS_Enhanced, unSupportListDoradoNas);
+
+        List<String> V6 = new ArrayList<>();
+        V6.add("811");
+        V6.add("812");
+        V6.add("813");
+        V6.add("814");
+        V6.add("815");
+        V6.add("816");
+        V6.add("817");
+        V6.add("818");
+        V6.add("819");
+        V6.add("821");
+        V6.add("822");
+        V6.add("823");
+        V6.add("824");
+        V6.add("825");
+        V6.add("826");
+        V6.add("827");
+        V6.add("828");
+        V6.add("829");
+        V6.add("830");
+        V6.add("831");
+        V6.add("832");
+        StorageTypeMap.put("V6", V6);
+
+
+
+
 
     }
 
