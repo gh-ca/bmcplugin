@@ -129,7 +129,6 @@
        <count-command>get-host-count</count-command>
        <query-command>batch-find-host</query-command>
         <counters>
-<!--            <counter mapping="host_system"><name>OBJREL</name></counter>-->
             <counter mapping="host"><name>OBJREL</name></counter>
             <counter mapping="host_blank"><name>OBJREL</name></counter>
         </counters>
@@ -141,7 +140,5 @@
             <counter mapping="volume_host"><name>STOHOST</name></counter>
         </counters>
     </storage-object>
-
-
 
 </managed-objects>

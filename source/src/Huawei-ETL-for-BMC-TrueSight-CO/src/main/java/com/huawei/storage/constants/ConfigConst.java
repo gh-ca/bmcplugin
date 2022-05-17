@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
+ */
 package com.huawei.storage.constants;
 
 /**
@@ -11,8 +14,6 @@ public class ConfigConst {
     public static final int RAID6 = 5;
     public static final int RAID50 = 6;
     public static final int RAID3 = 7;
-//    public static final int EC1 = 9;
-//    public static final int EC2 = 10;
     public static final int RAID_TP = 11;
 
     public static final String HEALTHSTATUS_NORMAL = "1";

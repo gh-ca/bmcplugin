@@ -30,13 +30,13 @@ public class DataMapperTest {
         PropertyConfigurator.configure(properties);
         ConnectionVO connectionVO = new ConnectionVO();
         connectionVO.setUsername("admin");
-        connectionVO.setPassword("Admin@storage");
+        connectionVO.setPassword("Pbu4@123");
         connectionVO.setScope("0");
-        connectionVO.setIpControllerA("10.158.196.210:40000");
-        connectionVO.setIpControllerB("10.158.196.210:40001");
-        connectionVO.setRestPort("40000");
-        connectionVO.setSftpPort("31000");
-        connectionVO.setHostIP("10.158.196.210");
+        connectionVO.setIpControllerA("10.143.133.201:8088");
+        connectionVO.setIpControllerB("10.143.133.201:8088");
+        connectionVO.setRestPort("8088");
+        connectionVO.setSftpPort("22");
+        connectionVO.setHostIP("10.143.133.201");
         perfJob = new PerformanceDataJob(connectionVO);
         restJob = new RestJob(connectionVO);
     }

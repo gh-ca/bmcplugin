@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
+ */
 package com.huawei.storage.constants;
 
 import java.util.HashMap;
@@ -8,8 +11,8 @@ import java.util.Map;
  */
 public class BoxTypeConst {
 
-    public static Map<String,String> boxMap = new HashMap<String, String>();
-    public static Map<String,String> boxNameMap = new HashMap<String, String>();
+    public static Map<String, String> boxMap = new HashMap<String, String>();
+    public static Map<String, String> boxNameMap = new HashMap<String, String>();
 
     public static final String OCEAN_STOR_S_5500_T = "OceanStor_S5500T";
 
@@ -335,46 +338,5 @@ public class BoxTypeConst {
         boxMap.put("839", OCEANSTOR_DORADO_5600K);
         boxMap.put("840", OCEANSTOR_18500K);
 
-        /**
-         * 61：6800 V3
-         * 62：6900 V3
-         * 63：5600 V3
-         * 64：5800 V3
-         * 68：5500 V3
-         * 69：2600 V3
-         * 70：5300 V3
-         * 71：2800 V3
-         * 72：18500 V3
-         * 73：18800 V3
-         * 74：2200 V3
-         *
-         * 82：2600 V3 for Video
-         *
-         *
-         * 84：2600F V3
-         * 85：5500F V3
-         * 86：5600F V3
-         * 87：5800F V3
-         * 88：6800F V3
-         * 89：18500F V3
-         * 90：18800F V3
-         * 92：2800 V5
-         * 93：5300 V5
-         * 94：5300F V5
-         * 95：5500 V5
-         * 96：5500F V5
-         * 97：5600 V5
-         * 98：5600F V5
-         * 99：5800 V5
-         * 100：5800F V5
-         * 101：6800 V5
-         * 102：6800F V5
-         * 103：18500 V5
-         * 104：18500F V5
-         * 105：18800 V5
-         * 106：18800F V5
-         * 107：5500 V5 Elite
-         * 108：2100 V3
-         */
     }
 }

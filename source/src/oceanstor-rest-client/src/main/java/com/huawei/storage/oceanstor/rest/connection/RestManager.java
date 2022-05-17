@@ -1,15 +1,11 @@
 package com.huawei.storage.oceanstor.rest.connection;
 
-import com.google.gson.Gson;
 import com.huawei.storage.oceanstor.rest.constants.HttpMethodEnum;
 import com.huawei.storage.oceanstor.rest.constants.OperationConstants;
 import com.huawei.storage.oceanstor.rest.constants.OperationError;
 import com.huawei.storage.oceanstor.rest.domain.RestResponse;
 import com.huawei.storage.oceanstor.rest.exception.RestException;
 import org.apache.log4j.Logger;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Huawei Technologies  all rights reserved
@@ -19,8 +15,6 @@ public class RestManager {
 
 	private String hostURL;
 	private RestRequestHandler restRequestHandler = new RestRequestHandler();
-
-	Map<String, Object> urls = new HashMap<String, Object>();
 
     public RestManager(){}
 
@@ -57,16 +51,6 @@ public class RestManager {
 		String url = hostURL  + restRelativeUri;
 		logger.info("start rest request ,the request url is " + url
                 +" request body is " +requestBody);
-
-
-		if (urls.get(url) == null) {
-			urls.put(url, method);
-		}
-
-		if (urls.size()==750) {
-			String s = new Gson().toJson(urls);
-			System.out.println(s);
-		}
 
 		switch (method) {
 		case GET:

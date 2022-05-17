@@ -19,6 +19,18 @@
                 <target>ReadBandWidth</target>
                 <result>BYCONT_BANDWIDTH_UTIL</result>
             </task>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getPerfDataFromController">
+                <target>ReadBandWidth,WriteBandWidth</target>
+                <result>ReadBandWidth,WriteBandWidth</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.getMAXBandWidth">
+                <target>MaxBandWidth</target>
+                <result>MaxBandWidth</result>
+            </task>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>(${ReadBandWidth},+,${WriteBandWidth}),/,${MaxBandWidth},*,100</target>
+                <result>ST_SYSTEM_BANDWIDTH_UTIL</result>
+            </task>
         </tasks>
     </metric>
     <metric dataSet="STOCONT" column="BYCONT_IO_RATE">
@@ -62,6 +74,10 @@
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
                 <target>CPUUSAGE</target>
+                <result>BYCONT_PROCESSOR_UTIL</result>
+            </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${BYCONT_PROCESSOR_UTIL},/,100</target>
                 <result>BYCONT_PROCESSOR_UTIL</result>
             </task>
         </tasks>

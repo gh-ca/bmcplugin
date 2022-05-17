@@ -5,7 +5,9 @@ import com.huawei.storage.domain.StorageObject;
 import com.huawei.storage.exception.ETLException;
 import com.huawei.storage.job.DataMapper;
 import com.huawei.storage.job.RestJob;
-import com.neptuny.cpit.etl.*;
+import com.neptuny.cpit.etl.DBConf;
+import com.neptuny.cpit.etl.DataSetList;
+import com.neptuny.cpit.etl.Log;
 import com.neptuny.cpit.etl.extractor.Extractor;
 import org.apache.log4j.Logger;
 
@@ -72,6 +74,7 @@ public class HWStorageExtractor  extends Extractor{
         // mapping data to object
         // mapping metric data
         DataSetList list = new DataSetList();
+
         if(storageObjects!=null) {
             bcoLogger.info("start transform data to bco dataset, dataset size will be "
                     + storageObjects.size());

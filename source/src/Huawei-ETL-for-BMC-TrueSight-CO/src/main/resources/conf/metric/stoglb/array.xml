@@ -93,48 +93,44 @@
     </metric>
     <metric dataSet="STOGLB" column="ST_SYSTEM_SUBSCRIBED_CAPACITY">
         <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
-                <target>THICKLUNSALLOCATECAPACITY,THINLUNSMAXCAPACITY,SECTORSIZE</target>
-                <result>THICKLUNSALLOCATECAPACITY,THINLUNSMAXCAPACITY,SECTORSIZE</result>
-            </task>
-            <task id="1" method="com.huawei.storage.utils.TaskHandler.addValues">
-                <target>THICKLUNSALLOCATECAPACITY,THINLUNSMAXCAPACITY</target>
-                <result>SUBSCRIBED_CAPACITY</result>
-            </task>
-            <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">
-                <target>${SUBSCRIBED_CAPACITY},*,${SECTORSIZE}</target>
-                <result>ST_SYSTEM_SUBSCRIBED_CAPACITY</result>
-            </task>
+                <task id="0" method="com.huawei.storage.utils.TaskHandler.getSumFromRestContextByObject">-->
+                    <target>LUNCONFIGEDCAPACITY,TOTALFSCAPACITY,StoragePool</target>
+                    <result>SUM_LUNCONFIGEDCAPACITY,SUM_TOTALFSCAPACITY</result>
+                </task>
+                <task id="1" method="com.huawei.storage.utils.TaskHandler.addValues">-->
+                    <target>SUM_LUNCONFIGEDCAPACITY,SUM_TOTALFSCAPACITY</target>
+                    <result>SUBSCRIBED_CAPACITY</result>
+                </task>
+                <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">-->
+                    <target>${SUBSCRIBED_CAPACITY},*,512</target>
+                    <result>ST_SYSTEM_SUBSCRIBED_CAPACITY</result>
+                </task>
         </tasks>
     </metric>
     <metric dataSet="STOGLB" column="ST_OVERSUBSCRIBED_CAPACITY">
         <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
-                <target>THICKLUNSALLOCATECAPACITY,THINLUNSMAXCAPACITY,STORAGEPOOLCAPACITY,SECTORSIZE</target>
-                <result>THICKLUNSALLOCATECAPACITY,THINLUNSMAXCAPACITY,STORAGEPOOLCAPACITY,SECTORSIZE</result>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getSumFromRestContextByObject">-->
+                <target>LUNCONFIGEDCAPACITY,TOTALFSCAPACITY,USERTOTALCAPACITY,StoragePool</target>
+                <result>SUM_LUNCONFIGEDCAPACITY,SUM_TOTALFSCAPACITY,SUM_USERTOTALCAPACITY</result>
             </task>
-            <task id="1" method="com.huawei.storage.utils.TaskHandler.addValues">
-                <target>THICKLUNSALLOCATECAPACITY,THINLUNSMAXCAPACITY</target>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.addValues">-->
+                <target>SUM_LUNCONFIGEDCAPACITY,SUM_TOTALFSCAPACITY</target>
                 <result>SUBSCRIBED_CAPACITY</result>
             </task>
-            <task id="2" method="com.huawei.storage.utils.TaskHandler.getDifference">
-                <target>SUBSCRIBED_CAPACITY,STORAGEPOOLCAPACITY</target>
-                <result>OVER_CAPACITY</result>
-            </task>
-            <task id="3" method="com.huawei.storage.utils.TaskHandler.evalExpression">
-                <target>${OVER_CAPACITY},*,${SECTORSIZE}</target>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">-->
+                <target>(${SUBSCRIBED_CAPACITY},-,${SUM_USERTOTALCAPACITY}),*,512</target>
                 <result>ST_OVERSUBSCRIBED_CAPACITY</result>
             </task>
         </tasks>
     </metric>
     <metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY">
         <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
-                <target>TOTALCAPACITY,USEDCAPACITY,SECTORSIZE</target>
-                <result>TOTALCAPACITY,USEDCAPACITY,SECTORSIZE</result>
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getSumFromRestContextByObject">-->
+                <target>USERTOTALCAPACITY,StoragePool</target>
+                <result>SUM_USERTOTALCAPACITY</result>
             </task>
-            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
-                <target>(${TOTALCAPACITY},-,${USEDCAPACITY}),*,${SECTORSIZE}</target>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">-->
+                <target>${SUM_USERTOTALCAPACITY},*,512</target>
                 <result>ST_AVAILABLE_CAPACITY</result>
             </task>
         </tasks>
@@ -144,15 +140,11 @@
     <metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY_PCT">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
-                <target>TOTALCAPACITY,USEDCAPACITY</target>
-                <result>TOTALCAPACITY,USEDCAPACITY</result>
+                <target>STORAGEPOOLCAPACITY,TOTALCAPACITY</target>
+                <result>STORAGEPOOLCAPACITY,TOTALCAPACITY</result>
             </task>
-            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
-                <target>${TOTALCAPACITY},-,${USEDCAPACITY}</target>
-                <result>FREECAPACITY</result>
-            </task>
-            <task id="2" method="com.huawei.storage.utils.TaskHandler.calculatePercentage">
-                <target>FREECAPACITY,TOTALCAPACITY</target>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.calculatePercentage">
+                <target>STORAGEPOOLCAPACITY,TOTALCAPACITY</target>
                 <result>ST_AVAILABLE_CAPACITY_PCT</result>
             </task>
         </tasks>
@@ -172,11 +164,11 @@
     <metric dataSet="STOGLB" column="ST_AVAILABLE_IN_STORAGE_POOLS">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
-                <target>STORAGEPOOLHOSTSPARECAPACITY,SECTORSIZE</target>
-                <result>STORAGEPOOLHOSTSPARECAPACITY,SECTORSIZE</result>
+                <target>STORAGEPOOLFREECAPACITY,SECTORSIZE</target>
+                <result>STORAGEPOOLFREECAPACITY,SECTORSIZE</result>
             </task>
             <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
-                <target>${STORAGEPOOLHOSTSPARECAPACITY},*,${SECTORSIZE}</target>
+                <target>${STORAGEPOOLFREECAPACITY},*,${SECTORSIZE}</target>
                 <result>ST_AVAILABLE_IN_STORAGE_POOLS</result>
             </task>
         </tasks>

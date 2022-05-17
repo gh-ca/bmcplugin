@@ -1,6 +1,5 @@
 package com.huawei.storage.utils;
 
-import com.google.gson.Gson;
 import com.huawei.storage.constants.*;
 import com.huawei.storage.domain.StorageObject;
 import com.huawei.storage.domain.Task;
@@ -10,8 +9,10 @@ import org.apache.log4j.Logger;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static java.math.BigDecimal.ZERO;
 
@@ -24,21 +25,6 @@ public class TaskHandler {
 
 
     private Logger logger = Logger.getLogger(TaskHandler.class);
-   /* //###
-    private ExecutorService executorService;
-    private com.neptuny.cpit.logger.Logger bcoLogger ;
-    //###
-    public TaskHandler(){
-        String loggerKey = "service-test-log";
-        String loglevel = "ALL";
-        String loggerFileName;
-
-        loggerFileName = com.neptuny.cpit.logger.Logger.loadLoggerAppenderForInstance(loggerKey, "scheduler", loglevel, Boolean.TRUE.booleanValue());
-        File loggerFile = new File(loggerFileName);
-        this.bcoLogger = com.neptuny.cpit.logger.Logger.getLogger(loggerKey);
-        this.bcoLogger.enableDiagnosticLogCaching();
-    }
-    */
 
     public void getFromRestContext(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
         String[] targets = task.getTarget().split(",");
@@ -49,6 +35,23 @@ public class TaskHandler {
             logger.debug("get from rest is : " + obj.getRestData().get((targets[i])));
             String contextValue = obj.getRestData().get((targets[i]));
             flowContext.put(results[i], contextValue);
+        }
+    }
+
+    public void getSumFromRestContextByObject(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+        String[] targets = task.getTarget().split(",");
+        String[] results = task.getResult().split(",");
+        logger.debug("object is :" + obj.getTypeName() + "_" + obj.getName() + "targets is " + task.getTarget());
+        logger.debug("flowContxt is " + flowContext);
+        if (storObjMap.get(targets[targets.length - 1]) != null) {
+            List<StorageObject> storageObjects = storObjMap.get(ObjectType.StoragePool.name());
+            for (int i = 0; i < targets.length - 1; i++) {
+                Long total = 0l;
+                for (StorageObject storagePool : storageObjects) {
+                    total += Long.valueOf(storagePool.getRestData().get(targets[i]));
+                }
+                flowContext.put(results[i], total + "");
+            }
         }
     }
 
@@ -142,13 +145,18 @@ public class TaskHandler {
         int count = 0;
         for (String objTypeName : objTypes) {
             List<StorageObject> storageObjects = storObjMap.get(objTypeName);
-            if (storageObjects != null) {
+            if (storageObjects != null ) {
                 for (StorageObject o : storageObjects) {
-                    if (o.getRestData().get("PARENTID").equals(obj.getId())) {
-                        count++;
+                    if (ObjectType.Lun.name().equals(objTypeName)) {
+                        if (o.getRestData().get("PARENTID").equals(obj.getId()) && o.getPerfData().size() != 0) {
+                            count++;
+                        }
+                    }else{
+                        if (o.getRestData().get("PARENTID").equals(obj.getId())) {
+                            count++;
+                        }
                     }
                 }
-
             }
         }
         flowContext.put(task.getResult(), count + "");
@@ -369,7 +377,7 @@ public class TaskHandler {
             if (null != tierCAPACITY[tier]){
                 if (!"0".equals(tierCAPACITY[tier])) {
                     if (tierDISKTYPE[tier] != null){
-                        poolDiskType = poolDiskType + PoolDiskType.valueOf(Integer.valueOf(tierDISKTYPE[tier])).name() + "/";
+                        poolDiskType = poolDiskType + DiskType.valueOf(Integer.valueOf(tierDISKTYPE[tier])).name() + "/";
                     }
                 }
             }
@@ -426,9 +434,12 @@ public class TaskHandler {
 
     public void getDevicesCount(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
         List devices = new ArrayList();
+
         String[] deviceType = task.getTarget().split(",");
         for (String type : deviceType) {
-            if (storObjMap.get(type) != null) {
+            if (type.equals(ObjectType.Lun.name()) && storObjMap.get(type) != null) {
+                devices.addAll(storObjMap.get(type).stream().filter(item -> item.getPerfData().size() != 0).collect(Collectors.toList()));
+            }else {
                 devices.addAll(storObjMap.get(type));
             }
         }
@@ -617,13 +628,6 @@ public class TaskHandler {
 
     private long calculateTierSize(int tierRAIDLV, int tierRAIDDISKNUM, long tierCAPACITY) {
         long tierSize = 0;
-       /* 1：RAID10
-        2：RAID5
-        3：RAID0
-        4：RAID1
-        5：RAID6
-        6：RAID50
-        7：RAID3*/
         switch (tierRAIDLV) {
             case ConfigConst.RAID10:
                 tierSize = tierCAPACITY * 2;
@@ -646,12 +650,6 @@ public class TaskHandler {
             case ConfigConst.RAID3:
                 tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 1);
                 break;
-//            case ConfigConst.EC1:
-//                tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 1);
-//                break;
-//            case ConfigConst.EC2:
-//                tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 2);
-//                break;
             case ConfigConst.RAID_TP:
                 tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 3);
                 break;

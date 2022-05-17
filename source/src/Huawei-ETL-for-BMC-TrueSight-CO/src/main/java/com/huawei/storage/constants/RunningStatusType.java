@@ -1,10 +1,14 @@
+/*
+ * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
+ */
 package com.huawei.storage.constants;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Huawei Technologies  all rights reserved
+ * @author lianq
+ * @since 2022-05-17
  */
 public enum RunningStatusType {
 

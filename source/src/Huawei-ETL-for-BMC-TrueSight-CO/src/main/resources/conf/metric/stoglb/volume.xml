@@ -1,19 +1,5 @@
 <metrics>
     <metric dataSet="STOGLB" column="SYSTYPENM" value="volume"></metric>
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_RAID_LEVEL" value="raid5"></metric>-->
-    <!--<metric dataSet="STOGLB" column="VOLUME_EXTERNAL_ID" value="2100643e8c4c5f66"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_MAPPED" value="0"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_RESPONSE_TIME" value="50"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_CONSUMED_CAPACITY" value="100"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_CONSUMED_CAPACITY_PCT" value="0.1"></metric>-->
-
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_TRANSFER_BYTE_RATE" value="200"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_TIME_SINCE_LAST_ACTIVITY" value="100"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_IO_READ_RATE" value="200"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_IO_WRITE_RATE" value="200"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_IO_RATE" value="300"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_VOLUME_TYPE" value="lun"></metric>-->
-
 
     <metric dataSet="STOGLB" column="DS_SYSNM">
         <tasks>

@@ -1,17 +1,6 @@
 <metrics>
     <metric dataSet="STOGLB" column="SYSTYPENM" value="rp:sto"></metric>
     <metric dataSet="STOGLB" column="ST_POOL_TYPE" value="Thin Pool"></metric>
-    <!--<metric dataSet="STOGLB" column="ST_CAPACITY" value="1000"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_CONFIG_SIZE" value="1024"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY" value="500"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY_PCT" value="0.5"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_POOL_SUBSCRIBED_CAPACITY" value="1000"></metric>-->
-
-    <!--<metric dataSet="STOGLB" column="ST_POOL_OVERSUBSCRIPTION_SITUATION" value="yes"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_POOL_DEV_COUNT" value="5"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY" value="500"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_AVAILABLE_CAPACITY_PCT" value="0.5"></metric>-->
-    <!--<metric dataSet="STOGLB" column="ST_DISK_TYPE" value="SAS"></metric>-->
 
 
     <metric dataSet="STOGLB" column="DS_SYSNM">
@@ -199,14 +188,5 @@
             </task>
         </tasks>
     </metric>
-
-<!--    <metric dataSet="STOGLB" column="ST_CONFIG_SIZE">-->
-            <!--        <tasks>-->
-            <!--            <task id="0" method="com.huawei.storage.utils.TaskHandler.calculatePhysicalSize">-->
-            <!--                <target>ID</target>-->
-            <!--                <result>SI_CONFIG_SIZE</result>-->
-            <!--            </task>-->
-            <!--        </tasks>-->
-<!--    </metric>-->
 
 </metrics>

@@ -101,7 +101,6 @@ public class RestPageUtils {
         object.setType(Integer.parseInt(data.get("TYPE")));
         //v6 unsupport NFSHARE/CIFSHARE NAME
         object.setName(data.get("NAME") != null ? data.get("NAME"): data.get("SHAREPATH"));
-        //CIFShare unsupport TPYE param
         object.setTypeName(ObjectType.valueOf(object.getType()).name());
         object.setRestData(data);
 
