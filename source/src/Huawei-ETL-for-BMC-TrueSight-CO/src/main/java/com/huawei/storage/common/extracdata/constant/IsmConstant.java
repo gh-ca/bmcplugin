@@ -1,7 +1,7 @@
 package com.huawei.storage.common.extracdata.constant;
 
 /**
- * Huawei Technologies  all rights reserved
+ * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
  */
 public class IsmConstant
 {

@@ -1,3 +1,6 @@
+/*
+ * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
+ */
 package com.huawei.storage.constants;
 
 import java.util.ArrayList;
@@ -62,12 +65,5 @@ public class ModelCapability {
         V6.add("831");
         V6.add("832");
         StorageTypeMap.put("V6", V6);
-
-
-
-
-
     }
-
-
 }

@@ -189,13 +189,4 @@
         </tasks>
     </metric>
 
-<!--    <metric dataSet="STOGLB" column="ST_CONFIG_SIZE">-->
-            <!--        <tasks>-->
-            <!--            <task id="0" method="com.huawei.storage.utils.TaskHandler.calculatePhysicalSize">-->
-            <!--                <target>ID</target>-->
-            <!--                <result>SI_CONFIG_SIZE</result>-->
-            <!--            </task>-->
-            <!--        </tasks>-->
-<!--    </metric>-->
-
 </metrics>

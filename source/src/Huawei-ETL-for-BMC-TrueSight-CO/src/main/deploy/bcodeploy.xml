@@ -7,7 +7,7 @@
         <name>Huawei OceanStor ETL</name>
         <vendor>Huawei Inc</vendor>
         <description>You are about to install Huawei OceanStor ETL package.</description>
-        <version>20.02.00</version>
+        <version>20.02.00.01</version>
         <date>01/19/2022 20:00:00</date>
         <checkLicense>license.txt</checkLicense>
         <BCOAcceptedVersions>10.0.00.[01:*];10.0.[01:*];10.3.[00:*];10.5.[00:*];10.7.[00:*];11.0.[00:*];11.3.[00:*];20.02.[00:*]</BCOAcceptedVersions>
@@ -130,20 +130,19 @@ delete from TASK_PSET_PROPS
             </action>
             <action auto-idx="6" type="LIB">
                 <properties>
-                    <!--<source>scheduler/libs/oceanstor-rest-client-one-1.6.3.jar</source>-->
                     <source>scheduler/libs/oceanstor-rest-client-1.6.3.jar</source>
                     <targetComponents>custom[${deploy.res.path.scheduler}/libext]</targetComponents>
                     </properties>
             </action>
             <action auto-idx="7" type="LIB">
                 <properties>
-                    <source>scheduler/libs/xstream-1.4.10.jar</source>
+                    <source>scheduler/libs/xstream-1.4.19.jar</source>
                     <targetComponents>custom[${deploy.res.path.scheduler}/libext]</targetComponents>
                     </properties>
             </action>
             <action auto-idx="8" type="LIB">
                 <properties>
-                    <source>scheduler/libs/json-3.1.1.jar</source>
+                    <source>scheduler/libs/json-20220320.jar</source>
                     <targetComponents>custom[${deploy.res.path.scheduler}/libext]</targetComponents>
                     </properties>
             </action>
@@ -155,13 +154,13 @@ delete from TASK_PSET_PROPS
             </action>
             <action auto-idx="10" type="LIB">
                 <properties>
-                    <source>scheduler/libs/commons-io-2.4.jar</source>
+                    <source>scheduler/libs/commons-io-2.5.jar</source>
                     <targetComponents>custom[${deploy.res.path.scheduler}/libext]</targetComponents>
                     </properties>
             </action>
             <action auto-idx="11" type="LIB">
                 <properties>
-                    <source>scheduler/libs/commons-compress-1.7.jar</source>
+                    <source>scheduler/libs/commons-compress-1.21.jar</source>
                     <targetComponents>custom[${deploy.res.path.scheduler}/libext]</targetComponents>
                 </properties>
             </action>
@@ -191,7 +190,7 @@ delete from TASK_PSET_PROPS
             </action>
             <action auto-idx="16" type="LIB">
                 <properties>
-                    <source>scheduler/libs/sqlite-jdbc-3.23.1.jar</source>
+                    <source>scheduler/libs/sqlite-jdbc-3.8.11.2.jar</source>
                     <targetComponents>custom[${deploy.res.path.scheduler}/libext]</targetComponents>
                 </properties>
             </action>

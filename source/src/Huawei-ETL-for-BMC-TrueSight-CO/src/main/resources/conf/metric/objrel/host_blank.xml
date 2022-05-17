@@ -25,6 +25,5 @@
         </tasks>
     </metric>
     <metric dataSet="OBJREL" column="CHANGETYPE" value="ASSERT"></metric>
-<!--    <metric dataSet="OBJREL" column="ENTTYPENM" value="gen"></metric>-->
     <metric dataSet="OBJREL" column="ENTTYPENM" value="vh"></metric>
 </metrics>

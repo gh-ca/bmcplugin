@@ -1,3 +1,6 @@
+/*
+ *  Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
+ */
 package com.huawei.storage.common.db;
 
 import com.neptuny.cpit.database.DatabaseConnectionManagerFactory;
@@ -10,9 +13,7 @@ import com.neptuny.cpit.etl.util.CryptoUtil;
 import java.sql.Connection;
 import java.util.Properties;
 
-/**
- * Huawei Technologies  all rights reserved
- */
+
 public class BCODBManager {
     private DatabaseConnectionManagerInterface dbManager;
     private Connection connection;

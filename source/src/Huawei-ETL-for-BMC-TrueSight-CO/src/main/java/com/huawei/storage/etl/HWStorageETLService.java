@@ -16,7 +16,7 @@ import java.util.Properties;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- * Huawei Technologies  all rights reserved
+ * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
  */
 public class HWStorageETLService extends AbstractService {
 

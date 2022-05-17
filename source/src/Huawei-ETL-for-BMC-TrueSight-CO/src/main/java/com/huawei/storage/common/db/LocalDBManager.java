@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Huawei Technologies  all rights reserved
+ * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
  */
 public class LocalDBManager {
     private final Logger logger = Logger.getLogger(LocalDBManager.class);

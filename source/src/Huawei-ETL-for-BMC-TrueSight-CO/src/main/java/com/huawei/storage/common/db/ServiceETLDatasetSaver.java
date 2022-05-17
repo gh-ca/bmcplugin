@@ -10,7 +10,7 @@ import com.neptuny.cpit.etl.util.SysUtils;
 import com.neptuny.cpit.logger.Logger;
 
 /**
- * Huawei Technologies  all rights reserved
+ * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
  */
 public class ServiceETLDatasetSaver {
 

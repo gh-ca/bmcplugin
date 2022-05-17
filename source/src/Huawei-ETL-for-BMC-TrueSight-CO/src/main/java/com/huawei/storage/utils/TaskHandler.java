@@ -1,6 +1,5 @@
 package com.huawei.storage.utils;
 
-import com.google.gson.Gson;
 import com.huawei.storage.constants.*;
 import com.huawei.storage.domain.StorageObject;
 import com.huawei.storage.domain.Task;
@@ -9,7 +8,10 @@ import org.apache.log4j.Logger;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static java.math.BigDecimal.ZERO;
@@ -23,21 +25,6 @@ public class TaskHandler {
 
 
     private Logger logger = Logger.getLogger(TaskHandler.class);
-   /* //###
-    private ExecutorService executorService;
-    private com.neptuny.cpit.logger.Logger bcoLogger ;
-    //###
-    public TaskHandler(){
-        String loggerKey = "service-test-log";
-        String loglevel = "ALL";
-        String loggerFileName;
-
-        loggerFileName = com.neptuny.cpit.logger.Logger.loadLoggerAppenderForInstance(loggerKey, "scheduler", loglevel, Boolean.TRUE.booleanValue());
-        File loggerFile = new File(loggerFileName);
-        this.bcoLogger = com.neptuny.cpit.logger.Logger.getLogger(loggerKey);
-        this.bcoLogger.enableDiagnosticLogCaching();
-    }
-    */
 
     public void getFromRestContext(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
         String[] targets = task.getTarget().split(",");
@@ -390,7 +377,7 @@ public class TaskHandler {
             if (null != tierCAPACITY[tier]){
                 if (!"0".equals(tierCAPACITY[tier])) {
                     if (tierDISKTYPE[tier] != null){
-                        poolDiskType = poolDiskType + PoolDiskType.valueOf(Integer.valueOf(tierDISKTYPE[tier])).name() + "/";
+                        poolDiskType = poolDiskType + DiskType.valueOf(Integer.valueOf(tierDISKTYPE[tier])).name() + "/";
                     }
                 }
             }
@@ -641,13 +628,6 @@ public class TaskHandler {
 
     private long calculateTierSize(int tierRAIDLV, int tierRAIDDISKNUM, long tierCAPACITY) {
         long tierSize = 0;
-       /* 1：RAID10
-        2：RAID5
-        3：RAID0
-        4：RAID1
-        5：RAID6
-        6：RAID50
-        7：RAID3*/
         switch (tierRAIDLV) {
             case ConfigConst.RAID10:
                 tierSize = tierCAPACITY * 2;
@@ -670,12 +650,6 @@ public class TaskHandler {
             case ConfigConst.RAID3:
                 tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 1);
                 break;
-//            case ConfigConst.EC1:
-//                tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 1);
-//                break;
-//            case ConfigConst.EC2:
-//                tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 2);
-//                break;
             case ConfigConst.RAID_TP:
                 tierSize = tierCAPACITY * tierRAIDDISKNUM / (tierRAIDDISKNUM - 3);
                 break;
@@ -772,38 +746,5 @@ public class TaskHandler {
                 result = "no migration";
         }
         flowContext.put(task.getResult(),result);
-    }
-
-    public static void main(String[] args) {
-        StorageObject storageObject = new StorageObject();
-        storageObject.setType(201);
-        storageObject.setTypeName("Lun");
-        StorageObject storageObject2 = new StorageObject();
-        storageObject2.setType(201);
-        storageObject2.setTypeName("Lun");
-        StorageObject storageObject3 = new StorageObject();
-        storageObject3.setType(201);
-        storageObject3.setTypeName("FileSystem");
-        StorageObject storageObject4 = new StorageObject();
-        storageObject4.setType(201);
-        storageObject4.setTypeName("FileSystem");
-        List<StorageObject> list = new ArrayList<>();
-        list.add(storageObject);
-        list.add(storageObject2);
-        List<StorageObject> list2 = new ArrayList<>();
-        list2.add(storageObject3);
-        list2.add(storageObject4);
-        Map<String, List<StorageObject>> map = new HashMap<>();
-        map.put("Lun", list);
-        map.put("FileSystem", list2);
-        List<String> list1 = new ArrayList<>();
-        list1.add("Lun");
-        list1.add("FileSystem");
-        List<StorageObject> list3 = new ArrayList<>();
-        for (String type : list1) {
-            list3.addAll(map.get(type));
-        }
-        System.out.println(list3.size());
-
     }
 }
