@@ -226,9 +226,19 @@ public class BoxTypeConst {
 
     public static final String OCEANSTOR_2810_V5 = "OCEANSTOR_2810_V5";
 
-    /**
-     *    137：2810 V5
-     */
+    public static final String OCEANSTOR_5120_V5 = "OCEANSTOR_5120 V5";
+
+    public static final String OCEANSTOR_5220_V5 = "OCEANSTOR_5220 V5";
+
+    public static final String OCEANSTOR_2220 = "OCEANSTOR_2220";
+
+    public static final String OCEANSTOR_5300K = "OCEANSTOR_5300K";
+
+    public static final String OCEANSTOR_5500K = "OCEANSTOR_5500K";
+
+    //844：OceanStor 5300K
+    //845：OceanStor 5500K
+
 
     static {
         boxMap.put("18", OCEAN_STOR_S_5500_T);
@@ -302,6 +312,9 @@ public class BoxTypeConst {
         boxMap.put("134", OCEAN_STOR_5210_V5_Enhanced);
         boxMap.put("135", OCEAN_STOR_5210_F_V5_Enhanced);
         boxMap.put("137", OCEANSTOR_2810_V5);
+        boxMap.put("144", OCEANSTOR_5120_V5);
+        boxMap.put("145", OCEANSTOR_5220_V5);
+        boxMap.put("147", OCEANSTOR_2220);
         boxMap.put("805", DORADO_5000_V_3);
         boxMap.put("806", DORADO_6000_V_3);
         boxMap.put("807", DORADO_18000_V_3);
@@ -337,6 +350,7 @@ public class BoxTypeConst {
         boxMap.put("838", OCEANSTOR_18810);
         boxMap.put("839", OCEANSTOR_DORADO_5600K);
         boxMap.put("840", OCEANSTOR_18500K);
-
+        boxMap.put("844", OCEANSTOR_5300K);
+        boxMap.put("845", OCEANSTOR_5500K);
     }
 }
