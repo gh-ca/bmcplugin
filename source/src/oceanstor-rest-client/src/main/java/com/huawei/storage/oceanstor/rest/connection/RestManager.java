@@ -7,9 +7,6 @@ import com.huawei.storage.oceanstor.rest.domain.RestResponse;
 import com.huawei.storage.oceanstor.rest.exception.RestException;
 import org.apache.log4j.Logger;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class RestManager {
 	private static final Logger logger = Logger.getLogger(RestManager.class);
 

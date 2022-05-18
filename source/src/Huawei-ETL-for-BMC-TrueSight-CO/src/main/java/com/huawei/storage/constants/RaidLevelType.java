@@ -3,9 +3,6 @@ package com.huawei.storage.constants;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public enum RaidLevelType {
 
     raid10(1),

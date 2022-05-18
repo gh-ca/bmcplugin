@@ -20,9 +20,6 @@ import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.Callable;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class PerformanceDataJob implements Callable<Map<String,Map<String,String>>> {
     private Logger logger = Logger.getLogger(PerformanceDataJob.class);
     private ConnectionVO connectionData;

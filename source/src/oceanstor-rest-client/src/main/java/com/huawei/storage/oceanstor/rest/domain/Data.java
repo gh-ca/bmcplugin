@@ -3,9 +3,6 @@ package com.huawei.storage.oceanstor.rest.domain;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class Data {
 
     private List<Map<String,String>> dataList;

@@ -16,11 +16,6 @@ import java.util.stream.Collectors;
 
 import static java.math.BigDecimal.ZERO;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/16.
- */
 public class TaskHandler {
 
 

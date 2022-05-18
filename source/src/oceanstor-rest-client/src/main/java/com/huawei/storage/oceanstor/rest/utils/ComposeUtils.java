@@ -11,9 +11,6 @@ import org.apache.log4j.Logger;
 import java.util.Map;
 import java.util.Map.Entry;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class ComposeUtils {
     private static final Logger log = Logger.getLogger(ComposeUtils.class);
 

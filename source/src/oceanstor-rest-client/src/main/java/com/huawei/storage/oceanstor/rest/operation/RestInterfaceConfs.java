@@ -12,10 +12,6 @@ import java.util.Map;
 import java.util.Properties;
 
 
-/**
- *
- * Huawei Technologies  all rights reserved
- */
 public class RestInterfaceConfs {
 	private static Logger logger = Logger.getLogger(RestInterfaceConfs.class);
 	//operationName , [restMethod,restRelativePath]

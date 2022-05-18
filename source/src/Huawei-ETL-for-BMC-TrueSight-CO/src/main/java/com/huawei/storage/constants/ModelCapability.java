@@ -1,6 +1,3 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
- */
 package com.huawei.storage.constants;
 
 import java.util.ArrayList;
@@ -8,9 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class ModelCapability {
 
     public static Map<String,List<String>> unSupportFunctionMap = new HashMap<String, List<String>>();

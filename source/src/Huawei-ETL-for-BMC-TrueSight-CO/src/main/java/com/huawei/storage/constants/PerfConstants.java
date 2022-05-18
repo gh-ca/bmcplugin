@@ -1,13 +1,7 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
- */
 package com.huawei.storage.constants;
 
 import java.io.File;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class PerfConstants {
 
     public static final String TEMP_FILE_PATH = System.getProperty("user.dir");

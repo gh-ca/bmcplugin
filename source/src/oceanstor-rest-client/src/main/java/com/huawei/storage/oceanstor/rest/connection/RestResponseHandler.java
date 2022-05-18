@@ -18,9 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Huawei Technology  all rights reserved
- */
 class RestResponseHandler implements ResponseHandler<RestResponse>{
     private static final Logger log = Logger.getLogger(RestResponseHandler.class);
 

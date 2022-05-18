@@ -2,9 +2,6 @@ package com.huawei.storage.domain;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 @XStreamAlias("sub-object")
 public class SubObject {
 

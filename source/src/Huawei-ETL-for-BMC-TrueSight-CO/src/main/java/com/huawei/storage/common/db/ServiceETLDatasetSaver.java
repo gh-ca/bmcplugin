@@ -9,9 +9,6 @@ import com.neptuny.cpit.etl.loader.Loader;
 import com.neptuny.cpit.etl.util.SysUtils;
 import com.neptuny.cpit.logger.Logger;
 
-/**
- * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
- */
 public class ServiceETLDatasetSaver {
 
     private DBConf dbConf;

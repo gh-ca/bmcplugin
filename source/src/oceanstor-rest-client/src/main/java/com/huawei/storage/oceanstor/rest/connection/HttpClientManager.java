@@ -3,9 +3,6 @@ package com.huawei.storage.oceanstor.rest.connection;
 import com.huawei.storage.oceanstor.rest.exception.RestException;
 import org.apache.http.client.HttpClient;
 
-/**
- * Huawei Technology  all rights reserverd
- */
 public class HttpClientManager {
 
     private HttpClientFactory httpClientFactory = new HttpClientFactory();

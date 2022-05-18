@@ -1,6 +1,3 @@
-/*
- *  Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
- */
 package com.huawei.storage.common.db;
 
 import com.neptuny.cpit.database.DatabaseConnectionManagerFactory;

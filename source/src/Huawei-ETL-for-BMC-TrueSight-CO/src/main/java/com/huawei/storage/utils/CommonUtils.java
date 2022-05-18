@@ -15,9 +15,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class CommonUtils {
     private final Logger logger = Logger.getLogger(CommonUtils.class);
 

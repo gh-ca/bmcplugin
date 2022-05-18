@@ -18,9 +18,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class HWStorageExtractor  extends Extractor{
 
     private static final Logger logger = Logger.getLogger(HWStorageExtractor.class);

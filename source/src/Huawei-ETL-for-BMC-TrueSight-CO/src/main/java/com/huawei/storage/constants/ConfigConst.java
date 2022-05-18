@@ -1,11 +1,5 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
- */
 package com.huawei.storage.constants;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class ConfigConst {
     public static final int RAID10 = 1;
     public static final int RAID5 = 2;
