@@ -1,14 +1,8 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
- */
 package com.huawei.storage.constants;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public enum FileSystemType {
 
     CommonFileSystem(0),

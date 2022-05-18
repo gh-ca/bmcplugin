@@ -1,8 +1,5 @@
 package com.huawei.storage.domain;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class Tier {
     private int raidLV;
     private int diskNum;

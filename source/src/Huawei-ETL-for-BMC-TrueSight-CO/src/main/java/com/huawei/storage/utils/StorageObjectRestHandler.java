@@ -7,9 +7,6 @@ import com.huawei.storage.oceanstor.rest.operation.DeviceManager;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class StorageObjectRestHandler {
 
     public List<StorageObject> findStorageObjectsFromRest(String countCommand,String queryCommand, DeviceManager deviceManager) throws ETLException {

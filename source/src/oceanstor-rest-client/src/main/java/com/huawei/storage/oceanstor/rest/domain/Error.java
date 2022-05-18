@@ -1,8 +1,5 @@
 package com.huawei.storage.oceanstor.rest.domain;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class Error {
     private String code;
     private String description;

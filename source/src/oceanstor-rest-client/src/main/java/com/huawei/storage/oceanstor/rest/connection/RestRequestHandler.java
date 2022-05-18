@@ -10,9 +10,6 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class RestRequestHandler {
     private static final Logger logger = Logger.getLogger(RestRequestHandler.class);
     private String certificateFilePath;

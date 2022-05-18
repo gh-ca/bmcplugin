@@ -14,9 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class RestPageUtils {
     public static final int DEFAULT_PAGE_SIZE = 100;
     private static final Logger logger = Logger.getLogger(RestPageUtils.class);

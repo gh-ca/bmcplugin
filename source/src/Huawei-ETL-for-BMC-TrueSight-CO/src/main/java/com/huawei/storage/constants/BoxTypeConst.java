@@ -1,14 +1,8 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
- */
 package com.huawei.storage.constants;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class BoxTypeConst {
 
     public static Map<String, String> boxMap = new HashMap<String, String>();
@@ -235,10 +229,6 @@ public class BoxTypeConst {
     public static final String OCEANSTOR_5300K = "OCEANSTOR_5300K";
 
     public static final String OCEANSTOR_5500K = "OCEANSTOR_5500K";
-
-    //844：OceanStor 5300K
-    //845：OceanStor 5500K
-
 
     static {
         boxMap.put("18", OCEAN_STOR_S_5500_T);

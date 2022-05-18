@@ -1,10 +1,6 @@
 package com.huawei.storage.common.extracdata.constant;
 
 
-/**
- * 魔鬼数字
- * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
- */
 public final class IsmNumberConstant
 {
     /**

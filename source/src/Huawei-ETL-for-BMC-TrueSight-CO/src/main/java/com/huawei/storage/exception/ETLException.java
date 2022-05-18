@@ -1,8 +1,5 @@
 package com.huawei.storage.exception;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class ETLException extends Exception{
 
     public ETLException(String s) {

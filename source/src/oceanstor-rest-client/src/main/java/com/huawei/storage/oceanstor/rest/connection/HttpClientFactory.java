@@ -30,9 +30,6 @@ import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 
-/**
- * Huawei Technology  all rights reserverd
- */
 public class HttpClientFactory {
     private Logger log = Logger.getLogger(HttpClientFactory.class);
 

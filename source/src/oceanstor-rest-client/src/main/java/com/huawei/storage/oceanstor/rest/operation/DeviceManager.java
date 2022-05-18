@@ -15,10 +15,6 @@ import java.util.Map;
 
 
 
-/**
- * Huawei Technologies  all rights reserved
- *
- */
 public class DeviceManager {
 	private static final Logger log = Logger.getLogger(DeviceManager.class); 
 	

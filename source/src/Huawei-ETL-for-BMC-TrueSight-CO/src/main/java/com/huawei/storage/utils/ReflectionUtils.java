@@ -19,9 +19,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class ReflectionUtils {
 
     private static Logger logger = Logger.getLogger(ReflectionUtils.class);

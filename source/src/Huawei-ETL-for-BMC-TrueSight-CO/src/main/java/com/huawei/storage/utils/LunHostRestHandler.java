@@ -10,9 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class LunHostRestHandler {
      private final Logger logger = Logger.getLogger(LunHostRestHandler.class);
 

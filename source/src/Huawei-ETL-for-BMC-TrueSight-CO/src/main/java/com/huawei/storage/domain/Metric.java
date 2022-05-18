@@ -3,9 +3,6 @@ package com.huawei.storage.domain;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 
 @XStreamAlias("metric")
 public class Metric {

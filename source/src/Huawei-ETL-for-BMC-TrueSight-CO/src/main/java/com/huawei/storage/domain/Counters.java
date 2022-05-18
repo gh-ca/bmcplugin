@@ -5,9 +5,6 @@ import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 import java.util.List;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 @XStreamAlias("counters")
 public class Counters {
 

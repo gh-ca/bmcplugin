@@ -22,9 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class RestJob implements Callable<List<StorageObject>> {
 
     private ConnectionVO connectionData;

@@ -1,11 +1,5 @@
-/*
- * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
- */
 package com.huawei.storage.constants;
 
-/**
- * Huawei Technologies  all rights reserved
- */
 public class ConnectionVO {
     private String username;
     private String password;

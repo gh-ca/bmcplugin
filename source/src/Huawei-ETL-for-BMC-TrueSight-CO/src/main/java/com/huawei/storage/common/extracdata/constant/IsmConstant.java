@@ -1,8 +1,5 @@
 package com.huawei.storage.common.extracdata.constant;
 
-/**
- * Copyright (c) Huawei Technologies Co., Ltd. 2022-2022. All rights reserved.
- */
 public class IsmConstant
 {
     //begin　  2008-8-18 AZ7D01197　增加告警导出功能的常量分割符
