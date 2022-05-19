@@ -1,2 +1,5 @@
 /.idea/
 *.class
+/source/src/Huawei-ETL-for-BMC-TrueSight-CO/target/
+/source/src/oceanstor-rest-client/target/
+/.metadata/
