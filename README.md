@@ -2,7 +2,7 @@
 
 # 编译
 
-因涉及到bmc TrueSight Capacity Optimization官方提供的开发工具中未开源的三方jar：
+项目涉及到bmc TrueSight Capacity Optimization官方提供的开发工具中未开源的三方jar：
 
  1. eal-common-core-20.02.00.jar
  2. eal-common-util-20.02.00.jar
