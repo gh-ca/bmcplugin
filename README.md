@@ -19,7 +19,7 @@
   
     # 前置条件：已安装bmc TrueSight Capacity Optimization环境（版本：20.02）
 
-    1.获取官方提供的开发工具：Integration Studio ，获取方式可参开BMC官方文档
+    1.获取官方提供的开发工具：Integration Studio ，获取方式可参考BMC官方文档
 
       1）https://docs.bmc.com/docs/capacityoptimization/btco2002/installing-and-configuring-integration-studio-914179514.html
       
