@@ -14,7 +14,6 @@
 
 # jar获取方式
   
-  方式一：
   
     # 前置条件：已安装bmc TrueSight Capacity Optimization环境（版本：20.02）
 
@@ -29,6 +28,4 @@
     
     注：bmc TrueSight Capacity Optimization版本不同，获取到的Integration Studio工具版本不同，对应的jar版本不同（本文Integration Studio版本：20.02）。
   
-  方式二：
-    
-    1.
+
