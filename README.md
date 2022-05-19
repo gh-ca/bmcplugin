@@ -31,7 +31,9 @@
 
     3.将jar包放入项目目录：
     
-          source/src/Huawei-ETL-for-BMC-TrueSight-CO/build/lib中(若不存在/build/lib请创建目录)，编译既可。
+
+          source/src/Huawei-ETL-for-BMC-TrueSight-CO/build/lib中(若不存在/build/lib请创建目录)，编译即可。
+
     
     注：bmc TrueSight Capacity Optimization版本不同，获取到的Integration Studio工具版本不同，对应的jar版本不同。
   
