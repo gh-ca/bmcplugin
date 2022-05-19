@@ -10,7 +10,7 @@
  4. eal-scheduler-core-10.5.3.jar
  5. etl-eda-java-20.02.00-20200202.173825-157.jar
 
-因此需要将上述三方包放到项目目录：source/src/Huawei-ETL-for-BMC-TrueSight-CO/build/lib中。
+因此需要将上述三方包放到项目目录：source/src/Huawei-ETL-for-BMC-TrueSight-CO/build/lib中(若不存在/build/lib请创建文件夹)。
 
 # jar获取方式
   
@@ -24,7 +24,7 @@
 
     2.安装完成Integration Studio后，去安装目录下：program\.metadata\.plugins\com.bmc.cpit.eds\framework\capetllib即可找到上述jar包。
 
-    3.将jar包放入项目目录：source/src/Huawei-ETL-for-BMC-TrueSight-CO/build/lib中，编译既可。
+    3.将jar包放入项目目录：source/src/Huawei-ETL-for-BMC-TrueSight-CO/build/lib中(若不存在/build/lib请创建文件夹)，编译既可。
     
     注：bmc TrueSight Capacity Optimization版本不同，获取到的Integration Studio工具版本不同，对应的jar版本不同（本文Integration Studio版本：20.02）。
   
