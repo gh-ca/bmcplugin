@@ -4,11 +4,11 @@
 
 因涉及到bmc TrueSight Capacity Optimization官方提供的开发工具中未开源的三方jar：
 
-eal-common-core-20.02.00.jar
-eal-common-util-20.02.00.jar
-eal-scheduler-api-10.5.3.jar
-eal-scheduler-core-10.5.3.jar
-etl-eda-java-20.02.00-20200202.173825-157.jar
+ 1. eal-common-core-20.02.00.jar
+ 2. eal-common-util-20.02.00.jar
+ 3. eal-scheduler-api-10.5.3.jar
+ 4. eal-scheduler-core-10.5.3.jar
+ 5. etl-eda-java-20.02.00-20200202.173825-157.jar
 
 因此需要将上述三方包放到项目目录：source/src/Huawei-ETL-for-BMC-TrueSight-CO/build/lib中。
 
