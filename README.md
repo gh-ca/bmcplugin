@@ -21,8 +21,9 @@
 
     1.获取官方提供的开发工具：Integration Studio ，获取方式可参开BMC官方文档
 
-      1.https://docs.bmc.com/docs/capacityoptimization/btco2002/installing-and-configuring-integration-studio-914179514.html
-      2.进入页面：Developing --> Integration Studio --> Installing and configuring Integration Studio 
+      1）.https://docs.bmc.com/docs/capacityoptimization/btco2002/installing-and-configuring-integration-studio-914179514.html
+      
+      2）.进入页面：Developing --> Integration Studio --> Installing and configuring Integration Studio 
 
     2.安装完成Integration Studio后，去安装目录下：
     
