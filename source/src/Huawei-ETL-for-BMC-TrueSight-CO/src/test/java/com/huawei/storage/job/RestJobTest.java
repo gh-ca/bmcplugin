@@ -8,6 +8,7 @@ import com.huawei.storage.domain.SubObject;
 import com.huawei.storage.oceanstor.rest.operation.OceanStorOperation;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -53,6 +54,7 @@ public class RestJobTest {
                     (s.getName()==null?s.getId():s.getName())
             +" Performance Data is :" + s.getPerfData());
         }
+        Assert.assertTrue(list.contains("16401_604_/LQ_1444"));
         //log.debug(list);
     }
 

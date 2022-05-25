@@ -31,6 +31,7 @@ public class TaskHandlerTest {
         restData.put("NAME","Cinder-HX");
         obj.setRestData(restData);
         handler.getObjectUniqueName(task,obj,flowContext,storageObjects);
+        Assert.assertEquals("StoragePool-[01]-[Cinder-HX]", flowContext.get(task.getResult()));
         System.out.println(flowContext.get(task.getResult()));
     }
 
@@ -47,6 +48,7 @@ public class TaskHandlerTest {
         Map<String, String> restData = new HashMap<String, String>();
         obj.setRestData(restData);
         handler.evalExpression(task,obj,flowContext,storageObjects);
+        Assert.assertEquals( "17179869184",flowContext.get(task.getResult()));
         System.out.println(flowContext.get(task.getResult()));
     }
 
@@ -64,6 +66,7 @@ public class TaskHandlerTest {
         Map<String, String> restData = new HashMap<String, String>();
         obj.setRestData(restData);
         handler.evalExpression(task,obj,flowContext,storageObjects);
+        Assert.assertEquals("100663296", flowContext.get(task.getResult()));
         System.out.println(flowContext.get(task.getResult()));
     }
 
@@ -81,6 +84,7 @@ public class TaskHandlerTest {
         Map<String, String> restData = new HashMap<String, String>();
         obj.setRestData(restData);
         handler.evalExpression(task,obj,flowContext,storageObjects);
+        Assert.assertEquals( "1207959552",flowContext.get(task.getResult()));
         System.out.println(flowContext.get(task.getResult()));
     }
 
@@ -98,6 +102,7 @@ public class TaskHandlerTest {
         Map<String, String> restData = new HashMap<String, String>();
         obj.setRestData(restData);
         handler.evalExpression(task,obj,flowContext,storageObjects);
+        Assert.assertEquals("14495514624",flowContext.get(task.getResult()));
         System.out.println(flowContext.get(task.getResult()));
     }
 
@@ -115,6 +120,7 @@ public class TaskHandlerTest {
         Map<String, String> restData = new HashMap<String, String>();
         obj.setRestData(restData);
         handler.getLunAndFileSystemType(task,obj,flowContext,storageObjects);
+        Assert.assertEquals( "CommonLUN",flowContext.get(task.getResult()));
         System.out.println(flowContext.get(task.getResult()));
     }
 
@@ -142,6 +148,7 @@ public class TaskHandlerTest {
         BigDecimal d1 = new BigDecimal("92233720368547758070");
         BigDecimal d2 = new BigDecimal("192233720368547758070");
         BigDecimal divide = d1.divide(d2,4,BigDecimal.ROUND_HALF_UP);
+        Assert.assertTrue(divide.compareTo(new BigDecimal(1)) == -1);
         System.out.println(divide.toPlainString());
     }
 }

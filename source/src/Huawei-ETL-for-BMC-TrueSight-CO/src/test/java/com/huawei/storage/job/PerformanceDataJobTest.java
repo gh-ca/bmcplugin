@@ -4,6 +4,7 @@ import com.huawei.storage.UserInfo;
 import com.huawei.storage.constants.ConnectionVO;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -42,6 +43,6 @@ public class PerformanceDataJobTest {
         log.debug(data);
         log.debug("return file data size is : " + data.size());
         log.debug(data.keySet());
-
+        Assert.assertTrue(data.size() > 0);
     }
 }
