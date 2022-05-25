@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 class RestResponseHandler implements ResponseHandler<RestResponse>{
     private static final Logger log = Logger.getLogger(RestResponseHandler.class);
@@ -56,12 +57,14 @@ class RestResponseHandler implements ResponseHandler<RestResponse>{
         if (null!=dataJSONElement&&dataJSONElement instanceof JsonArray) {
             JsonArray dataArray = (JsonArray) dataJSONElement;
             for (JsonElement element : dataArray) {
-                Map<String,String> map = gson.fromJson(element, new TypeToken<Map<String, String>>() {
+                Map<String, JsonElement>jsonElementMap = filterJsonArray(element);
+                Map<String,String> map = gson.fromJson(gson.toJson(jsonElementMap), new TypeToken<Map<String, String>>() {
                 }.getType());
                 dataList.add(map);
             }
         }else if(dataJSONElement!=null){
-            Map<String,String> map = gson.fromJson(dataJSONElement.getAsJsonObject(), new TypeToken<Map<String, String>>() {
+            Map<String, JsonElement> jsonElementMap = filterJsonArray(dataJSONElement);
+            Map<String,String> map = gson.fromJson(gson.toJson(jsonElementMap), new TypeToken<Map<String, String>>() {
             }.getType());
             dataList.add(map);
         }
@@ -82,6 +85,18 @@ class RestResponseHandler implements ResponseHandler<RestResponse>{
         return new RestResponse(data,error);
     }
 
+    private Map<String, JsonElement> filterJsonArray(JsonElement dataJSONElement){
+
+        JsonObject asJsonObject1 = dataJSONElement.getAsJsonObject();
+
+        List<Map.Entry<String, JsonElement>> collect = asJsonObject1.entrySet().stream().filter(item ->
+                item.getValue() instanceof JsonPrimitive).collect(Collectors.toList());
+
+        Map<String, JsonElement> collect1 = collect.stream().filter(item ->
+                item.getValue() != null).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+
+        return collect1;
+    }
 
     private RestResponse validateResponse(HttpResponse response){
         if(response==null){

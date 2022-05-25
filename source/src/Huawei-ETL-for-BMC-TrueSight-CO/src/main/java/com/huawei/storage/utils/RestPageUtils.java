@@ -95,7 +95,7 @@ public class RestPageUtils {
         object.setMappingName(type.getMappingName());
         object.setStorageObjectType(type);
         object.setId(data.get("ID"));
-        object.setType(Integer.parseInt(data.get("TYPE")));
+        object.setType(data.get("TYPE") != null ? Integer.parseInt(data.get("TYPE")) : ObjectType.CIFShare.getValue());
         //v6 unsupport NFSHARE/CIFSHARE NAME
         object.setName(data.get("NAME") != null ? data.get("NAME"): data.get("SHAREPATH"));
         object.setTypeName(ObjectType.valueOf(object.getType()).name());
