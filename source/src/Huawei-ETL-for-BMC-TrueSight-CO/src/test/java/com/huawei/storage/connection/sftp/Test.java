@@ -2,6 +2,7 @@ package com.huawei.storage.connection.sftp;
 
 
 
+import com.huawei.storage.UserInfo;
 import org.apache.log4j.BasicConfigurator;
 
 import com.huawei.storage.common.sftp.SftpAccount;
@@ -14,9 +15,9 @@ public class Test {
 		BasicConfigurator.configure();
 
 		SftpTransfer sftp = new SftpTransfer();
-		SftpAccount account = new SftpAccount("10.158.196.210", "admin", "Admin@storage", 31004);
-		sftp.transferFileFromDevice("zhongjunsetsn1234567", "10.158.196.210:/OSM/coffer_data/perf/perf_files/PerfData_5500_V3_SN_zhongjunsetsn1234567_SP0_0_20160811202105.tgz", "d:/temps", account, 31004, true);
-		sftp.transferFileFromDevice("zhongjunsetsn1234567", "10.158.196.210:/OSM/coffer_data/perf/perf_files/PerfData_5500_V3_SN_zhongjunsetsn1234567_SP0_0_20160725134922.tgz", "d:/temps", account, 31004, true);
+		SftpAccount account = new SftpAccount(UserInfo.hostIp, UserInfo.username, UserInfo.password, Integer.valueOf(UserInfo.port));
+		sftp.transferFileFromDevice(UserInfo.arrayId, UserInfo.serverPath1, UserInfo.localPath, account, 31004, true);
+		sftp.transferFileFromDevice(UserInfo.arrayId, UserInfo.serverPath2, UserInfo.localPath, account, 31004, true);
 		//testContent();
 				   
 	}

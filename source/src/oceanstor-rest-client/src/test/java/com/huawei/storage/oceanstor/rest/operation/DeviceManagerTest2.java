@@ -1,5 +1,6 @@
 package com.huawei.storage.oceanstor.rest.operation;
 
+import com.huawei.storage.oceanstor.UserInfo;
 import com.huawei.storage.oceanstor.rest.domain.ConnectionData;
 import org.apache.log4j.Logger;
 import org.junit.Test;
@@ -17,10 +18,10 @@ public class DeviceManagerTest2 {
     @Test
     public void testSSLLogin() throws Exception {
         ConnectionData data = new ConnectionData();
-        data.setHostURL("https://10.143.133.201:8088/deviceManager/rest");
+        data.setHostURL(UserInfo.hostUrl);
         //data.setCertificateFilePath("D:\\dev\\cert\\os_4002.cer");
-        data.setUsername("admin");
-        data.setPassword("Pbu4@123");
+        data.setUsername(UserInfo.username);
+        data.setPassword(UserInfo.password);
         data.setStrictCheckHostName(false);
         deviceManager = new DeviceManager(data);
         deviceManager.login();

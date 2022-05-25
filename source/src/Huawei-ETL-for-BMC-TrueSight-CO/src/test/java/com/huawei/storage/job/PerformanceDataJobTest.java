@@ -1,5 +1,6 @@
 package com.huawei.storage.job;
 
+import com.huawei.storage.UserInfo;
 import com.huawei.storage.constants.ConnectionVO;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -8,8 +9,6 @@ import org.junit.Test;
 
 import java.util.Map;
 import java.util.Properties;
-
-import static org.junit.Assert.*;
 
 /**
  * Huawei Technologies  all rights reserved
@@ -25,16 +24,16 @@ public class PerformanceDataJobTest {
         Properties properties = new Properties();
         properties.load(this.getClass().getClassLoader().getResourceAsStream("log4j.properties"));
         PropertyConfigurator.configure(properties);
-        ConnectionVO connectionVO = new ConnectionVO();
-        connectionVO.setUsername("admin");
-        connectionVO.setPassword("Admin@storage");
-        connectionVO.setScope("0");
-        connectionVO.setIpControllerA("10.158.196.210:40000");
-        connectionVO.setIpControllerB("10.158.196.210:40001");
-        connectionVO.setRestPort("40000");
-        connectionVO.setSftpPort("31000");
-        connectionVO.setHostIP("10.158.196.210");
-        job = new PerformanceDataJob(connectionVO);
+        ConnectionVO connVo = new ConnectionVO();
+        connVo.setHostIP(UserInfo.hostIp);
+        connVo.setIpControllerA(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setIpControllerB(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setUsername(UserInfo.username);
+        connVo.setPassword(UserInfo.password);
+        connVo.setSftpPort(UserInfo.sftpPort);
+        connVo.setRestPort(UserInfo.port);
+        connVo.setScope(UserInfo.scope);
+        job = new PerformanceDataJob(connVo);
     }
 
     @Test
