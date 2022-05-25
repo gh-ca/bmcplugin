@@ -1,11 +1,10 @@
 package com.huawei.storage.oceanstor.rest.utils;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import static org.junit.Assert.*;
 
 /**
  * Huawei Technology  all rights reserverd
@@ -21,6 +20,7 @@ public class ComposeUtilsTest {
         map.put("sectorSize","102400");
         map.put("parentId","2");
         String s = ComposeUtils.composeJsonFromMap(map);
+        Assert.assertEquals("{\"NAME\":\"storagePool1\",\"SECTORSIZE\":\"102400\",\"PARENTID\":\"2\"}", s);
         System.out.println(s);
 
     }

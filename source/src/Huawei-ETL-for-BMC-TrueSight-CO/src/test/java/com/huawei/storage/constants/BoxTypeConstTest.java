@@ -1,8 +1,7 @@
 package com.huawei.storage.constants;
 
+import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Huawei Technologies  all rights reserved
@@ -13,8 +12,8 @@ public class BoxTypeConstTest {
 
     @Test
     public void testGetType() throws Exception {
-        System.out.println(BoxTypeConst.boxMap.get("70"));
-        System.out.println(BoxTypeConst.boxMap.get("68"));
+        Assert.assertEquals("OceanStor_5300 V3",BoxTypeConst.boxMap.get("70"));
+        Assert.assertEquals("OceanStor_5500 V3",BoxTypeConst.boxMap.get("68"));
 
     }
 }

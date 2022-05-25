@@ -5,6 +5,7 @@ import com.huawei.storage.constants.ConnectionVO;
 import com.huawei.storage.domain.StorageObject;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -67,6 +68,7 @@ public class DataMapperTest {
         log.debug(missList);
         log.debug(matchList);
         log.debug("lun : " + lunList.size());
+        Assert.assertTrue(lunList.size() > 0);
     }
 
     @Test
@@ -75,6 +77,8 @@ public class DataMapperTest {
         List<StorageObject> restData = restJob.call();
         log.debug(perfData);
         log.debug(restData);
+        Assert.assertTrue(perfData.size() > 0);
+        Assert.assertTrue(restData.size() > 0);
       /*  DataMapper mapper = new DataMapper();
         List<StorageObject> storageObjects = mapper.mappingAllData(restData, perfData);
         for (StorageObject s : storageObjects) {
@@ -98,6 +102,7 @@ public class DataMapperTest {
                 log.debug("--------------------------");
             }
         }
+        Assert.assertTrue(restData.size() > 0);
     }
 
     @Test
@@ -107,6 +112,7 @@ public class DataMapperTest {
         BigDecimal result = a.subtract(b);
         log.debug(result.toPlainString());
         log.debug(a.divide(b).toPlainString());
+        Assert.assertEquals(new BigDecimal("92233720368547758070"),result);
     }
 
     @Test
@@ -114,6 +120,7 @@ public class DataMapperTest {
         String exp = "OWNINGCONTROLLER::${ID}";
         int dataIndex = exp.indexOf("${");
         String substring = exp.substring(dataIndex + 2, exp.length() - 1);
+        Assert.assertEquals("ID", substring);
         System.out.println(substring);
     }
 }

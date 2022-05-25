@@ -72,6 +72,6 @@ public class DeviceManagerTestLogin {
                 dataList.add(map);
             }
         }
-        Assert.assertTrue(dataList.size() > 0);
+        Assert.assertEquals("/Test_fileSystem01",dataList.get(0).get("ROOT"));
     }
 }

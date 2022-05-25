@@ -8,6 +8,7 @@ import com.huawei.storage.oceanstor.rest.operation.DeviceManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -49,6 +50,7 @@ public class StorageObjectHandlerTest {
             log.debug("mappedLun data is " + storageObj.getRestData()
                     +"linked host data is : " +  storageObj.getLinkedObject().getRestData());
         }
+        Assert.assertTrue(mappedLunHost.size() > 0);
         log.debug("================================================================");
     }
 

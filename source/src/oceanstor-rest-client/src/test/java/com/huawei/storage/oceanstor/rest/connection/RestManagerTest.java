@@ -2,8 +2,8 @@ package com.huawei.storage.oceanstor.rest.connection;
 
 import com.google.gson.JsonObject;
 import com.huawei.storage.oceanstor.UserInfo;
-import com.huawei.storage.oceanstor.rest.constants.HttpMethodEnum;
 import com.huawei.storage.oceanstor.rest.domain.RestResponse;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -23,8 +23,8 @@ public class RestManagerTest {
         requestBodybody.addProperty("scope", UserInfo.scope);
         System.out.println(requestBodybody.toString());
         RestResponse restResponse = manager.doLogin(UserInfo.loginRelativeURL, requestBodybody.toString());
-
-        RestResponse resp = manager.doRequest(HttpMethodEnum.POST, UserInfo.loginRelativeUri, UserInfo.Controller_performance_body);
-        System.out.println(resp);
+        Assert.assertEquals("2102351QLH9WK5800028",restResponse.getData().getDataList().get(0).get("deviceid"));
+        //RestResponse resp = manager.doRequest(HttpMethodEnum.POST, UserInfo.loginRelativeUri, UserInfo.Controller_performance_body);
+        //System.out.println(resp);
     }
 }

@@ -4,6 +4,7 @@ import com.huawei.storage.constants.ConnectionVO;
 import com.huawei.storage.etl.HWStorageExtractor;
 import com.neptuny.cpit.etl.DataSetList;
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
@@ -42,6 +43,7 @@ public class HWStorageExtractorTest {
         conn.set(extractor,connVo);
         executor.set(extractor, Executors.newFixedThreadPool(10));
         DataSetList list = (DataSetList) method.invoke(extractor);
+        Assert.assertTrue(list.size() > 0);
         log.debug(list);
     }
 
