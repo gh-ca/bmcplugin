@@ -1,5 +1,6 @@
 package com.huawei.storage.utils;
 
+import com.huawei.storage.UserInfo;
 import com.huawei.storage.constants.ConnectionVO;
 import com.huawei.storage.domain.StorageObject;
 import com.huawei.storage.domain.StorageObjectType;
@@ -28,14 +29,11 @@ public class StorageObjectHandlerTest {
         Properties properties = new Properties();
         properties.load(this.getClass().getClassLoader().getResourceAsStream("log4j.properties"));
         PropertyConfigurator.configure(properties);
-        connectionVO.setUsername("admin");
-        connectionVO.setPassword("Admin@storage");
-//        connectionVO.setPassword("Admin@storage2");
-        connectionVO.setScope("0");
-        connectionVO.setRestPort("40000");
-        connectionVO.setHostIP("10.158.196.210");
-//        connectionVO.setRestPort("34088");
-//        connectionVO.setHostIP("10.169.219.91");
+        connectionVO.setUsername(UserInfo.username);
+        connectionVO.setPassword(UserInfo.password);
+        connectionVO.setScope(UserInfo.scope);
+        connectionVO.setRestPort(UserInfo.port);
+        connectionVO.setHostIP(UserInfo.hostIp);
         deviceManager = getDeviceManager();
         deviceManager.login();
     }

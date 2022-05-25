@@ -1,5 +1,6 @@
 package com.huawei.storage.job;
 
+import com.huawei.storage.UserInfo;
 import com.huawei.storage.constants.ConnectionVO;
 import com.huawei.storage.domain.Link;
 import com.huawei.storage.domain.StorageObject;
@@ -29,18 +30,16 @@ public class RestJobTest {
         Properties properties = new Properties();
         properties.load(this.getClass().getClassLoader().getResourceAsStream("log4j.properties"));
         PropertyConfigurator.configure(properties);
-        ConnectionVO connectionVO = new ConnectionVO();
-        connectionVO.setUsername("admin");
-        connectionVO.setPassword("Admin@storage");
-//        connectionVO.setPassword("Admin@storage2");
-        connectionVO.setScope("0");
-        connectionVO.setIpControllerA("10.158.196.210");
-        connectionVO.setHostIP("10.158.196.210");
-        connectionVO.setRestPort("40000");
-//        connectionVO.setIpControllerA("10.169.219.91");
-//        connectionVO.setHostIP("10.169.219.91");
-//        connectionVO.setRestPort("34088");
-        restJob = new RestJob(connectionVO);
+        ConnectionVO connVo = new ConnectionVO();
+        connVo.setHostIP(UserInfo.hostIp);
+        connVo.setIpControllerA(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setIpControllerB(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setUsername(UserInfo.username);
+        connVo.setPassword(UserInfo.password);
+        connVo.setSftpPort(UserInfo.sftpPort);
+        connVo.setRestPort(UserInfo.port);
+        connVo.setScope(UserInfo.scope);
+        restJob = new RestJob(connVo);
     }
 
     @Test

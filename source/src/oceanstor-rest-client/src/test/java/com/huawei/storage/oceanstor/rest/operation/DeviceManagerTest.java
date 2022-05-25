@@ -1,22 +1,21 @@
 package com.huawei.storage.oceanstor.rest.operation;
 
-import static org.junit.Assert.*;
+import com.huawei.storage.oceanstor.UserInfo;
+import com.huawei.storage.oceanstor.rest.constants.OperationNames;
+import com.huawei.storage.oceanstor.rest.constants.OperationNamesEnum;
+import com.huawei.storage.oceanstor.rest.domain.ConnectionData;
+import com.huawei.storage.oceanstor.rest.exception.RestException;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-
-import com.huawei.storage.oceanstor.rest.constants.OperationNames;
-import com.huawei.storage.oceanstor.rest.constants.OperationNamesEnum;
-import com.huawei.storage.oceanstor.rest.domain.ConnectionData;
-import com.huawei.storage.oceanstor.rest.exception.RestException;
-import org.apache.log4j.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
 
 public class DeviceManagerTest {
 	private transient final static Logger logger = Logger.getLogger(DeviceManagerTest.class);
@@ -28,9 +27,9 @@ public class DeviceManagerTest {
         properties.load(this.getClass().getClassLoader().getResourceAsStream("log4j.properties"));
         PropertyConfigurator.configure(properties);
 		ConnectionData connectionData = new ConnectionData();
-		connectionData.setHostURL("https://10.143.133.201:8088/deviceManager/rest");
-		connectionData.setUsername("admin");
-		connectionData.setPassword("Pbu4@123");
+		connectionData.setHostURL(UserInfo.hostUrl);
+		connectionData.setUsername(UserInfo.username);
+		connectionData.setPassword(UserInfo.password);
 		deviceManager = new DeviceManager(connectionData);
 		deviceManager.login();
 	}

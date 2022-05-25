@@ -1,5 +1,6 @@
 package com.huawei.storage.job;
 
+import com.huawei.storage.UserInfo;
 import com.huawei.storage.constants.ConnectionVO;
 import com.huawei.storage.domain.StorageObject;
 import org.apache.log4j.Logger;
@@ -28,17 +29,17 @@ public class DataMapperTest {
         Properties properties = new Properties();
         properties.load(this.getClass().getClassLoader().getResourceAsStream("log4j.properties"));
         PropertyConfigurator.configure(properties);
-        ConnectionVO connectionVO = new ConnectionVO();
-        connectionVO.setUsername("admin");
-        connectionVO.setPassword("Pbu4@123");
-        connectionVO.setScope("0");
-        connectionVO.setIpControllerA("10.143.133.201:8088");
-        connectionVO.setIpControllerB("10.143.133.201:8088");
-        connectionVO.setRestPort("8088");
-        connectionVO.setSftpPort("22");
-        connectionVO.setHostIP("10.143.133.201");
-        perfJob = new PerformanceDataJob(connectionVO);
-        restJob = new RestJob(connectionVO);
+        ConnectionVO connVo = new ConnectionVO();
+        connVo.setHostIP(UserInfo.hostIp);
+        connVo.setIpControllerA(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setIpControllerB(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setUsername(UserInfo.username);
+        connVo.setPassword(UserInfo.password);
+        connVo.setSftpPort(UserInfo.sftpPort);
+        connVo.setRestPort(UserInfo.port);
+        connVo.setScope(UserInfo.scope);
+        perfJob = new PerformanceDataJob(connVo);
+        restJob = new RestJob(connVo);
     }
 
 
