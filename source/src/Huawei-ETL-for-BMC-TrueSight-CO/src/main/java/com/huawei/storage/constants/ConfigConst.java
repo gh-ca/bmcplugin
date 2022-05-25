@@ -13,4 +13,5 @@ public class ConfigConst {
     public static final String HEALTHSTATUS_NORMAL = "1";
     public static final String RUNNINGSTATUS_NORMAL = "10";
     public static final int UNNORMAL = -1;
+    public static final String POOL_INVALID_RETURN = "18446744073709551615";
 }

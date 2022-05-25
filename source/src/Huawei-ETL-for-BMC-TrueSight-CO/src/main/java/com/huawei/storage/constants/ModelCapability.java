@@ -11,7 +11,6 @@ public class ModelCapability {
 
     public static Map<String, List<String>> StorageTypeMap = new HashMap<>();
 
-
     static {
         List<String> unSupportList2200 = new ArrayList<String>();
         unSupportList2200.add("filesystem");

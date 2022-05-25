@@ -97,12 +97,6 @@
             <groupId>com.huawei.storage.oceanstor</groupId>
             <artifactId>oceanstor-rest-client</artifactId>
             <version>1.6.3</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>httpcore</artifactId>
-                    <groupId>org.apache.httpcomponents</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <groupId>com.neptuny.cpit</groupId>
