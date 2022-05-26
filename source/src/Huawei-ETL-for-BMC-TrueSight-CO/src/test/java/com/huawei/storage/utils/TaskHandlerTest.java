@@ -11,11 +11,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/9/17.
- */
 public class TaskHandlerTest {
     @Test
     public void testGetObjectUniqueName() throws Exception {

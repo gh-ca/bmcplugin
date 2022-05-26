@@ -6,11 +6,6 @@ import com.huawei.storage.oceanstor.rest.domain.RestResponse;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created on 2016/11/17.
- */
 public class RestManagerTest {
 
     @Test

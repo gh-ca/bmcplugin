@@ -15,11 +15,6 @@ import org.junit.Test;
 import java.util.List;
 import java.util.Properties;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created on 2016/11/8.
- */
 public class StorageObjectHandlerTest {
     DeviceManager deviceManager ;
     ConnectionVO connectionVO = new ConnectionVO();

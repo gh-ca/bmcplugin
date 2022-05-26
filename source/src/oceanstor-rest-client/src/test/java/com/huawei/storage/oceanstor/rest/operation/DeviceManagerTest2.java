@@ -5,11 +5,6 @@ import com.huawei.storage.oceanstor.rest.domain.ConnectionData;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/10/20.
- */
 public class DeviceManagerTest2 {
     private transient final static Logger logger = Logger.getLogger(DeviceManagerTest.class);
     private DeviceManager deviceManager;

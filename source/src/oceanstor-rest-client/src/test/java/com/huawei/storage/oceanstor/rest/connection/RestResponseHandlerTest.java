@@ -1,26 +1,21 @@
 package com.huawei.storage.oceanstor.rest.connection;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import com.huawei.storage.oceanstor.rest.domain.RestResponse;
-import org.apache.commons.io.IOUtils;
-import org.apache.http.*;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpVersion;
+import org.apache.http.ProtocolVersion;
+import org.apache.http.StatusLine;
 import org.apache.http.entity.InputStreamEntity;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.message.BasicHttpResponse;
 import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 
-
 import java.io.File;
 import java.io.FileInputStream;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-/**
- * Created by m00373015 on 2016/8/4.
- */
 public class RestResponseHandlerTest {
     private static final Logger log = Logger.getLogger(RestResponseHandlerTest.class);
 

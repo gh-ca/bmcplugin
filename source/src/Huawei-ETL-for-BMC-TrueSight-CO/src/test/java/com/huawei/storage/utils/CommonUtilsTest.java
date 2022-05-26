@@ -9,11 +9,6 @@ import org.junit.Test;
 import java.io.InputStream;
 import java.util.List;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/25.
- */
 public class CommonUtilsTest {
 
 
@@ -26,6 +21,7 @@ public class CommonUtilsTest {
         List<StorageObjectType> storageObjectTypeList = mos.getStorageObjectTypeList();
         Assert.assertEquals(12, storageObjectTypeList.size());
         log.debug("storage Type list is : " + storageObjectTypeList);
+
     }
 
 }
