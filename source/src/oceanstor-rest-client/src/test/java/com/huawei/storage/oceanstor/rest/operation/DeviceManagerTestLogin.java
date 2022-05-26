@@ -17,11 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Huawei Technology  all rights reserverd
- * <p>
- * Created by m00373015 on 2016/8/9.
- */
 public class DeviceManagerTestLogin {
     private transient final static Logger logger = Logger.getLogger(DeviceManagerTest.class);
     private DeviceManager deviceManager;

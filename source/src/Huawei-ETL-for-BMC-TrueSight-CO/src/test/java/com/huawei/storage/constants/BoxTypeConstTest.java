@@ -3,11 +3,6 @@ package com.huawei.storage.constants;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/9/28.
- */
 public class BoxTypeConstTest {
 
     @Test

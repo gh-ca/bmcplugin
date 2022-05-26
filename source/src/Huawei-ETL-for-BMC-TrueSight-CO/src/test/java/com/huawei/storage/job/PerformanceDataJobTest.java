@@ -11,11 +11,6 @@ import org.junit.Test;
 import java.util.Map;
 import java.util.Properties;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/22.
- */
 public class PerformanceDataJobTest {
     PerformanceDataJob job;
     private Logger log = Logger.getLogger(PerformanceDataJobTest.class);

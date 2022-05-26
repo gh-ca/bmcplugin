@@ -6,11 +6,6 @@ import org.junit.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Huawei Technology  all rights reserverd
- * <p>
- * Created by m00373015 on 2016/8/5.
- */
 public class ComposeUtilsTest {
 
     @Test

@@ -16,11 +16,6 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.*;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/22.
- */
 
 public class RestJobTest {
     RestJob restJob;
