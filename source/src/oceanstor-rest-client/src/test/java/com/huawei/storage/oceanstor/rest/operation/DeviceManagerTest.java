@@ -8,6 +8,7 @@ import com.huawei.storage.oceanstor.rest.exception.RestException;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -47,6 +48,7 @@ public class DeviceManagerTest {
 		operation.putOperationData("capacity", "20480000");
 		
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 	
@@ -64,6 +66,7 @@ public class DeviceManagerTest {
 		operation.putOperationData("ID", "45");
 		operation.putOperationData("NAME", "restManager888");
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 	
@@ -73,8 +76,8 @@ public class DeviceManagerTest {
 		operation.setOperationName(OperationNames.FileSystem.DELETE_FILESYSTEM);
 		Map<String, String> operationData = new HashMap<String, String>();
 		operation.putOperationData("id", "43");
-		
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 	
@@ -85,8 +88,8 @@ public class DeviceManagerTest {
 		operation.setOperationName(OperationNames.FileSystem.FIND_FILESYSTEM_BY_ID);
 		Map<String, String> operationData = new HashMap<String, String>();
 		operation.putOperationData("id", "45");
-		
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 
@@ -96,8 +99,8 @@ public class DeviceManagerTest {
 		operation.setOperationName(OperationNames.FileSystem.FIND_FILESYSTEM_BY_NAME);
 		Map<String, String> operationData = new HashMap<String, String>();
 		operation.putOperationData("name", "restManager888");
-
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 	
@@ -110,6 +113,7 @@ public class DeviceManagerTest {
 		operation.putOperationData("filter", "ALLOCTYPE::0");
 		
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(3, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 	
@@ -145,6 +149,7 @@ public class DeviceManagerTest {
 		operation.putOperationData("TIER1RAIDDISKNUM", "5");
 		operation.putOperationData("TIER1RAIDLV", "2");
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 	
@@ -154,6 +159,7 @@ public class DeviceManagerTest {
 		operation.setOperationName(OperationNames.StoragePool.DELETE_STORAGE_POOL);
 		operation.putOperationData("ID","10");
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 	
@@ -164,6 +170,7 @@ public class DeviceManagerTest {
 		operation.putOperationData("ID","9");
 		operation.putOperationData("name", "restManager");
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 	
@@ -173,6 +180,7 @@ public class DeviceManagerTest {
 		operation.setOperationName(OperationNamesEnum.FIND_STORAGE_POOL_BY_ID);
 		operation.putOperationData("ID","9");
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 
@@ -185,6 +193,7 @@ public class DeviceManagerTest {
 		operation.setOperationName(OperationNamesEnum.FIND_STORAGE_POOL_BY_NAME);
 		operation.putOperationData("NAME","FileStoragePool001");
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 
@@ -194,6 +203,7 @@ public class DeviceManagerTest {
 		operation.setOperationName("create-NFS-share");
 		operation.putOperationData("sharePath","/Test_filesystem05/");
 		OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
 		printResult(operationResult);
 	}
 
@@ -205,6 +215,7 @@ public class DeviceManagerTest {
             operation.putOperationData("sharePath","/restManager999/");
             operation.putOperationData("name","restManager999"+i);
             OperationResult operationResult = deviceManager.performAction(operation);
+			Assert.assertEquals(1, operationResult.getResultData().size());
             printResult(operationResult);
         }
 
@@ -217,6 +228,7 @@ public class DeviceManagerTest {
         operation.setOperationName("find-CIFS-share-by-name");
         operation.putOperationData("name","share_123");
         OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
         printResult(operationResult);
     }
 
@@ -226,6 +238,7 @@ public class DeviceManagerTest {
         operation.setOperationName("find-CIFS-share-by-name-fuzzy-single");
         operation.putOperationData("name","TestFileSystem21");
         OperationResult operationResult = deviceManager.performAction(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
         printResult(operationResult);
     }
 
@@ -235,9 +248,10 @@ public class DeviceManagerTest {
         operation.setOperationName("find-CIFS-share-by-name-fuzzy-single");
         operation.putOperationData("name","restManager999199");
         OperationExecutor executor = new OperationExecutor();
-        executor.setDMConnection("admin","Pbu4@123",
-                "https://10.143.133.201:8088/deviceManager/rest","0");
+        executor.setDMConnection(UserInfo.username,UserInfo.password,
+                UserInfo.hostUrl,UserInfo.scope);
         OperationResult operationResult = executor.execute(operation);
+		Assert.assertEquals(1, operationResult.getResultData().size());
         printResult(operationResult);
 
     }
@@ -247,6 +261,7 @@ public class DeviceManagerTest {
         OceanStorOperation operation = new OceanStorOperation();
         operation.setOperationName("find-all-system");
         OperationResult result = deviceManager.performAction(operation);
+		Assert.assertEquals(1,result.getResultData().size());
         printResult(result);
     }
 
@@ -255,6 +270,7 @@ public class DeviceManagerTest {
         OceanStorOperation operation = new OceanStorOperation();
         operation.setOperationName("find-all-disk");
         OperationResult result = deviceManager.performAction(operation);
+		Assert.assertEquals(4,result.getResultData().size());
         printResult(result);
     }
 
@@ -263,6 +279,7 @@ public class DeviceManagerTest {
         OceanStorOperation operation = new OceanStorOperation();
         operation.setOperationName("find-all-diskpool");
         OperationResult result = deviceManager.performAction(operation);
+		Assert.assertEquals(1,result.getResultData().size());
         printResult(result);
     }
 
@@ -274,6 +291,7 @@ public class DeviceManagerTest {
         OceanStorOperation operation = new OceanStorOperation();
         operation.setOperationName("find-all-storage-pool");
         OperationResult result = deviceManager.performAction(operation);
+		Assert.assertTrue(result.getResultData().size() == 7);
         printResult(result);
     }
 
@@ -282,6 +300,7 @@ public class DeviceManagerTest {
         OceanStorOperation operation = new OceanStorOperation();
         operation.setOperationName("find-all-lun");
         OperationResult result = deviceManager.performAction(operation);
+		Assert.assertTrue(result.getResultData().size() == 364);
         printResult(result);
     }
 
@@ -290,6 +309,7 @@ public class DeviceManagerTest {
         OceanStorOperation operation = new OceanStorOperation();
         operation.setOperationName("find-all-filesystem");
         OperationResult result = deviceManager.performAction(operation);
+		Assert.assertTrue(result.getResultData().size() == 94);
         printResult(result);
     }
 
@@ -298,6 +318,7 @@ public class DeviceManagerTest {
         OceanStorOperation operation = new OceanStorOperation();
         operation.setOperationName("find-all-host");
         OperationResult result = deviceManager.performAction(operation);
+		Assert.assertEquals(12, result.getResultData().size());
         printResult(result);
     }
 
@@ -306,6 +327,7 @@ public class DeviceManagerTest {
         OceanStorOperation operation = new OceanStorOperation();
         operation.setOperationName("find-all-controller");
         OperationResult result = deviceManager.performAction(operation);
+		Assert.assertTrue(result.getResultData().size() == 2);
         printResult(result);
     }
 
