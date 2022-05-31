@@ -147,14 +147,14 @@
             </task>
         </tasks>
     </metric>
-    <metric dataSet="STOGLB" column="ST_VOLUME_RESPONSE_TIME" name="StorageConfigured Space">
-        <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromPerformance">
-                <target>AverageIOResponseTimeUs</target>
-                <result>ST_RESPONSE_TIME</result>
-            </task>
-        </tasks>
-    </metric>
+<!--    <metric dataSet="STOGLB" column="ST_VOLUME_RESPONSE_TIME" name="StorageConfigured Space">-->
+<!--        <tasks>-->
+<!--            <task id="0" method="com.huawei.storage.utils.TaskHandler.getDataFromPerformance">-->
+<!--                <target>AverageIOResponseTimeUs</target>-->
+<!--                <result>ST_RESPONSE_TIME</result>-->
+<!--            </task>-->
+<!--        </tasks>-->
+<!--    </metric>-->
     <metric dataSet="STOGLB" column="ST_VOLUME_TRANSFER_BYTE_RATE" name="StorageConfigured Space">
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
@@ -167,28 +167,28 @@
             </task>
         </tasks>
     </metric>
-    <metric dataSet="STOGLB" column="ST_VOLUME_IO_RATE" name="StorageConfigured Space">
-        <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
-                <target>Throughput</target>
-                <result>ST_VOLUME_IO_RATE</result>
-            </task>
-        </tasks>
-    </metric>
-    <metric dataSet="STOGLB" column="ST_VOLUME_IO_READ_RATE" name="StorageConfigured Space">
-        <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
-                <target>ReadThroughput</target>
-                <result>ST_VOLUME_IO_READ_RATE</result>
-            </task>
-        </tasks>
-    </metric>
-    <metric dataSet="STOGLB" column="ST_VOLUME_IO_WRITE_RATE" name="StorageConfigured Space">
-        <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
-                <target>WriteThroughput</target>
-                <result>ST_VOLUME_IO_WRITE_RATE</result>
-            </task>
-        </tasks>
-    </metric>
+<!--    <metric dataSet="STOGLB" column="ST_VOLUME_IO_RATE" name="StorageConfigured Space">-->
+<!--        <tasks>-->
+<!--            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">-->
+<!--                <target>Throughput</target>-->
+<!--                <result>ST_VOLUME_IO_RATE</result>-->
+<!--            </task>-->
+<!--        </tasks>-->
+<!--    </metric>-->
+<!--    <metric dataSet="STOGLB" column="ST_VOLUME_IO_READ_RATE" name="StorageConfigured Space">-->
+<!--        <tasks>-->
+<!--            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">-->
+<!--                <target>ReadThroughput</target>-->
+<!--                <result>ST_VOLUME_IO_READ_RATE</result>-->
+<!--            </task>-->
+<!--        </tasks>-->
+<!--    </metric>-->
+<!--    <metric dataSet="STOGLB" column="ST_VOLUME_IO_WRITE_RATE" name="StorageConfigured Space">-->
+<!--        <tasks>-->
+<!--            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">-->
+<!--                <target>WriteThroughput</target>-->
+<!--                <result>ST_VOLUME_IO_WRITE_RATE</result>-->
+<!--            </task>-->
+<!--        </tasks>-->
+<!--    </metric>-->
 </metrics>

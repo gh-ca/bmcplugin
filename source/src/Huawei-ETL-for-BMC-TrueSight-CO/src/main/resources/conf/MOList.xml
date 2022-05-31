@@ -75,7 +75,7 @@
 
     <storage-object name="filesystem">
         <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
-        <performance>AverageIOResponseTimeUs,ReadBandWidth,WriteBandWidth,Throughput,ReadThroughput,WriteThroughput</performance>
+        <performance>ReadBandWidth,WriteBandWidth</performance>
         <count-command>get-filesystem-count</count-command>
         <query-command>batch-find-filesystem</query-command>
         <counters>
