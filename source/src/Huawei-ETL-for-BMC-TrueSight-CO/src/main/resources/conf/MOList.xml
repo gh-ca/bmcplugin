@@ -75,6 +75,7 @@
 
     <storage-object name="filesystem">
         <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <performance>AverageIOResponseTimeUs,ReadBandWidth,WriteBandWidth,Throughput,ReadThroughput,WriteThroughput</performance>
         <count-command>get-filesystem-count</count-command>
         <query-command>batch-find-filesystem</query-command>
         <counters>
@@ -84,6 +85,19 @@
             <counter mapping="filesystem_system"><name>OBJREL</name></counter>
         </counters>
     </storage-object>
+
+        <storage-object name="lun">
+            <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+            <performance>AverageIOResponseTimeUs,ReadBandWidth,WriteBandWidth,Throughput,ReadThroughput,WriteThroughput</performance>
+            <count-command>get-lun-count</count-command>
+            <query-command>batch-find-lun</query-command>
+            <counters>
+                <counter mapping="volume"><name>STOGLB</name></counter>
+                <counter mapping="volume_blank"><name>OBJREL</name></counter>
+                <counter mapping="volume_system"><name>OBJREL</name></counter>
+                <counter mapping="volume_storagepool"><name>OBJREL</name></counter>
+            </counters>
+        </storage-object>
 
     <storage-object name="nfshare">
         <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
@@ -108,21 +122,6 @@
             <counter mapping="cifshare_system"><name>OBJREL</name></counter>
         </counters>
     </storage-object>
-
-
-    <storage-object name="lun">
-        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
-        <performance>AverageIOResponseTimeUs,ReadBandWidth,WriteBandWidth,Throughput,ReadThroughput,WriteThroughput</performance>
-        <count-command>get-lun-count</count-command>
-        <query-command>batch-find-lun</query-command>
-        <counters>
-            <counter mapping="volume"><name>STOGLB</name></counter>
-            <counter mapping="volume_blank"><name>OBJREL</name></counter>
-            <counter mapping="volume_system"><name>OBJREL</name></counter>
-            <counter mapping="volume_storagepool"><name>OBJREL</name></counter>
-        </counters>
-    </storage-object>
-
 
    <storage-object name="host" >
        <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
