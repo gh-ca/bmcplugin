@@ -4,17 +4,13 @@ import com.huawei.storage.constants.ConnectionVO;
 import com.huawei.storage.etl.HWStorageExtractor;
 import com.neptuny.cpit.etl.DataSetList;
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.concurrent.Executors;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/30.
- */
 
 public class HWStorageExtractorTest {
 
@@ -31,17 +27,18 @@ public class HWStorageExtractorTest {
         conn.setAccessible(true);
         executor.setAccessible(true);
         ConnectionVO connVo = new ConnectionVO();
-        connVo.setHostIP("10.143.133.201");
-        connVo.setIpControllerA("10.143.133.201:8088");
-        connVo.setIpControllerB("10.143.133.201:8088");
-        connVo.setUsername("admin");
-        connVo.setPassword("Pbu4@123");
-        connVo.setSftpPort("22");
-        connVo.setRestPort("8088");
-        connVo.setScope("0");
+        connVo.setHostIP(UserInfo.hostIp);
+        connVo.setIpControllerA(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setIpControllerB(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setUsername(UserInfo.username);
+        connVo.setPassword(UserInfo.password);
+        connVo.setSftpPort(UserInfo.sftpPort);
+        connVo.setRestPort(UserInfo.port);
+        connVo.setScope(UserInfo.scope);
         conn.set(extractor,connVo);
         executor.set(extractor, Executors.newFixedThreadPool(10));
         DataSetList list = (DataSetList) method.invoke(extractor);
+        Assert.assertTrue(list.size() > 0);
         log.debug(list);
     }
 

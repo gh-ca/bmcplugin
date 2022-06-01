@@ -2,11 +2,12 @@ package com.huawei.storage.oceanstor.rest.operation;
 
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
-import com.huawei.storage.oceanstor.rest.domain.ConnectionData;
+import com.huawei.storage.oceanstor.UserInfo;
 import com.huawei.storage.oceanstor.rest.domain.Data;
 import com.huawei.storage.oceanstor.rest.exception.RestException;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,36 +17,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.*;
-
-/**
- * Huawei Technology  all rights reserverd
- * <p>
- * Created by m00373015 on 2016/8/9.
- */
 public class DeviceManagerTestLogin {
     private transient final static Logger logger = Logger.getLogger(DeviceManagerTest.class);
     private DeviceManager deviceManager;
-    private String hostUrl = "https://10.143.133.201:8088/deviceManager/rest";
-    private String username = "admin";
 
     @Before
     public void setUp() throws RestException {
-        String password = "Pbu4@123";
-        deviceManager = new DeviceManager(hostUrl, username, password);
+        deviceManager = new DeviceManager(UserInfo.hostUrl, UserInfo.username, UserInfo.password);
     }
 
     @Test
     public void testLogin_correct_credential() throws Exception {
-        String password = "Pbu4@123";
-        deviceManager = new DeviceManager(hostUrl, username, password);
+        deviceManager = new DeviceManager(UserInfo.hostUrl, UserInfo.username, UserInfo.password);
         deviceManager.login();
     }
 
     @Test(expected = Exception.class)
     public void testLogin_wrong_credential() throws Exception {
-        String password = "Pbu4@123";
-        deviceManager = new DeviceManager(hostUrl, username, password);
+        deviceManager = new DeviceManager(UserInfo.hostUrl, UserInfo.username, UserInfo.password);
         deviceManager.login();
 
     }
@@ -78,7 +67,6 @@ public class DeviceManagerTestLogin {
                 dataList.add(map);
             }
         }
-
-
+        Assert.assertEquals("/Test_fileSystem01",dataList.get(0).get("ROOT"));
     }
 }

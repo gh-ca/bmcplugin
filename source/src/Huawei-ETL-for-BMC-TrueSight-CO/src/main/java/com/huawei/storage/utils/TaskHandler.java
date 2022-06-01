@@ -241,6 +241,7 @@ public class TaskHandler {
         if ("System".equals(nameAndPre[0])) {
             StorageObject system = storObjMap.get("System").get(0);
             flowContext.put(task.getResult(), nameAndPre[1] + system.getId());
+
         }
     }
 
@@ -259,25 +260,27 @@ public class TaskHandler {
                     "Huawei_OceanStor+" + storObjMap.get("System").get(0).getId());
         } else {
             List<StorageObject> storageObjects = storObjMap.get(task.getTarget());
-            logger.info("TaskHandler Test : target=" + task.getTarget());
-            logger.info("TaskHandler Test : storageObjects size =" + storageObjects.size());
-            for (StorageObject o : storageObjects) {
-                String parentid = obj.getRestData().get("PARENTID");
-                String fsid = obj.getRestData().get("FSID");
-                if (null != parentid) {
-                    if (parentid.equals(o.getId())) {
-                        flowContext.put(task.getResult(),
-                                o.getTypeName() + "-[" + o.getId() + "]-" +
-                                        "[" + o.getName() + "]"
-                        );
-                        break;
+            if (storageObjects != null && storageObjects.size() != 0) {
+                for (StorageObject o : storageObjects) {
+                    if (obj.getRestData().size() != 0) {
+                        String parentid = obj.getRestData().get("PARENTID");
+                        String fsid = obj.getRestData().get("FSID");
+                        if (null != parentid) {
+                            if (parentid.equals(o.getId())) {
+                                flowContext.put(task.getResult(),
+                                        o.getTypeName() + "-[" + o.getId() + "]-" +
+                                                "[" + o.getName() + "]"
+                                );
+                                break;
+                            }
+                        } else if (null != fsid && fsid.equals(o.getId())) {
+                            flowContext.put(task.getResult(),
+                                    o.getTypeName() + "-[" + o.getId() + "]-" +
+                                            "[" + o.getName() + "]"
+                            );
+                            break;
+                        }
                     }
-                } else if (fsid.equals(o.getId())) {
-                    flowContext.put(task.getResult(),
-                            o.getTypeName() + "-[" + o.getId() + "]-" +
-                                    "[" + o.getName() + "]"
-                    );
-                    break;
                 }
             }
         }
@@ -368,17 +371,33 @@ public class TaskHandler {
         tierDISKTYPE[2] = obj.getRestData().get("TIER2DISKTYPE");
 
         String poolDiskType = "";
-        for (int tier = 0; tier < tierCAPACITY.length; tier++) {
-            if (null != tierCAPACITY[tier]){
-                if (!"0".equals(tierCAPACITY[tier])) {
-                    if (tierDISKTYPE[tier] != null){
-                        poolDiskType = poolDiskType + DiskType.valueOf(Integer.valueOf(tierDISKTYPE[tier])).name() + "/";
+
+        if (judgeV6(storObjMap)) {
+            poolDiskType = poolDiskType + DiskType.valueOf(Integer.valueOf(tierDISKTYPE[0])).name() + "/";
+        } else {
+            for (int tier = 0; tier < tierCAPACITY.length; tier++) {
+                if (null != tierCAPACITY[tier]){
+                    if (!"0".equals(tierCAPACITY[tier]) && !ConfigConst.POOL_INVALID_RETURN.equals(tierCAPACITY[tier])) {
+                        if (tierDISKTYPE[tier] != null) {
+                            poolDiskType = poolDiskType + DiskType.valueOf(Integer.valueOf(tierDISKTYPE[tier])).name() + "/";
+                        }
                     }
                 }
             }
         }
+
         poolDiskType = poolDiskType.substring(0, poolDiskType.length() - 1);
         flowContext.put(task.getResult(), poolDiskType);
+    }
+
+    private boolean judgeV6(Map<String, List<StorageObject>> storObjMap) {
+
+        List<StorageObject> storageObjects = storObjMap.get(ObjectType.System.name());
+        String productmode = storageObjects.get(0).getRestData().get("PRODUCTMODE");
+        if (ModelCapability.StorageTypeMap.get("V6").contains(productmode)) {
+            return true;
+        }
+        return false;
     }
 
     public void convertBoolToNumber(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
@@ -434,7 +453,7 @@ public class TaskHandler {
         for (String type : deviceType) {
             if (type.equals(ObjectType.Lun.name()) && storObjMap.get(type) != null) {
                 devices.addAll(storObjMap.get(type).stream().filter(item -> item.getPerfData().size() != 0).collect(Collectors.toList()));
-            }else {
+            }else if (storObjMap.get(type) != null){
                 devices.addAll(storObjMap.get(type));
             }
         }
@@ -669,6 +688,17 @@ public class TaskHandler {
                     }
             }
             flowContext.put(results[i], perfValue + "");
+        }
+    }
+
+    public void getPerfDataFromDisk(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+        String[] perfNames = task.getTarget().split(",");
+        String[] results = task.getResult().split(",");
+        if (ObjectType.Disk.getValue()==obj.getType()) {
+            for (int i = 0; i < perfNames.length; i++) {
+                if(obj.getPerfData()!=null&&obj.getPerfData().get(perfNames[i])!=null)
+                flowContext.put(results[i], obj.getPerfData().get(perfNames[i]) + "");
+            }
         }
     }
 

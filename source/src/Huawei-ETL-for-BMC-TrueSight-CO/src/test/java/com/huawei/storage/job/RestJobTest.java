@@ -1,5 +1,6 @@
 package com.huawei.storage.job;
 
+import com.huawei.storage.UserInfo;
 import com.huawei.storage.constants.ConnectionVO;
 import com.huawei.storage.domain.Link;
 import com.huawei.storage.domain.StorageObject;
@@ -7,6 +8,7 @@ import com.huawei.storage.domain.SubObject;
 import com.huawei.storage.oceanstor.rest.operation.OceanStorOperation;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,11 +16,6 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.util.*;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/22.
- */
 
 public class RestJobTest {
     RestJob restJob;
@@ -29,18 +26,16 @@ public class RestJobTest {
         Properties properties = new Properties();
         properties.load(this.getClass().getClassLoader().getResourceAsStream("log4j.properties"));
         PropertyConfigurator.configure(properties);
-        ConnectionVO connectionVO = new ConnectionVO();
-        connectionVO.setUsername("admin");
-        connectionVO.setPassword("Admin@storage");
-//        connectionVO.setPassword("Admin@storage2");
-        connectionVO.setScope("0");
-        connectionVO.setIpControllerA("10.158.196.210");
-        connectionVO.setHostIP("10.158.196.210");
-        connectionVO.setRestPort("40000");
-//        connectionVO.setIpControllerA("10.169.219.91");
-//        connectionVO.setHostIP("10.169.219.91");
-//        connectionVO.setRestPort("34088");
-        restJob = new RestJob(connectionVO);
+        ConnectionVO connVo = new ConnectionVO();
+        connVo.setHostIP(UserInfo.hostIp);
+        connVo.setIpControllerA(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setIpControllerB(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setUsername(UserInfo.username);
+        connVo.setPassword(UserInfo.password);
+        connVo.setSftpPort(UserInfo.sftpPort);
+        connVo.setRestPort(UserInfo.port);
+        connVo.setScope(UserInfo.scope);
+        restJob = new RestJob(connVo);
     }
 
     @Test
@@ -54,6 +49,7 @@ public class RestJobTest {
                     (s.getName()==null?s.getId():s.getName())
             +" Performance Data is :" + s.getPerfData());
         }
+        Assert.assertTrue(list.contains("16401_604_/LQ_1444"));
         //log.debug(list);
     }
 

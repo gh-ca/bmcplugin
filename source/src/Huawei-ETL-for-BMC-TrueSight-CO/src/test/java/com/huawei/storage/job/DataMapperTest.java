@@ -1,9 +1,11 @@
 package com.huawei.storage.job;
 
+import com.huawei.storage.UserInfo;
 import com.huawei.storage.constants.ConnectionVO;
 import com.huawei.storage.domain.StorageObject;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -13,11 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-/**
- * Huawei Technologies  all rights reserved
- * <p>
- * Created by m00373015 on 2016/8/23.
- */
 public class DataMapperTest {
     PerformanceDataJob perfJob;
     private Logger log = Logger.getLogger(PerformanceDataJobTest.class);
@@ -28,17 +25,17 @@ public class DataMapperTest {
         Properties properties = new Properties();
         properties.load(this.getClass().getClassLoader().getResourceAsStream("log4j.properties"));
         PropertyConfigurator.configure(properties);
-        ConnectionVO connectionVO = new ConnectionVO();
-        connectionVO.setUsername("admin");
-        connectionVO.setPassword("Pbu4@123");
-        connectionVO.setScope("0");
-        connectionVO.setIpControllerA("10.143.133.201:8088");
-        connectionVO.setIpControllerB("10.143.133.201:8088");
-        connectionVO.setRestPort("8088");
-        connectionVO.setSftpPort("22");
-        connectionVO.setHostIP("10.143.133.201");
-        perfJob = new PerformanceDataJob(connectionVO);
-        restJob = new RestJob(connectionVO);
+        ConnectionVO connVo = new ConnectionVO();
+        connVo.setHostIP(UserInfo.hostIp);
+        connVo.setIpControllerA(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setIpControllerB(UserInfo.hostIp + ":" + UserInfo.port);
+        connVo.setUsername(UserInfo.username);
+        connVo.setPassword(UserInfo.password);
+        connVo.setSftpPort(UserInfo.sftpPort);
+        connVo.setRestPort(UserInfo.port);
+        connVo.setScope(UserInfo.scope);
+        perfJob = new PerformanceDataJob(connVo);
+        restJob = new RestJob(connVo);
     }
 
 
@@ -66,6 +63,7 @@ public class DataMapperTest {
         log.debug(missList);
         log.debug(matchList);
         log.debug("lun : " + lunList.size());
+        Assert.assertTrue(lunList.size() > 0);
     }
 
     @Test
@@ -74,6 +72,8 @@ public class DataMapperTest {
         List<StorageObject> restData = restJob.call();
         log.debug(perfData);
         log.debug(restData);
+        Assert.assertTrue(perfData.size() > 0);
+        Assert.assertTrue(restData.size() > 0);
       /*  DataMapper mapper = new DataMapper();
         List<StorageObject> storageObjects = mapper.mappingAllData(restData, perfData);
         for (StorageObject s : storageObjects) {
@@ -97,6 +97,7 @@ public class DataMapperTest {
                 log.debug("--------------------------");
             }
         }
+        Assert.assertTrue(restData.size() > 0);
     }
 
     @Test
@@ -106,6 +107,7 @@ public class DataMapperTest {
         BigDecimal result = a.subtract(b);
         log.debug(result.toPlainString());
         log.debug(a.divide(b).toPlainString());
+        Assert.assertEquals(new BigDecimal("92233720368547758070"),result);
     }
 
     @Test
@@ -113,6 +115,7 @@ public class DataMapperTest {
         String exp = "OWNINGCONTROLLER::${ID}";
         int dataIndex = exp.indexOf("${");
         String substring = exp.substring(dataIndex + 2, exp.length() - 1);
+        Assert.assertEquals("ID", substring);
         System.out.println(substring);
     }
 }
