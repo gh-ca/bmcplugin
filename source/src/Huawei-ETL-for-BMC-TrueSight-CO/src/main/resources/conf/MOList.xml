@@ -54,7 +54,7 @@
 
     <storage-object name="disk">
         <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
-        <performance>AverageIOResponseTime,ReadThroughput,AVERAGE_READ_IO_SIZE,WriteThroughput,AVERAGE_WRITE_IO_SIZE</performance>
+        <performance>AverageIOResponseTime,ReadThroughput,AVERAGE_READ_IO_SIZE,WriteThroughput,AVERAGE_WRITE_IO_SIZE,Throughput,AverageIOSize</performance>
         <count-command>get-disk-count</count-command>
         <query-command>batch-find-disk</query-command>
         <counters>
