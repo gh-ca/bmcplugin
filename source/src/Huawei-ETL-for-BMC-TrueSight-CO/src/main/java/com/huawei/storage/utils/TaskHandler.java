@@ -241,6 +241,7 @@ public class TaskHandler {
         if ("System".equals(nameAndPre[0])) {
             StorageObject system = storObjMap.get("System").get(0);
             flowContext.put(task.getResult(), nameAndPre[1] + system.getId());
+
         }
     }
 
@@ -687,6 +688,17 @@ public class TaskHandler {
                     }
             }
             flowContext.put(results[i], perfValue + "");
+        }
+    }
+
+    public void getPerfDataFromDisk(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+        String[] perfNames = task.getTarget().split(",");
+        String[] results = task.getResult().split(",");
+        if (ObjectType.Disk.getValue()==obj.getType()) {
+            for (int i = 0; i < perfNames.length; i++) {
+                if(obj.getPerfData()!=null&&obj.getPerfData().get(perfNames[i])!=null)
+                flowContext.put(results[i], obj.getPerfData().get(perfNames[i]) + "");
+            }
         }
     }
 
