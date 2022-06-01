@@ -118,7 +118,7 @@
     <metric dataSet="SYSDSK" column="BYDISK_TRANSFER_RATE">
         <name>Transfer rate by disk</name>
         <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getPerfDataFromController">
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getPerfDataFromDisk">
                 <target>AverageIOSize,Throughput</target>
                 <result>AverageIOSize,Throughput</result>
             </task>
