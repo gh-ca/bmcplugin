@@ -372,7 +372,7 @@ public class TaskHandler {
 
         String poolDiskType = "";
 
-        if (judgeV6(storObjMap)) {
+        if (judgeProduceVersion(storObjMap)) {
             poolDiskType = poolDiskType + DiskType.valueOf(Integer.valueOf(tierDISKTYPE[0])).name() + "/";
         } else {
             for (int tier = 0; tier < tierCAPACITY.length; tier++) {
@@ -398,6 +398,23 @@ public class TaskHandler {
             return true;
         }
         return false;
+    }
+
+    private boolean judgeProduceVersion(Map<String, List<StorageObject>> storObjMap) {
+
+        List<String> productversions = new ArrayList<>();
+        List<StorageObject> storageObjects = storObjMap.get(ObjectType.System.name());
+        String pointRelease = storageObjects.get(0).getRestData().get("pointRelease");
+        if (null != pointRelease && pointRelease.length() != 0) {
+            productversions = ModelCapability.StorageTypeMap.get("POINTRELEASES").stream().filter(e -> pointRelease.contains(e)).collect(Collectors.toList());
+        } else {
+            String productVersion = storageObjects.get(0).getRestData().get("PRODUCTVERSION");
+            productversions = ModelCapability.StorageTypeMap.get("PRODUCTVERSIONS").stream().filter(e -> productVersion.contains(e)).collect(Collectors.toList());
+        }
+        if (productversions.size() == 0) {
+            return false;
+        }
+        return true;
     }
 
     public void convertBoolToNumber(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
@@ -696,8 +713,11 @@ public class TaskHandler {
         String[] results = task.getResult().split(",");
         if (ObjectType.Disk.getValue()==obj.getType()) {
             for (int i = 0; i < perfNames.length; i++) {
-                if(obj.getPerfData()!=null&&obj.getPerfData().get(perfNames[i])!=null)
-                flowContext.put(results[i], obj.getPerfData().get(perfNames[i]) + "");
+                if (obj.getPerfData() != null && obj.getPerfData().get(perfNames[i]) != null) {
+                    flowContext.put(results[i], obj.getPerfData().get(perfNames[i]) + "");
+                } else {
+                    flowContext.put(results[i], "0");
+                }
             }
         }
     }

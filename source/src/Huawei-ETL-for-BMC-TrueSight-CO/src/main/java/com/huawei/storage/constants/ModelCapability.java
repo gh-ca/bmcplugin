@@ -58,5 +58,14 @@ public class ModelCapability {
         V6.add("831");
         V6.add("832");
         StorageTypeMap.put("V6", V6);
+
+        List<String> pointReleases = new ArrayList<>();
+        pointReleases.add("6.1.3");
+        pointReleases.add("6.1.5");
+        StorageTypeMap.put("POINTRELEASES", pointReleases);
+
+        List<String> productVersions = new ArrayList<>();
+        productVersions.add("V600R005");
+        StorageTypeMap.put("PRODUCTVERSIONS", productVersions);
     }
 }
