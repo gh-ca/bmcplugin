@@ -372,7 +372,7 @@ public class TaskHandler {
 
         String poolDiskType = "";
 
-        if (judgeProduceVersion(storObjMap)) {
+        if (judgeV6(storObjMap)) {
             poolDiskType = poolDiskType + DiskType.valueOf(Integer.valueOf(tierDISKTYPE[0])).name() + "/";
         } else {
             for (int tier = 0; tier < tierCAPACITY.length; tier++) {
