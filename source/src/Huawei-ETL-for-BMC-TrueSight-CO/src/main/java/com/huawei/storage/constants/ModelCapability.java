@@ -36,27 +36,9 @@ public class ModelCapability {
         unSupportFunctionMap.put(BoxTypeConst.DORADO_NAS_Enhanced, unSupportListDoradoNas);
 
         List<String> V6 = new ArrayList<>();
-        V6.add("811");
-        V6.add("812");
-        V6.add("813");
-        V6.add("814");
-        V6.add("815");
-        V6.add("816");
-        V6.add("817");
-        V6.add("818");
-        V6.add("819");
-        V6.add("821");
-        V6.add("822");
-        V6.add("823");
-        V6.add("824");
-        V6.add("825");
-        V6.add("826");
-        V6.add("827");
-        V6.add("828");
-        V6.add("829");
-        V6.add("830");
-        V6.add("831");
-        V6.add("832");
+        BoxTypeConst.boxMap.entrySet().stream()
+                .filter(item -> Integer.valueOf(item.getKey()) >= 811 && Integer.valueOf(item.getKey()) <= 845)
+                .forEach(m -> V6.add(m.getKey()));
         StorageTypeMap.put("V6", V6);
 
         List<String> pointReleases = new ArrayList<>();
@@ -68,4 +50,5 @@ public class ModelCapability {
         productVersions.add("V600R005");
         StorageTypeMap.put("PRODUCTVERSIONS", productVersions);
     }
+
 }
