@@ -165,6 +165,10 @@
                 <target>ReadBandWidth,WriteBandWidth</target>
                 <result>ST_VOLUME_TRANSFER_BYTE_RATE</result>
             </task>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${ST_VOLUME_TRANSFER_BYTE_RATE},*,1024,*,1024</target>
+                <result>ST_VOLUME_TRANSFER_BYTE_RATE</result>
+            </task>
         </tasks>
     </metric>
 <!--    <metric dataSet="STOGLB" column="ST_VOLUME_IO_RATE" name="StorageConfigured Space">-->
