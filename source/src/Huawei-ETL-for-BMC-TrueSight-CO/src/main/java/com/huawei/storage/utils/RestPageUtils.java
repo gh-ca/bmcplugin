@@ -75,13 +75,13 @@ public class RestPageUtils {
                     logger.warn("this device dose not support this operation");
                 }else{
                     logger.error("rest request error happened " + result.getErrorDescription());
-                    throw new ETLException("rest request error happened "
-                            + result.getErrorDescription());
+//                    throw new ETLException("rest request error happened "
+//                            + result.getErrorDescription());
                 }
             }
         } catch (RestException e) {
             logger.error("get data from rest failed " + e.getErrorDescription() ,e );
-            throw new ETLException("get Data from rest failed "+e.getErrorDescription(),e);
+//            throw new ETLException("get Data from rest failed "+e.getErrorDescription(),e);
         }
         return resultData;
     }

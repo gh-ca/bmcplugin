@@ -16,10 +16,14 @@
         <name>Bandwidth utilization by Controller</name>
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
-                <target>ReadBandWidth,WriteBandWidth,MaxBandWidth</target>
-                <result>ReadBandWidth,WriteBandWidth,MaxBandWidth</result>
+                <target>ReadBandWidth,WriteBandWidth</target>
+                <result>ReadBandWidth,WriteBandWidth</result>
             </task>
-            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.getMAXBandWidth">
+                <target>MaxBandWidth</target>
+                <result>MaxBandWidth</result>
+            </task>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">
                 <target>(${ReadBandWidth},+,${WriteBandWidth}),/,${MaxBandWidth},*,100</target>
                 <result>BYCONT_BANDWIDTH_UTIL</result>
             </task>

@@ -17,7 +17,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 
 public class HWStorageExtractor  extends Extractor{
 
@@ -26,28 +25,27 @@ public class HWStorageExtractor  extends Extractor{
     private ConnectionVO conn = new ConnectionVO();
     private com.neptuny.cpit.logger.Logger bcoLogger;
     private DBConf dbConf;
-
+    private final int NUM = 15;
 
 
     public HWStorageExtractor(){
         this.bcoLogger = com.neptuny.cpit.logger.Logger.getLogger();
-        executorService = Executors.newFixedThreadPool(10);
+        executorService = Executors.newFixedThreadPool(NUM);
     }
 
     HWStorageExtractor(com.neptuny.cpit.logger.Logger bcoLogger, DBConf dbConf){
-        executorService = Executors.newFixedThreadPool(10);
+        executorService = Executors.newFixedThreadPool(NUM);
         this.bcoLogger = bcoLogger;
         this.dbConf = dbConf;
     }
 
     private void validateConfig(Properties props) {
         //validate all config
-
     }
 
     public void init(Properties props){
         bcoLogger.info("start init ETL parameter ");
-        executorService = Executors.newFixedThreadPool(10);
+        executorService = Executors.newFixedThreadPool(NUM);
         conn.setUsername(props.getProperty("huawei.username"));
         conn.setPassword(props.getProperty("huawei.password"));
         conn.setScope("0");
@@ -65,8 +63,9 @@ public class HWStorageExtractor  extends Extractor{
         /*Future<Map<String, Map<String, String>>> performanceData = executorService.
                 submit(new PerformanceDataJob(conn));*/
 
-        List<StorageObject> storageObjects = restData.get(5, TimeUnit.MINUTES);
+        List<StorageObject> storageObjects = restData.get(2, TimeUnit.HOURS);
         bcoLogger.info("All storageObject get from rest, size is " + storageObjects.size());
+
         /*Map<String, Map<String, String>> perfData = performanceData.get(5, TimeUnit.MINUTES);
         bcoLogger.info("All performance data get from sftp size is :" + perfData.size());*/
         // mapping data to object
@@ -94,4 +93,5 @@ public class HWStorageExtractor  extends Extractor{
             executorService.shutdownNow();
         }
     }
+
 }
