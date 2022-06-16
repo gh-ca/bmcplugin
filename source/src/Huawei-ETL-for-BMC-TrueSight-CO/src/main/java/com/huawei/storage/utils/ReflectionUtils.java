@@ -72,7 +72,7 @@ public class ReflectionUtils {
             throw new ETLException("get Data from rest failed "+ e.getMessage() + e.getStackTrace(),e);
         } catch (InvocationTargetException e) {
             logger.error("get data from rest failed " + e.getMessage() + e.getStackTrace() ,e );
-            throw new ETLException("get Data from rest failed "+ e.getMessage() + e.getStackTrace(),e);
+            //throw new ETLException("get Data from rest failed "+ e.getMessage() + e.getStackTrace(),e);
         } catch (RestException e) {
             logger.error("get data from rest failed " + e.getMessage() + e.getStackTrace() ,e );
             throw new ETLException("get Data from rest failed "+ e.getMessage() + e.getStackTrace(),e);

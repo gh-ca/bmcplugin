@@ -42,7 +42,11 @@ public class TaskHandler {
             for (int i = 0; i < targets.length - 1; i++) {
                 Long total = 0l;
                 for (StorageObject storagePool : storageObjects) {
-                    total += Long.valueOf(storagePool.getRestData().get(targets[i]));
+                    if (storagePool.getRestData() != null && storagePool.getRestData().get(targets[i]) != null) {
+                        total += Long.valueOf(storagePool.getRestData().get(targets[i]));
+                    }else {
+                        total += Long.valueOf(0);
+                    }
                 }
                 flowContext.put(results[i], total + "");
             }
