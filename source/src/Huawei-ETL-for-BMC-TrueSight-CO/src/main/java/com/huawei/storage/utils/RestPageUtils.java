@@ -71,9 +71,9 @@ public class RestPageUtils {
             if("0".equals(result.getErrorCode())){
                 resultData = result.getResultData();
             }else{
-                if(result.getErrorDescription().contains("The operation is not supported")){
+                if (result.getErrorDescription() != null && result.getErrorDescription().contains("The operation is not supported")) {
                     logger.warn("this device dose not support this operation");
-                }else{
+                } else {
                     logger.error("rest request error happened " + result.getErrorDescription());
 //                    throw new ETLException("rest request error happened "
 //                            + result.getErrorDescription());

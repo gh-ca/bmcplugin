@@ -177,10 +177,12 @@ public class ComposeUtils {
 
     public static OperationResult composeResultFromRest(RestResponse restResult) {
         OperationResult operationResult = new OperationResult();
-        operationResult.setErrorCode(restResult.getError().getCode());
-        operationResult.setErrorDescription(restResult.getError().getDescription());
-        operationResult.setErrorSuggestion(restResult.getError().getSuggestion());
-        operationResult.setResultData(restResult.getData().getDataList());
+        if (restResult != null && restResult.getError() != null && restResult.getData() != null) {
+            operationResult.setErrorCode(restResult.getError().getCode());
+            operationResult.setErrorDescription(restResult.getError().getDescription());
+            operationResult.setErrorSuggestion(restResult.getError().getSuggestion());
+            operationResult.setResultData(restResult.getData().getDataList());
+        }
         return operationResult;
     }
 
