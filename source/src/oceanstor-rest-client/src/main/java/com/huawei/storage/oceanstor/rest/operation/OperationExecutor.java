@@ -114,18 +114,20 @@ public class OperationExecutor {
         List<Map<String, String>> resultData =
                 operationResult.getResultData();
         boolean isfound = false;
-        for (Map<String,String> result: resultData) {
-            if(result.get("NAME").equals(target)){
-                log.debug("find target " + target);
-                List<Map<String,String>> l = new ArrayList<Map<String, String>>();
-                l.add(result);
-                operationResult.setResultData(l);
-                isfound = true;
-                break;
+        if (resultData != null && resultData.size() != 0) {
+            for (Map<String,String> result: resultData) {
+                if(result.get("NAME").equals(target)){
+                    log.debug("find target " + target);
+                    List<Map<String,String>> l = new ArrayList<Map<String, String>>();
+                    l.add(result);
+                    operationResult.setResultData(l);
+                    isfound = true;
+                    break;
+                }
             }
-        }
-        if(!isfound){
-            operationResult.addEmptyResult();
+            if(!isfound){
+                operationResult.addEmptyResult();
+            }
         }
         return  isfound;
     }

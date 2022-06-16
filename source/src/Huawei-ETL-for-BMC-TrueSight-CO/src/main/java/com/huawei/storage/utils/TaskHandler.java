@@ -594,19 +594,34 @@ public class TaskHandler {
         }
         BigDecimal result = new BigDecimal(express.get(0));
         for (int i = 1; i < express.size(); i++) {
-            if (express.get(i).equals("+")&&express.get(i + 1) != null) {
-                result = result.add(new BigDecimal(express.get(i + 1)));
+            if (express.get(i) != null && express.get(i).equals("+")) {
+
+                if (express.get(i + 1) != null) {
+                    result = result.add(new BigDecimal(express.get(i + 1)));
+                } else {
+                    result = result.add(new BigDecimal(0));
+                }
             }
-            if (express.get(i).equals("-") && express.get(i + 1) != null) {
-                result = result.subtract(new BigDecimal(express.get(i + 1)));
+            if (express.get(i) != null &&express.get(i).equals("-")) {
+                if (express.get(i + 1) != null) {
+                    result = result.subtract(new BigDecimal(express.get(i + 1)));
+                } else {
+                    result = result.subtract(new BigDecimal(0));
+                }
             }
-            if (express.get(i).equals("*") && express.get(i + 1) != null) {
-                result = result.multiply(new BigDecimal(express.get(i + 1)));
+            if (express.get(i) != null &&express.get(i).equals("*")) {
+                if (express.get(i + 1) != null) {
+                    result = result.multiply(new BigDecimal(express.get(i + 1)));
+                } else {
+                    result = new BigDecimal(0);
+                }
             }
-            if (express.get(i).equals("/")) {
+            if (express.get(i) != null && express.get(i).equals("/")) {
                 if (!express.get(i + 1).equals("0") && express.get(i + 1) != null) {
                     result = result.divide(new BigDecimal(express.get(i + 1)), 4,
                             RoundingMode.HALF_UP);
+                } else {
+                    result = new BigDecimal(0);
                 }
             }
         }

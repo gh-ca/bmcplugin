@@ -1,10 +1,14 @@
 package com.huawei.storage.oceanstor.rest.connection;
 
-import com.huawei.storage.oceanstor.rest.constants.OperationError;
 import com.huawei.storage.oceanstor.rest.domain.RestResponse;
 import com.huawei.storage.oceanstor.rest.exception.RestException;
 import org.apache.http.client.config.RequestConfig;
-import org.apache.http.client.methods.*;
+import org.apache.http.client.methods.HttpDelete;
+import org.apache.http.client.methods.HttpEntityEnclosingRequestBase;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
+import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.entity.StringEntity;
 import org.apache.log4j.Logger;
 
@@ -93,7 +97,7 @@ public class RestRequestHandler {
 	
 	
 	private RestResponse doRequest(HttpRequestBase method) throws RestException {
-        RestResponse restResponse;
+		RestResponse restResponse = new RestResponse(null, null);
 		try {
             setRequestTimeouts(method);
             if(keyPath!=null&&keyPass!=null){
@@ -110,15 +114,15 @@ public class RestRequestHandler {
 		} catch (IOException e) {
 			logger.error("The http request failed because of an IOException: " +
 					e.getMessage(),e);
-			throw OperationError.HTTP.HTTP_IO_EXCEPTION_ERROR.newException(method.getMethod(),method.getURI().getHost()+":"+
-					method.getURI().getPort()+method.getURI().getPath(),e+":"+e.getMessage());
+//			throw OperationError.HTTP.HTTP_IO_EXCEPTION_ERROR.newException(method.getMethod(),method.getURI().getHost()+":"+
+//					method.getURI().getPort()+method.getURI().getPath(),e+":"+e.getMessage());
 		} catch (RestException e){
-            throw e;
+//            throw e;
         }catch (Exception e) {
 			logger.error("The http request failed because of an Exception: " +
                     e.getMessage(),e);
-			throw OperationError.HTTP.HTTP_EXCEPTION_ERROR.newException(method.getMethod(),method.getURI().getHost()+":"+
-					method.getURI().getPort()+method.getURI().getPath(),e+":"+e.getMessage());
+//			throw OperationError.HTTP.HTTP_EXCEPTION_ERROR.newException(method.getMethod(),method.getURI().getHost()+":"+
+//					method.getURI().getPort()+method.getURI().getPath(),e+":"+e.getMessage());
 		}
 		return restResponse;
 	}
@@ -127,9 +131,6 @@ public class RestRequestHandler {
 	void setToken(String iBaseToken) {
 		this.iBaseToken = iBaseToken;
 	}
-
-
-
 
     public void setSocketTimeout(int socketTimeout) {
         this.socketTimeout = socketTimeout;
