@@ -12,7 +12,7 @@
 
     <storage-object name="controller">
         <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
-        <performance>ReadBandWidth,WriteBandWidth,MaxBandWidth,Throughput,ReadThroughput,WriteThroughput,AverageIOResponseTime,AverageIOSize</performance>
+        <performance>ReadBandWidth,WriteBandWidth,Throughput,ReadThroughput,WriteThroughput,AverageIOResponseTime,AverageIOSize</performance>
         <query-command>find-all-controller</query-command>
         <counters>
             <counter mapping="controller"><name>STOCONT</name></counter>
