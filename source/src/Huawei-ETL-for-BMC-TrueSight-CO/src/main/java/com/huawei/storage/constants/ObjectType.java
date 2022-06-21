@@ -41,7 +41,9 @@ public enum  ObjectType {
 
     FCoEPort(252),
 
-    Host(21);
+    Host(21),
+
+    vStore(16442);
 
     private int type;
 

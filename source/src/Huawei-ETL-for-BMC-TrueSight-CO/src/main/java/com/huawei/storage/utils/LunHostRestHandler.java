@@ -1,5 +1,6 @@
 package com.huawei.storage.utils;
 
+import com.huawei.storage.domain.PreQuery;
 import com.huawei.storage.domain.StorageObject;
 import com.huawei.storage.exception.ETLException;
 import com.huawei.storage.oceanstor.rest.operation.DeviceManager;
@@ -14,7 +15,7 @@ public class LunHostRestHandler {
      private final Logger logger = Logger.getLogger(LunHostRestHandler.class);
 
 
-    public List<StorageObject> getMappedLunHost(String countCommand,String queryCommand, DeviceManager deviceManager) throws ETLException {
+    public List<StorageObject> getMappedLunHost(String countCommand, String queryCommand, PreQuery preQuery, DeviceManager deviceManager) throws ETLException {
         List<StorageObject> hostLUNs = new ArrayList<StorageObject>();
         List<StorageObject> mappingViews = getAllMappingView(deviceManager);
         for (StorageObject mappingView : mappingViews) {
@@ -68,7 +69,7 @@ public class LunHostRestHandler {
         Map<String, String> operatrionData = new HashMap<String, String>();
         operatrionData.put("ASSOCIATEOBJTYPE", "245");
         operatrionData.put("ASSOCIATEOBJID", id);
-        return RestPageUtils.pageGetAll(deviceManager, "get-associate-hostgroup-count", "get-associate-hostgroup", operatrionData);
+        return RestPageUtils.pageGetAll(deviceManager, "get-associate-hostgroup-count", "get-associate-hostgroup",operatrionData);
     }
 
 
@@ -76,7 +77,7 @@ public class LunHostRestHandler {
         Map<String, String> operatrionData = new HashMap<String, String>();
         operatrionData.put("ASSOCIATEOBJTYPE", "14");
         operatrionData.put("ASSOCIATEOBJID", id);
-        return RestPageUtils.pageGetAll(deviceManager, "get-associate-host-count", "get-associate-host", operatrionData);
+        return RestPageUtils.pageGetAll(deviceManager, "get-associate-host-count", "get-associate-host",operatrionData);
     }
 
 

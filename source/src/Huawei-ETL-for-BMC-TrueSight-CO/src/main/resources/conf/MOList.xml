@@ -101,6 +101,10 @@
 
     <storage-object name="nfshare">
         <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <pre-query>
+            <count-command>get-vstore-count</count-command>
+            <query-command>batch-find-vstore</query-command>
+        </pre-query>
         <count-command>find-NFS-share-count</count-command>
         <query-command>batch-find-NFS-share</query-command>
         <counters>
@@ -113,6 +117,10 @@
 
     <storage-object name="cifshare">
         <method>com.huawei.storage.utils.StorageObjectRestHandler.findStorageObjectsFromRest</method>
+        <pre-query>
+            <count-command>get-vstore-count</count-command>
+            <query-command>batch-find-vstore</query-command>
+        </pre-query>
         <count-command>find-CIFS-share-count</count-command>
         <query-command>batch-find-CIFS-share</query-command>
         <counters>

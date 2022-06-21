@@ -1,6 +1,11 @@
 package com.huawei.storage.job;
 
-import com.huawei.storage.domain.*;
+import com.huawei.storage.domain.Counter;
+import com.huawei.storage.domain.Metric;
+import com.huawei.storage.domain.Metrics;
+import com.huawei.storage.domain.StorageObject;
+import com.huawei.storage.domain.Task;
+import com.huawei.storage.etl.HWStorageExtractor;
 import com.huawei.storage.utils.CommonUtils;
 import com.huawei.storage.utils.ReflectionUtils;
 import com.neptuny.cpit.etl.DBConf;
