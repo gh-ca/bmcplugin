@@ -104,6 +104,10 @@
         <pre-query>
             <count-command>get-vstore-count</count-command>
             <query-command>batch-find-vstore</query-command>
+            <pre-param>
+                <target>vstoreId</target>
+                <source>ID</source>
+            </pre-param>
         </pre-query>
         <count-command>find-NFS-share-count</count-command>
         <query-command>batch-find-NFS-share</query-command>
@@ -120,6 +124,10 @@
         <pre-query>
             <count-command>get-vstore-count</count-command>
             <query-command>batch-find-vstore</query-command>
+            <pre-param>
+                <target>vstoreId</target>
+                <source>ID</source>
+            </pre-param>
         </pre-query>
         <count-command>find-CIFS-share-count</count-command>
         <query-command>batch-find-CIFS-share</query-command>

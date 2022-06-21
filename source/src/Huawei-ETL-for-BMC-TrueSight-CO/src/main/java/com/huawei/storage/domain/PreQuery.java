@@ -11,6 +11,9 @@ public class PreQuery {
     @XStreamAlias("query-command")
     String queryCommand;
 
+    @XStreamAlias("pre-param")
+    PreParam preParam;
+
     public String getCountCommand() {
         return countCommand;
     }
@@ -27,11 +30,20 @@ public class PreQuery {
         this.queryCommand = queryCommand;
     }
 
+    public PreParam getPreParam() {
+        return preParam;
+    }
+
+    public void setPreParam(PreParam preParam) {
+        this.preParam = preParam;
+    }
+
     @Override
     public String toString() {
-        return "PreCommand{" +
+        return "PreQuery{" +
                 "countCommand='" + countCommand + '\'' +
                 ", queryCommand='" + queryCommand + '\'' +
+                ", preParam=" + preParam +
                 '}';
     }
 }

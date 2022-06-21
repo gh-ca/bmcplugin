@@ -57,7 +57,7 @@ public class RestPageUtils {
             List<StorageObject> storageObjects = pageGetAll(deviceManager, preQuery.getCountCommand(), preQuery.getQueryCommand(), operationData);
             storageObjects.forEach(item->{
                 try {
-                    operationData.put("vstoreId", item.getId());
+                    operationData.put(preQuery.getPreParam().getTarget(), item.getRestData().get(preQuery.getPreParam().getSource()));
                     list.addAll(pageGetAll(deviceManager,countOperationName,queryOperationName,operationData));
                 } catch (ETLException e) {
                     logger.error("rest request error happened " + e.getMessage());
