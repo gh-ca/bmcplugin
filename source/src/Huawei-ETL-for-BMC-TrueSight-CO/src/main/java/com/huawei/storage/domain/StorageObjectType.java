@@ -28,6 +28,8 @@ public class StorageObjectType {
     @XStreamAlias("query-command")
     String queryCommand;
 
+    @XStreamAlias("pre-query")
+    PreQuery preQuery;
 
     @XStreamAlias("performance")
     String performance;
@@ -88,6 +90,14 @@ public class StorageObjectType {
         this.performance = performance;
     }
 
+    public PreQuery getPreQuery() {
+        return preQuery;
+    }
+
+    public void setPreQuery(PreQuery preQuery) {
+        this.preQuery = preQuery;
+    }
+
     @Override
     public String toString() {
         return "StorageObjectType{" +
@@ -97,6 +107,8 @@ public class StorageObjectType {
                 ", method='" + method + '\'' +
                 ", countCommand='" + countCommand + '\'' +
                 ", queryCommand='" + queryCommand + '\'' +
+                ", preQuery=" + preQuery +
+                ", performance='" + performance + '\'' +
                 '}';
     }
 }

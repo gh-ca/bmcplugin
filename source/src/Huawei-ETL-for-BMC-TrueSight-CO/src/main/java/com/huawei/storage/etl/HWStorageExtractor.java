@@ -76,8 +76,7 @@ public class HWStorageExtractor  extends Extractor{
             bcoLogger.info("start transform data to bco dataset, dataset size will be "
                     + storageObjects.size());
 
-            DataMapper mapper = new DataMapper(dbConf,bcoLogger);
-            //list = mapper.mappingAllData(storageObjects, perfData);
+          DataMapper mapper = new DataMapper(dbConf,bcoLogger);
             list = mapper.mappingAllData(storageObjects);
         }else {
             throw new ETLException("Get data failed...");
