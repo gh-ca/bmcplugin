@@ -16,10 +16,6 @@
         <name>Bandwidth utilization by Controller</name>
         <tasks>
             <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromPerformanceData">
-                <target>ReadBandWidth</target>
-                <result>BYCONT_BANDWIDTH_UTIL</result>
-            </task>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getPerfDataFromController">
                 <target>ReadBandWidth,WriteBandWidth</target>
                 <result>ReadBandWidth,WriteBandWidth</result>
             </task>
@@ -29,7 +25,7 @@
             </task>
             <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">
                 <target>(${ReadBandWidth},+,${WriteBandWidth}),/,${MaxBandWidth},*,100</target>
-                <result>ST_SYSTEM_BANDWIDTH_UTIL</result>
+                <result>BYCONT_BANDWIDTH_UTIL</result>
             </task>
         </tasks>
     </metric>

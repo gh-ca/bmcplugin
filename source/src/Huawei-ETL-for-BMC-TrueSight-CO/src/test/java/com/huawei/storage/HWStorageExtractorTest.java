@@ -36,7 +36,7 @@ public class HWStorageExtractorTest {
         connVo.setRestPort(UserInfo.port);
         connVo.setScope(UserInfo.scope);
         conn.set(extractor,connVo);
-        executor.set(extractor, Executors.newFixedThreadPool(10));
+        executor.set(extractor, Executors.newFixedThreadPool(15));
         DataSetList list = (DataSetList) method.invoke(extractor);
         Assert.assertTrue(list.size() > 0);
         log.debug(list);
