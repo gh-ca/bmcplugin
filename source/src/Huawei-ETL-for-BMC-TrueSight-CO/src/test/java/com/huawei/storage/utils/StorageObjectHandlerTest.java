@@ -38,7 +38,7 @@ public class StorageObjectHandlerTest {
     public void getMappedLunHost() throws Exception {
         LunHostRestHandler handler = new LunHostRestHandler();
         StorageObjectType type = new StorageObjectType();
-        List<StorageObject> mappedLunHost = handler.getMappedLunHost("","",deviceManager);
+        List<StorageObject> mappedLunHost = handler.getMappedLunHost("","",null,deviceManager);
         log.debug("mappedLunHost size is " + mappedLunHost.size());
         log.debug("================================================================");
         for (StorageObject storageObj : mappedLunHost ) {

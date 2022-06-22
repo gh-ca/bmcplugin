@@ -9,7 +9,6 @@ import org.apache.log4j.Logger;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -43,7 +42,11 @@ public class TaskHandler {
             for (int i = 0; i < targets.length - 1; i++) {
                 Long total = 0l;
                 for (StorageObject storagePool : storageObjects) {
-                    total += Long.valueOf(storagePool.getRestData().get(targets[i]));
+                    if (storagePool.getRestData() != null && storagePool.getRestData().get(targets[i]) != null) {
+                        total += Long.valueOf(storagePool.getRestData().get(targets[i]));
+                    }else {
+                        total += Long.valueOf(0);
+                    }
                 }
                 flowContext.put(results[i], total + "");
             }
@@ -400,6 +403,23 @@ public class TaskHandler {
         return false;
     }
 
+    private boolean judgeProduceVersion(Map<String, List<StorageObject>> storObjMap) {
+
+        List<String> productversions = new ArrayList<>();
+        List<StorageObject> storageObjects = storObjMap.get(ObjectType.System.name());
+        String pointRelease = storageObjects.get(0).getRestData().get("pointRelease");
+        if (null != pointRelease && pointRelease.length() != 0) {
+            productversions = ModelCapability.StorageTypeMap.get("POINTRELEASES").stream().filter(e -> pointRelease.contains(e)).collect(Collectors.toList());
+        } else {
+            String productVersion = storageObjects.get(0).getRestData().get("PRODUCTVERSION");
+            productversions = ModelCapability.StorageTypeMap.get("PRODUCTVERSIONS").stream().filter(e -> productVersion.contains(e)).collect(Collectors.toList());
+        }
+        if (productversions.size() == 0) {
+            return false;
+        }
+        return true;
+    }
+
     public void convertBoolToNumber(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
         String target = task.getTarget();
         logger.debug("object is :" + obj.getTypeName() + "_" + obj.getName() + "targets is " + task.getTarget());
@@ -574,19 +594,34 @@ public class TaskHandler {
         }
         BigDecimal result = new BigDecimal(express.get(0));
         for (int i = 1; i < express.size(); i++) {
-            if (express.get(i).equals("+")) {
-                result = result.add(new BigDecimal(express.get(i + 1)));
+            if (express.get(i) != null && express.get(i).equals("+")) {
+
+                if (express.get(i + 1) != null) {
+                    result = result.add(new BigDecimal(express.get(i + 1)));
+                } else {
+                    result = result.add(new BigDecimal(0));
+                }
             }
-            if (express.get(i).equals("-")) {
-                result = result.subtract(new BigDecimal(express.get(i + 1)));
+            if (express.get(i) != null &&express.get(i).equals("-")) {
+                if (express.get(i + 1) != null) {
+                    result = result.subtract(new BigDecimal(express.get(i + 1)));
+                } else {
+                    result = result.subtract(new BigDecimal(0));
+                }
             }
-            if (express.get(i).equals("*")) {
-                result = result.multiply(new BigDecimal(express.get(i + 1)));
+            if (express.get(i) != null &&express.get(i).equals("*")) {
+                if (express.get(i + 1) != null) {
+                    result = result.multiply(new BigDecimal(express.get(i + 1)));
+                } else {
+                    result = new BigDecimal(0);
+                }
             }
-            if (express.get(i).equals("/")) {
-                if (!express.get(i + 1).equals("0")) {
+            if (express.get(i) != null && express.get(i).equals("/")) {
+                if (!express.get(i + 1).equals("0") && express.get(i + 1) != null) {
                     result = result.divide(new BigDecimal(express.get(i + 1)), 4,
                             RoundingMode.HALF_UP);
+                } else {
+                    result = new BigDecimal(0);
                 }
             }
         }
@@ -696,8 +731,11 @@ public class TaskHandler {
         String[] results = task.getResult().split(",");
         if (ObjectType.Disk.getValue()==obj.getType()) {
             for (int i = 0; i < perfNames.length; i++) {
-                if(obj.getPerfData()!=null&&obj.getPerfData().get(perfNames[i])!=null)
-                flowContext.put(results[i], obj.getPerfData().get(perfNames[i]) + "");
+                if (obj.getPerfData() != null && obj.getPerfData().get(perfNames[i]) != null) {
+                    flowContext.put(results[i], obj.getPerfData().get(perfNames[i]) + "");
+                } else {
+                    flowContext.put(results[i], "0");
+                }
             }
         }
     }

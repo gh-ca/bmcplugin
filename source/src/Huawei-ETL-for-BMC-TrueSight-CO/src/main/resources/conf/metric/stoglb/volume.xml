@@ -130,6 +130,10 @@
                 <target>AverageIOResponseTimeUs</target>
                 <result>ST_RESPONSE_TIME</result>
             </task>
+            <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${ST_RESPONSE_TIME},/,1000</target>
+                <result>ST_RESPONSE_TIME</result>
+            </task>
         </tasks>
     </metric>
     <metric dataSet="STOGLB" column="ST_VOLUME_TRANSFER_BYTE_RATE" name="StorageConfigured Space">
@@ -140,6 +144,10 @@
             </task>
             <task id="1" method="com.huawei.storage.utils.TaskHandler.addValues">
                 <target>ReadBandWidth,WriteBandWidth</target>
+                <result>ST_VOLUME_TRANSFER_BYTE_RATE</result>
+            </task>
+            <task id="2" method="com.huawei.storage.utils.TaskHandler.evalExpression">
+                <target>${ST_VOLUME_TRANSFER_BYTE_RATE},*,1024,*,1024</target>
                 <result>ST_VOLUME_TRANSFER_BYTE_RATE</result>
             </task>
         </tasks>
