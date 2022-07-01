@@ -44,8 +44,10 @@
           
           
 # 源码方式得到插件包：
+
+    上述编译条件具备后，便可以开始打包。
           
-    1.打包 (maven)：
+    打包 (maven)：
     
          1) Install oceanstor-rest-client 
          2）package storage-etl
