@@ -1,5 +1,9 @@
 # bmcplugin
 
+#插件包获取
+ 
+位置： 
+
 # 编译
 
 项目涉及到bmc TrueSight Capacity Optimization官方提供的开发工具中未开源的三方jar：
