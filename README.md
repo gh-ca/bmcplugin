@@ -20,7 +20,7 @@
     
     source/src/Huawei-ETL-for-BMC-TrueSight-CO/build/lib中(若不存在/build/lib请创建目录)。
 
-# jar获取方式
+    # jar获取方式
   
   
     # 前置条件：已安装bmc TrueSight Capacity Optimization环境（版本：20.02）
