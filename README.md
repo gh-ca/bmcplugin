@@ -38,9 +38,21 @@
     3.将jar包放入项目目录：
     
 
-          source/src/Huawei-ETL-for-BMC-TrueSight-CO/build/lib中(若不存在/build/lib请创建目录)，编译即可。
+          source/src/Huawei-ETL-for-BMC-TrueSight-CO/build/lib中(若不存在/build/lib请创建目录)。
+          
+    注：bmc TrueSight Capacity Optimization版本不同，获取到的Integration Studio工具版本不同，对应的jar版本不同。
+          
+          
+# 源码方式得到插件包：
+          
+    1.打包 (maven)：
+    
+         1) Install oceanstor-rest-client 
+         2）package storage-etl
+         
+         注：保持顺序。
 
     
-    注：bmc TrueSight Capacity Optimization版本不同，获取到的Integration Studio工具版本不同，对应的jar版本不同。
+   
   
 
