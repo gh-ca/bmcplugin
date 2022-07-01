@@ -32,6 +32,21 @@ public class TaskHandler {
         }
     }
 
+    public void getUsedCapacity(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+        String[] targets = task.getTarget().split(",");
+        String[] results = task.getResult().split(",");
+        logger.debug("object is :" + obj.getTypeName() + "_" + obj.getName() + "targets is " + task.getTarget());
+        logger.debug("flowContxt is " + flowContext);
+        if (judgeV6(storObjMap)) {
+            targets = task.getReplace().split(",");
+        }
+        for (int i = 0; i < targets.length; i++) {
+            logger.debug("get from rest is : " + obj.getRestData().get((targets[i])));
+            String contextValue = obj.getRestData().get((targets[i]));
+            flowContext.put(results[i], contextValue);
+        }
+    }
+
     public void getSumFromRestContextByObject(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
         String[] targets = task.getTarget().split(",");
         String[] results = task.getResult().split(",");
