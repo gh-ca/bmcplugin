@@ -1,6 +1,6 @@
-# bmcplugin
+# BCOPlugin (BCO:BMC TrueSight Capacity Optimization)
 
-#获取
+# 获取
 
 插件包：https://github.com/gh-ca/bmcplugin/releases/tag/v20.02.01
 
