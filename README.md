@@ -1,4 +1,5 @@
-# BCOPlugin (BCO:BMC TrueSight Capacity Optimization)
+# BCOPlugin 
+BCO:BMC TrueSight Capacity Optimization
 
 # 获取
 
