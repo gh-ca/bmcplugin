@@ -15,6 +15,9 @@ public class Task {
     @XStreamAlias("result")
     private String result;
 
+    @XStreamAlias("replace")
+    private String replace;
+
     @XStreamAlias("input")
     private String input;
 
@@ -48,5 +51,13 @@ public class Task {
 
     public void setResult(String result) {
         this.result = result;
+    }
+
+    public String getReplace() {
+        return replace;
+    }
+
+    public void setReplace(String replace) {
+        this.replace = replace;
     }
 }
