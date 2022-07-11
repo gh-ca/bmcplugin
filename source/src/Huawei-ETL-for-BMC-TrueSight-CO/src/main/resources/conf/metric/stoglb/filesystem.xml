@@ -10,8 +10,9 @@
 
     <metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY">
         <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getUsedCapacity">
                 <target>ALLOCCAPACITY</target>
+                <replace>ALLOCATEDPOOLQUOTA</replace>
                 <result>ALLOCCAPACITY</result>
             </task>
             <task id="1" method="com.huawei.storage.utils.TaskHandler.evalExpression">
@@ -22,8 +23,9 @@
     </metric>
     <metric dataSet="STOGLB" column="ST_CONSUMED_CAPACITY_PCT">
         <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getUsedCapacity">
                 <target>ALLOCCAPACITY,CAPACITY</target>
+                <replace>ALLOCATEDPOOLQUOTA,CAPACITY</replace>
                 <result>ALLOCCAPACITY,CAPACITY</result>
             </task>
             <task id="1" method="com.huawei.storage.utils.TaskHandler.calculatePercentage">
