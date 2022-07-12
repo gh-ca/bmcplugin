@@ -3,9 +3,9 @@ BCO:BMC TrueSight Capacity Optimization
 
 # 获取
 
-插件包：https://github.com/gh-ca/bmcplugin/releases/tag/v20.02.01
+插件包获取：https://github.com/gh-ca/bmcplugin/releases/tag/v20.02.01
 
-用户手册： https://github.com/gh-ca/bmcplugin/releases/tag/User_Guide
+用户手册获取： https://github.com/gh-ca/bmcplugin/releases/tag/User_Guide
 
 # 编译
 
