@@ -32,6 +32,21 @@ public class TaskHandler {
         }
     }
 
+    public void getProductVersion(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
+        String[] targets = task.getTarget().split(",");
+        String[] results = task.getResult().split(",");
+        if (judgeV6(storObjMap)) {
+            targets = task.getReplace().split(",");
+        }
+        logger.debug("object is :" + obj.getTypeName() + "_" + obj.getName() + "targets is " + task.getTarget());
+        logger.debug("flowContxt is " + flowContext);
+        for (int i = 0; i < targets.length; i++) {
+            logger.debug("get from rest is : " + obj.getRestData().get((targets[i])));
+            String contextValue = obj.getRestData().get((targets[i]));
+            flowContext.put(results[i], contextValue);
+        }
+    }
+
     public void getUsedCapacity(Task task, StorageObject obj, Map<String, String> flowContext, Map<String, List<StorageObject>> storObjMap) {
         String[] targets = task.getTarget().split(",");
         String[] results = task.getResult().split(",");
@@ -805,12 +820,14 @@ public class TaskHandler {
         int tierPolicy = 0 ;
         if(flowContext.get(task.getTarget())!=null){
             tierPolicy = Integer.parseInt(flowContext.get(task.getTarget()));
+        }else {
+            tierPolicy = 4;
         }
         String result = "";
         switch (tierPolicy){
             case 0 :
-               result= "no migration";
-               break;
+                result= "no migration";
+                break;
             case 1 :
                 result= "automatic migration";
                 break;
@@ -821,7 +838,7 @@ public class TaskHandler {
                 result= "migration to a lower performance tier";
                 break;
             default:
-                result = "no migration";
+                result = "N/A";
         }
         flowContext.put(task.getResult(),result);
     }
