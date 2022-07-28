@@ -210,7 +210,8 @@
 
     <metric dataSet="STOGLB" column="ST_MICROCODE">
         <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getProductVersion">
+                <replace>pointRelease</replace>
                 <target>PRODUCTVERSION</target>
                 <result>ST_MICROCODE</result>
             </task>
@@ -218,7 +219,8 @@
     </metric>
     <metric dataSet="STOGLB" column="ST_MICROCODE_PATCH">
         <tasks>
-            <task id="0" method="com.huawei.storage.utils.TaskHandler.getFromRestContext">
+            <task id="0" method="com.huawei.storage.utils.TaskHandler.getProductVersion">
+                <replace>pointRelease</replace>
                 <target>PATCHVERSION</target>
                 <result>ST_MICROCODE_PATCH</result>
             </task>
